@@ -32,7 +32,7 @@ License: copyright commercial
 25. Clients Section
 26. Main Footer
 **********************************************/
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("animate.css");
 @import url("owl.css");
 @import url("swiper.min.css");
@@ -69,8 +69,8 @@ License: copyright commercial
   --headings-color: #003c38;
   --link-color: #352F27;
   --link-hover-color: #5B8C51;
-  --text-font: "DM Sans", sans-serif;
-  --title-font: "DM Sans", sans-serif;
+  --text-font: "Roboto", sans-serif;
+  --title-font: "Roboto", sans-serif;
   --third-font: "Schoolbell",cursive;
   --body-font-size: 16px;
   --body-font-weight: 400;

@@ -46,7 +46,7 @@
                                 data-y="['middle','middle','middle','middle']"
                                 data-textalign="['top','top','top','top']"
                                 data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                                <span class="title">Tonis Logistics & Transport</span>
+                                <span class="title">{{__('Huaxia Việt Nam')}}</span>
                             </div>
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
                                 data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]"
@@ -56,7 +56,7 @@
                                 data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']"
                                 data-textalign="['top','top','top','top']"
                                 data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                                <h2>Logistics & Cargo <br />For Business</h2>
+                                <h2>{{__('Vận chuyển hàng hoá Quốc tế')}}</h2>
                             </div>
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
                                 data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]"
@@ -66,8 +66,8 @@
                                 data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']"
                                 data-textalign="['top','top','top','top']"
                                 data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                                <a href="page-about.html" class="theme-btn btn-style-one hvr-light"><span
-                                        class="btn-title">Explore More</span></a>
+                                <a href="#" class="theme-btn btn-style-one hvr-light"><span
+                                        class="btn-title">{{__('Xem thêm')}}</span></a>
                             </div>
                         </li>
 
@@ -112,7 +112,7 @@
                                 data-y="['middle','middle','middle','middle']"
                                 data-textalign="['top','top','top','top']"
                                 data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                                <span class="title">Tonis Logistics & Transport</span>
+                                <span class="title">{{__('Huaxia Việt Nam')}}</span>
                             </div>
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
                                 data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]"
@@ -122,7 +122,7 @@
                                 data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']"
                                 data-textalign="['top','top','top','top']"
                                 data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                                <h2>Logistics & Cargo <br />For Business</h2>
+                                <h2>{{__('Vận chuyển hàng hoá Quốc tế')}}</h2>
                             </div>
                             <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
                                 data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]"
@@ -133,7 +133,7 @@
                                 data-textalign="['top','top','top','top']"
                                 data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
                                 <a href="page-about.html" class="theme-btn btn-style-one hvr-light"><span
-                                        class="btn-title">Explore More</span></a>
+                                        class="btn-title">{{__('Xem thêm')}}</span></a>
                             </div>
                         </li>
                     </ul>
@@ -154,8 +154,7 @@
                             </div>
                             <div class="content-box">
                                 <h4 class="title">
-                                    <a href="page-about.html">Cost<br />
-                                        optimization</a>
+                                    <a href="page-about.html">{!!__('Tối ưu </br> chi phí')!!}</a>
                                 </h4>
                                 <div class="text">Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod.</div>
                             </div>
@@ -170,8 +169,7 @@
                             </div>
                             <div class="content-box">
                                 <h4 class="title">
-                                    <a href="page-about.html">Reduced<br />
-                                        transit timing</a>
+                                    <a href="page-about.html">{!!__('Vận chuyển </br> nhanh chóng')!!}</a>
                                 </h4>
                                 <div class="text">Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod.</div>
                             </div>
@@ -185,7 +183,7 @@
                                 <span class="count">03</span>
                             </div>
                             <div class="content-box">
-                                <h4 class="title"><a href="page-about.html">Warehouse operation</a></h4>
+                                <h4 class="title"><a href="page-about.html">{!!__('Kho hàng </br> đảm bảo')!!}</a></h4>
                                 <div class="text">Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod.</div>
                             </div>
                         </div>
@@ -206,29 +204,27 @@
                     <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
                         <div class="inner-column">
                             <div class="sec-title">
-                                <span class="sub-title">Transportation Company</span>
-                                <h2>We provide full rang of transportation services</h2>
-                                <div class="text">Long established fact that a reader will be distracted by the readable
-                                    content of a page when looking at its layout. The point of using is that it has a
-                                    more-or-less normal distribution.</div>
+                                <span class="sub-title">{{__('HUAXIA VIETNAM')}}</span>
+                                <h2>{!!__('Chúng tôi cung cấp các dịch vụ vận chuyển </br> trọn gói')!!}</h2>
+                                <div class="text">{{__('Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam luôn nỗ lực phấn đấu trở thành công ty giao nhận hàng được khách hàng gửi gắm niềm tiên và sự tín nhiệm cao, hỗ trợ kết nối các doanh nghiệp Việt Nam vươn ra thế giới với dịch vụ chat lượng cao, nhân sự chuyên nghiệp, tận tâm, tạo ra giá trị gia tăng, đóng góp tích cực vào sự phát triển của chuỗi cung ứng')}}</div>
                             </div>
                             <div class="content-box">
                                 <div class="about-block">
                                     <i class="icon flaticon-worldwide-shipping"></i>
-                                    <h4 class="title">Worldwide services</h4>
+                                    <h4 class="title">{{__('Vận chuyển hàng hoá quốc tế')}}</h4>
                                     <p class="text">We’re always provide people a complete solution focused of any
                                         business.</p>
                                 </div>
                                 <div class="about-block">
                                     <i class="icon flaticon-3d-cube"></i>
-                                    <h4 class="title">Local services</h4>
+                                    <h4 class="title">{{__('Xúc tiến thương mại')}}</h4>
                                     <p class="text">We’re always provide people a complete solution focused of any
                                         business.</p>
                                 </div>
                             </div>
                             <div class="btm-box">
                                 <a href="page-about.html" class="theme-btn btn-style-one"><span
-                                        class="btn-title">Explore More</span></a>
+                                        class="btn-title">{{__('Tìm hiểu thêm')}}</span></a>
                             </div>
                         </div>
                     </div>
@@ -239,8 +235,8 @@
                             <figure class="image-2"><img src="{{asset('huaxia/images/resource/about-2.jpg')}}" alt /></figure>
                             <div class="experience">
                                 <strong><i class="icon flaticon-global"></i> 40<br />
-                                    Years</strong>
-                                Working Exprience
+                                    {{__('Năm')}}</strong>
+                                {{__('Kinh nghiệm')}}
                             </div>
                         </div>
                     </div>
@@ -256,8 +252,8 @@
             </div>
             <div class="auto-container">
                 <div class="sec-title text-center">
-                    <span class="sub-title">SPECIALISE IN THE TRANSPORTATION</span>
-                    <h2>Specialist logistics services</h2>
+                    <span class="sub-title">{{__('Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam')}}</span>
+                    <h2>{{__('Dịch vụ của chúng tôi')}}</h2>
                 </div>
                 <div class="row">
 
