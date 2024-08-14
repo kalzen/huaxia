@@ -256,74 +256,24 @@
                     <h2>{{__('Dịch vụ của chúng tôi')}}</h2>
                 </div>
                 <div class="row">
-
+                    @foreach($services as $service)
                     <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
                         <div class="inner-box">
                             <div class="image-box">
                                 <figure class="image">
-                                    <a href="page-service-details.html"><img src="{{asset('huaxia/images/resource/service-1.jpg')}}"
+                                    <a href="{{ route('post.detail',['alias' => $service->slug])}}"><img src="{{$service->images()->first()->url}}"
                                             alt /></a>
                                 </figure>
                             </div>
                             <div class="content-box">
                                 <i class="icon flaticon-airplane-2"></i>
-                                <span class="sub-title">01 Service</span>
-                                <h4 class="title"><a href="page-service-details.html">Air freight</a></h4>
-                                <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
+                                <span class="sub-title">{{__('Dịch vụ')}}</span>
+                                <h4 class="title"><a href="{{ route('post.detail',['alias' => $service->slug])}}">{{$service->title}}</a></h4>
+                                <div class="text">{{$service->description}}</div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image">
-                                    <a href="page-service-details.html"><img src="{{asset('huaxia/images/resource/service-2.jpg')}}"
-                                            alt /></a>
-                                </figure>
-                            </div>
-                            <div class="content-box">
-                                <i class="icon flaticon-cargo-boat"></i>
-                                <span class="sub-title">02 Service</span>
-                                <h4 class="title"><a href="page-service-details.html">Sea freight</a></h4>
-                                <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image">
-                                    <a href="page-service-details.html"><img src="{{asset('huaxia/images/resource/service-3.jpg')}}"
-                                            alt /></a>
-                                </figure>
-                            </div>
-                            <div class="content-box">
-                                <i class="icon flaticon-delivery-truck-3"></i>
-                                <span class="sub-title">03 Service</span>
-                                <h4 class="title"><a href="page-service-details.html">Road service</a></h4>
-                                <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="900ms">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image">
-                                    <a href="page-service-details.html"><img src="{{asset('huaxia/images/resource/service-4.jpg')}}"
-                                            alt /></a>
-                                </figure>
-                            </div>
-                            <div class="content-box">
-                                <i class="icon flaticon-delivery-box-4"></i>
-                                <span class="sub-title">04 Service</span>
-                                <h4 class="title"><a href="page-service-details.html">Other solution</a></h4>
-                                <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
