@@ -339,14 +339,14 @@
                     <div class="content-column col-lg-6 col-md-12 col-sm-12">
                         <div class="inner-column">
                             <div class="sec-title light">
-                                <span class="sub-title">Why Choose Us</span>
-                                <h2>We create opportunity to reach potential</h2>
+                                <span class="sub-title">{{__('Vì sao nên chọn chúng tôi')}}</span>
+                                <h2>{{__('Nhanh gọn, thủ tục dễ dàng, vận chuyển nhanh chóng')}}</h2>
                             </div>
 
                             <div class="feature-block-two">
                                 <div class="inner-box">
                                     <i class="icon flaticon-delivery-box-4"></i>
-                                    <h4 class="title">Safety and reliability</h4>
+                                    <h4 class="title">{{__('Vận chuyển nhanh chóng')}}</h4>
                                     <p class="text">Aenean placerat ut lacus nec pulvinar. Donec eu leo, ante at,
                                         commodo diam.</p>
                                 </div>
@@ -355,7 +355,7 @@
                             <div class="feature-block-two">
                                 <div class="inner-box">
                                     <i class="icon flaticon-international-shipping-3"></i>
-                                    <h4 class="title">Shipping worldwide</h4>
+                                    <h4 class="title">{{__('Vận chuyển đa quốc gia')}}</h4>
                                     <p class="text">Interdum et malesuada fames ac ante ipsum primis in faucibus donec
                                         tempor nisi neque.</p>
                                 </div>
@@ -368,7 +368,7 @@
 
                             <div class="contact-form wow fadeInLeft">
 
-                                <form method="post" action="https://html.kodesolution.com/2022/tronis-html/get"
+                                <form method="post" action="#"
                                     id="contact-form">
                                     <div class="row">
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group">
@@ -432,8 +432,8 @@
                     <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
                         <div class="inner-column">
                             <div class="sec-title">
-                                <span class="sub-title">Get to know us</span>
-                                <h2>Global Logistics Solution Provider 1996</h2>
+                                <span class="sub-title">{{__('Giới thiệu về chúng tôi')}}</span>
+                                <h2>{{__('Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam')}}</h2>
                                 <h4>Simplify your freight and logistics needs with a personal approch.</h4>
                                 <div class="text">Explain to you how all this mistaken denouncing pleasure and praising
                                     pain was born and we will give you a complete account of the system, and expound the
@@ -464,8 +464,8 @@
                             </div>
                             <div class="founder-info">
                                 <div class="thumb"><img src="{{asset('huaxia/images/resource/ceo.jpg')}}" alt /></div>
-                                <h5 class="name">Brittary Herman</h5>
-                                <span class="designation">CEO & Founder of Company</span>
+                                <h5 class="name">Ông. Mai Công Luật</h5>
+                                <span class="designation">Giám đốc điều hành</span>
                             </div>
                         </div>
                     </div>
@@ -491,7 +491,7 @@
             </div>
             <div class="auto-container">
                 <div class="sec-title text-center">
-                    <span class="sub-title">Client’s Testimonials</span>
+                    <span class="sub-title">{{__('Khách hàng nói gì về chúng tôi')}}</span>
                     <h2>Here are some clients <br />feedbacks</h2>
                 </div>
                 <div class="outer-box">
