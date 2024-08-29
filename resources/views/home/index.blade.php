@@ -284,26 +284,25 @@
                 <div class="outer-box">
                     <div class="arrow-box wow fadeInRight">
                         <img src="{{asset('huaxia/images/icons/arrow-2.png')}}" alt class="icon" />
-                        <span class="title">Results in <br />few seconds</span>
+                        <span class="title">{{__('File sẽ được gửi trong vài giây')}}</span>
                     </div>
                     <div class="tracking-form">
-                        <h4 class="title">Track your <br />Order</h4>
+                        <h4 class="title">{!!__('Nhận profile </br> công ty')!!}</h4>
 
-                        <form method="post" action="https://html.kodesolution.com/2022/tronis-html/job-list-v10.html">
+                        <form method="post" action="#">
                             <div class="row">
                                 <div class="form-group col-lg-4 col-md-12 col-sm-12">
                                     <span class="icon lnr-icon-user"></span>
-                                    <input type="text" name="field_name" placeholder="Your Tracking ID Now" />
+                                    <input type="text" name="field_name" placeholder="{{__('Họ và tên')}}" />
                                 </div>
 
                                 <div class="form-group col-lg-4 col-md-12 col-sm-12">
                                     <span class="icon lnr-icon-envelope1"></span>
-                                    <input type="text" name="field_name" placeholder="Your Email Address" />
+                                    <input type="text" name="field_name" placeholder="{{__('Email của bạn')}}" />
                                 </div>
 
                                 <div class="form-group col-lg-4 col-md-12 col-sm-12 text-end">
-                                    <button type="submit" class="theme-btn btn-style-one"><span class="btn-title">Track
-                                            Order</span></button>
+                                    <button type="submit" class="theme-btn btn-style-one"><span class="btn-title">{{__('Đăng ký')}}</span></button>
                                 </div>
                             </div>
                         </form>
@@ -314,208 +313,23 @@
         </section>
 
 
-        <section class="call-to-action" style="background-image: url(images/background/2.jpg)">
+        <section class="call-to-action" style="background-image: url({{asset('huaxia/images/background/2.jpg')}})">
             <div class="auto-container">
                 <div class="outer-box">
                     <a href="https://www.youtube.com/watch?v=Fvae8nxzVz4" class="play-now lightbox-image"><i
                             class="icon fa fa-play"></i><span class="ripple"></span></a>
                     <div class="sec-title light mb-0">
-                        <div class="sub-title">Get in touch with us anytime</div>
-                        <h1>Looking for the best <br />logistics transport service?</h1>
-                        <a href="page-services.html" class="theme-btn btn-style-one hvr-light"><span
-                                class="btn-title">Get A Quote</span></a>
+                        <div class="sub-title">{{__(Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam)}}</div>
+                        <h1>{!!__('Bạn muốn tìm kiếm <br />công ty vận chuyển hàng hoá đa quốc gia?')!!}</h1>
+                        <a href="#" class="theme-btn btn-style-one hvr-light"><span
+                                class="btn-title">{{__('Liên hệ ngay')}}</span></a>
                     </div>
                 </div>
             </div>
         </section>
-
-
-        <section class="work-section">
-            <div class="anim-icons">
-                <span class="icon icon-dotted-map-2 zoom-one"></span>
-                <span class="icon icon-plane-1 bounce-y"></span>
-            </div>
-            <div class="auto-container">
-                <div class="sec-title text-center">
-                    <span class="sub-title">How It Work</span>
-                    <h2>3 easy step to task</h2>
-                </div>
-                <div class="row">
-
-                    <div class="work-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight">
-                        <div class="inner-box">
-                            <div class="icon-box">
-                                <span class="count">01</span>
-                                <i class="icon flaticon-delivery-box-4"></i>
-                            </div>
-                            <h4 class="title">Enter your <br />& product details</h4>
-                        </div>
-                    </div>
-
-                    <div class="work-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="300ms">
-                        <div class="inner-box">
-                            <div class="icon-box">
-                                <span class="count">02</span>
-                                <i class="icon flaticon-stock-1"></i>
-                            </div>
-                            <h4 class="title">Pay your service <br />charges</h4>
-                        </div>
-                    </div>
-
-                    <div class="work-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="600ms">
-                        <div class="inner-box">
-                            <div class="icon-box">
-                                <span class="count">03</span>
-                                <i class="icon flaticon-delivery-box-3"></i>
-                            </div>
-                            <h4 class="title">Ready to send <br />your goods</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="fun-fact-section p-0">
-            <div class="auto-container">
-                <div class="outer-box">
-                    <div class="bg-image" style="background-image: url(images/background/3.jpg)"></div>
-                    <div class="row">
-
-                        <div class="content-column col-lg-7 col-md-12 col-sm-12 order-2">
-                            <div class="inner-column">
-                                <div class="sec-title light">
-                                    <span class="sub-title">We Deliver on time</span>
-                                    <h2>Total Coverage & Flexibility in Exports & Imports</h2>
-                                    <div class="text">Long established fact that a reader will be distracted by the
-                                        readable content of a page when looking at its layout.</div>
-                                </div>
-                                <div class="fact-counter">
-                                    <div class="row">
-
-                                        <div class="counter-column col-lg-4 col-md-6 col-sm-12">
-                                            <div class="inner">
-                                                <div class="count-box"><span class="count-text" data-speed="3000"
-                                                        data-stop="869">0</span></div>
-                                                <h4 class="counter-title">Projects <br />Completed</h4>
-                                                <i class="icon flaticon-delivery-8"></i>
-                                            </div>
-                                        </div>
-
-                                        <div class="counter-column col-lg-4 col-md-6 col-sm-12">
-                                            <div class="inner">
-                                                <div class="count-box"><span class="count-text" data-speed="3000"
-                                                        data-stop="683">0</span></div>
-                                                <h4 class="counter-title">Satisfied <br />Customers</h4>
-                                                <i class="icon flaticon-team"></i>
-                                            </div>
-                                        </div>
-
-                                        <div class="counter-column col-lg-4 col-md-6 col-sm-12">
-                                            <div class="inner">
-                                                <div class="count-box"><span class="count-text" data-speed="3000"
-                                                        data-stop="975">0</span></div>
-                                                <h4 class="counter-title">
-                                                    Delivered<br />
-                                                    on Time
-                                                </h4>
-                                                <i class="icon flaticon-delivery-box-3"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-column col-lg-5 col-md-12 col-sm-12">
-                            <div class="inner-column">
-                                <figure class="image"><img src="{{asset('huaxia/images/resource/image-1.png')}}" alt /></figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="project-section pb-0">
-            <div class="large-container">
-                <div class="sec-title text-center">
-                    <span class="sub-title">LATEST PROJECTS</span>
-                    <h2>Works across the world</h2>
-                </div>
-
-                <div class="project-carousel owl-carousel owl-theme">
-
-                    <div class="project-block">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image">
-                                    <a href="images/resource/project-1.jpg')}}" class="lightbox-image"><img
-                                            src="images/resource/project-1.jpg')}}" alt /></a>
-                                </figure>
-                                <a href="page-project-details.html" class="icon"><i class="fa fa-plus"></i></a>
-                            </div>
-                            <div class="content-box">
-                                <span class="sub-title">Logistics</span>
-                                <h4 class="title"><a href="page-project-details.html">Special transport</a></h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-block">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image">
-                                    <a href="images/resource/project-2.jpg')}}" class="lightbox-image"><img
-                                            src="images/resource/project-2.jpg')}}" alt /></a>
-                                </figure>
-                                <a href="page-project-details.html" class="icon"><i class="fa fa-plus"></i></a>
-                            </div>
-                            <div class="content-box">
-                                <span class="sub-title">Cargo</span>
-                                <h4 class="title"><a href="page-project-details.html">Special transport</a></h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-block">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image">
-                                    <a href="images/resource/project-3.jpg')}}" class="lightbox-image"><img
-                                            src="images/resource/project-3.jpg')}}" alt /></a>
-                                </figure>
-                                <a href="page-project-details.html" class="icon"><i class="fa fa-plus"></i></a>
-                            </div>
-                            <div class="content-box">
-                                <span class="sub-title">Logistics</span>
-                                <h4 class="title"><a href="page-project-details.html">Special transport</a></h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-block">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image">
-                                    <a href="images/resource/project-4.jpg')}}" class="lightbox-image"><img
-                                            src="images/resource/project-4.jpg')}}" alt /></a>
-                                </figure>
-                                <a href="page-project-details.html" class="icon"><i class="fa fa-plus"></i></a>
-                            </div>
-                            <div class="content-box">
-                                <span class="sub-title">Logistics</span>
-                                <h4 class="title"><a href="page-project-details.html">Special transport</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
 
         <section class="why-choose-us pull-up pb-0">
-            <div class="bg-image" style="background-image: url(images/background/4.jpg)"></div>
+            <div class="bg-image" style="background-image: url({{asset('huaxia/images/background/4.jpg')}})"></div>
             <div class="anim-icons">
                 <div class="float-image"><img src="{{asset('huaxia/images/resource/delivery-boy.png')}}" alt /></div>
             </div>

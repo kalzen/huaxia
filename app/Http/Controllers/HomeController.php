@@ -23,8 +23,11 @@ class HomeController extends Controller
         $testimonials = Testimonial::All();
         $teams = Team::All();
         $posts = Post::latest()->withCount(['images'])->having('images_count','>',0)->active()->take(5)->get();
-        $services = Category::find(2);
-        return view('home.index',['slides'=> $slides, 'posts'=>$posts, 'testimonials' => $testimonials, 'teams' => $teams, 'services' => $services->posts()]);
+
+        $services = Post::whereHas('categories', function($query) {
+            $query->where('category_post.category_id', 2);
+        })->get();
+        return view('home.index',['slides'=> $slides, 'posts'=>$posts, 'testimonials' => $testimonials, 'teams' => $teams, 'services' => $services]);
     }
     public function order()
     {
