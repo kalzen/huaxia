@@ -319,7 +319,7 @@
                     <a href="https://www.youtube.com/watch?v=Fvae8nxzVz4" class="play-now lightbox-image"><i
                             class="icon fa fa-play"></i><span class="ripple"></span></a>
                     <div class="sec-title light mb-0">
-                        <div class="sub-title">{{__(Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam)}}</div>
+                        <div class="sub-title">{{__('Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam')}}</div>
                         <h1>{!!__('Bạn muốn tìm kiếm <br />công ty vận chuyển hàng hoá đa quốc gia?')!!}</h1>
                         <a href="#" class="theme-btn btn-style-one hvr-light"><span
                                 class="btn-title">{{__('Liên hệ ngay')}}</span></a>
