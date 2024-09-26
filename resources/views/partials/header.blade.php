@@ -49,10 +49,10 @@
                             <a href="{{ route('about') }}">{{ __('Giới thiệu') }}</a>
                         </li>
                         <li>
-                            <a href="#">{{ __('Dịch vụ') }}</a>
+                            <a href="{{ route('service') }}">{{ __('Dịch vụ') }}</a>
                         </li>
                         <li>
-                            <a href="#">{{ __('Tin tức') }}</a>
+                            <a href="{{ route('post.list') }}">{{ __('Tin tức') }}</a>
                         </li>
                         <li>
                             <a href="{{ route('contact') }}">{{ __('Liên hệ') }}</a>
