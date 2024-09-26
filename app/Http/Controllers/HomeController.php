@@ -13,7 +13,8 @@ use App\Models\OrderDetail;
 use App\Models\Testimonial;
 use App\Models\Team;
 use App\Models\Category;
-use DB;
+use Exception;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
