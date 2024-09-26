@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
-use App\Http\Controllers\Admin\PostController;
+// use App\Http\Controllers\Admin\PostController;
+
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\AttributeController;
@@ -39,7 +41,8 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::any('/lien-he', [HomeController::class, 'contact'])->name('contact');
 // Route::get('/san-pham/{alias}', [ProductController::class, 'detail'])->name('product.detail');
 // Route::get('/danh-muc/{alias}', [ProductController::class, 'catalogue'])->name('product.catalogue');
-Route::get('/tin-tuc', [PostController::class, 'index'])->name('post');
+// Route::get('/tin-tuc', [PostController::class, 'index'])->name('post.list');
+Route::get('/tuc-tin', [PostController::class, 'index'])->name('post.list');
 Route::get('/danh-muc-tin-tuc/{alias}', [PostController::class, 'category'])->name('post.category');
 Route::get('/tim-kiem-tin-tuc', [PostController::class, 'search'])->name('post.search');
 Route::get('/tin-tuc/{alias}', [PostController::class, 'detail'])->name('post.detail');
@@ -87,6 +90,7 @@ Route::middleware(['auth'])->name('admin.')->prefix('admin')->group(function () 
         Route::post('', [SettingController::class, 'update'])->name('update');
     });
 });
+
 Route::any('/ckfinder/connector', '\CKSource\CKFinderBridge\Controller\CKFinderController@requestAction')
     ->name('ckfinder_connector');
 
