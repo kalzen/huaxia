@@ -32,13 +32,14 @@ Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/logout', [HomeController::class, 'logout'])->name('logout');
-Route::get('/tu-van', [HomeController::class, 'advise'])->name('advise');
+// Route::get('/tu-van', [HomeController::class, 'advise'])->name('advise');
 Route::any('/gioi-thieu', [HomeController::class, 'about'])->name('about');
+Route::any('/dich-vu', [HomeController::class, 'service'])->name('service');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::any('/lien-he', [HomeController::class, 'contact'])->name('contact');
-Route::get('/san-pham/{alias}', [ProductController::class, 'detail'])->name('product.detail');
-Route::get('/danh-muc/{alias}', [ProductController::class, 'catalogue'])->name('product.catalogue');
-Route::get('/tin-tuc/', [PostController::class, 'index'])->name('post.list');
+// Route::get('/san-pham/{alias}', [ProductController::class, 'detail'])->name('product.detail');
+// Route::get('/danh-muc/{alias}', [ProductController::class, 'catalogue'])->name('product.catalogue');
+Route::get('/tin-tuc', [PostController::class, 'index'])->name('post');
 Route::get('/danh-muc-tin-tuc/{alias}', [PostController::class, 'category'])->name('post.category');
 Route::get('/tim-kiem-tin-tuc', [PostController::class, 'search'])->name('post.search');
 Route::get('/tin-tuc/{alias}', [PostController::class, 'detail'])->name('post.detail');
