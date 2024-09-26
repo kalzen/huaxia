@@ -16,6 +16,8 @@ use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\TeamController;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,7 +28,6 @@ use App\Http\Controllers\Admin\TeamController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
@@ -35,12 +36,12 @@ Route::get('/tu-van', [HomeController::class, 'advise'])->name('advise');
 Route::any('/gioi-thieu', [HomeController::class, 'about'])->name('about');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::any('/lien-he', [HomeController::class, 'contact'])->name('contact');
-Route::get('/san-pham/{alias}', [App\Http\Controllers\ProductController::class, 'detail'])->name('product.detail');
-Route::get('/danh-muc/{alias}', [App\Http\Controllers\ProductController::class, 'catalogue'])->name('product.catalogue');
-Route::get('/tin-tuc/', [App\Http\Controllers\PostController::class, 'index'])->name('post.list');
-Route::get('/danh-muc-tin-tuc/{alias}', [App\Http\Controllers\PostController::class, 'category'])->name('post.category');
-Route::get('/tim-kiem-tin-tuc', [App\Http\Controllers\PostController::class, 'search'])->name('post.search');
-Route::get('/tin-tuc/{alias}', [App\Http\Controllers\PostController::class, 'detail'])->name('post.detail');
+Route::get('/san-pham/{alias}', [ProductController::class, 'detail'])->name('product.detail');
+Route::get('/danh-muc/{alias}', [ProductController::class, 'catalogue'])->name('product.catalogue');
+Route::get('/tin-tuc/', [PostController::class, 'index'])->name('post.list');
+Route::get('/danh-muc-tin-tuc/{alias}', [PostController::class, 'category'])->name('post.category');
+Route::get('/tim-kiem-tin-tuc', [PostController::class, 'search'])->name('post.search');
+Route::get('/tin-tuc/{alias}', [PostController::class, 'detail'])->name('post.detail');
 
 Route::middleware(['auth'])->name('admin.')->prefix('admin')->group(function () {
     Route::get('', [DashboardController::class, 'index'])->name('index');
