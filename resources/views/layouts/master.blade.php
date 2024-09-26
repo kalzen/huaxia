@@ -14,8 +14,8 @@
 
     <link href="{{asset('huaxia/css/style.css')}}" rel="stylesheet" />
     <link href="{{asset('huaxia/css/responsive.css')}}" rel="stylesheet" />
-    <link rel="shortcut icon" href="images/favicon.png')}}" type="image/x-icon" />
-    <link rel="icon" href="images/favicon.png')}}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{asset('huaxia/images/favicon.png')}}" type="image/x-icon" />
+    <link rel="icon" href="{{asset('huaxia/images/favicon.png')}}" type="image/x-icon" />
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
