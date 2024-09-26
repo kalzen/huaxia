@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\Product;
@@ -20,15 +21,15 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $slides = Slide::orderBy('ordering','asc')->paginate();
+        $slides = Slide::orderBy('ordering', 'asc')->paginate();
         $testimonials = Testimonial::All();
         $teams = Team::All();
-        $posts = Post::latest()->withCount(['images'])->having('images_count','>',0)->active()->take(5)->get();
+        $posts = Post::latest()->withCount(['images'])->having('images_count', '>', 0)->active()->take(5)->get();
 
-        $services = Post::whereHas('categories', function($query) {
+        $services = Post::whereHas('categories', function ($query) {
             $query->where('category_post.category_id', 2);
         })->get();
-        return view('home.index',['slides'=> $slides, 'posts'=>$posts, 'testimonials' => $testimonials, 'teams' => $teams, 'services' => $services]);
+        return view('home.index', ['slides' => $slides, 'posts' => $posts, 'testimonials' => $testimonials, 'teams' => $teams, 'services' => $services]);
     }
     public function order()
     {
@@ -46,10 +47,10 @@ class HomeController extends Controller
                 'product_id' => request('product_id')
             ]);
             DB::commit();
-            return response()->json(['success'=>true,'msg'=>'Yêu cầu của bạn đã được gửi tới Admin. Chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất.']);
-        }catch(Exception $ex){
+            return response()->json(['success' => true, 'msg' => 'Yêu cầu của bạn đã được gửi tới Admin. Chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất.']);
+        } catch (Exception $ex) {
             DB::rollback();
-            return response()->json(['success'=>false,'msg'=>$ex->getMessage()]);
+            return response()->json(['success' => false, 'msg' => $ex->getMessage()]);
         }
     }
     public function contact()
@@ -70,6 +71,12 @@ class HomeController extends Controller
     {
         return view('home.about');
     }
+
+    public function service()
+    {
+        return view('home.service');
+    }
+
     public function logout()
     {
         auth()->logout();
