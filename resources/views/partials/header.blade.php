@@ -81,7 +81,7 @@
         <nav class="menu-box">
             <div class="upper-box">
                 <div class="nav-logo">
-                    <a href="{{ route('home') }}"><img src="{{ asset('huaxia/images/logo-navi.jpg') }}" alt
+                    <a href="{{ route('home') }}"><img src="{{ asset('huaxia/images/favicon.png') }}" alt
                             title="Huaxia" /></a>
                 </div>
                 <div class="close-btn"><i class="icon fa fa-times"></i></div>
