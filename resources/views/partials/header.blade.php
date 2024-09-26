@@ -42,17 +42,18 @@
             <div class="nav-outer">
                 <nav class="nav main-menu">
                     <ul class="navigation">
-                        <li class="current dropdown">
+                        <li>
                             <a href="{{ route('home') }}">{{ __('Trang chủ') }}</a>
-
                         </li>
-                        <li class="dropdown">
+                        <li>
                             <a href="{{ route('about') }}">{{ __('Giới thiệu') }}</a>
                         </li>
-                        <li class="dropdown">
+                        <li>
                             <a href="#">{{ __('Dịch vụ') }}</a>
                         </li>
-                        <li><a href="{{ route('contact') }}">{{ __('Liên hệ') }}</a></li>
+                        <li>
+                            <a href="{{ route('contact') }}">{{ __('Liên hệ') }}</a>
+                        </li>
                     </ul>
                 </nav>
 
