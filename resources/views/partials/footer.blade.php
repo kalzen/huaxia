@@ -1,5 +1,5 @@
 <footer class="main-footer">
-            <div class="bg-image" style="background-image: url(images/background/5.jpg)"></div>
+            <div class="bg-image" style="background-image: url({{asset('huaxia/images/background/5.jpg')}})"></div>
             <div class="anim-icons">
                 <span class="icon icon-plane-3 bounce-x"></span>
             </div>
