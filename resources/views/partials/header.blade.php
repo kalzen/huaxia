@@ -52,6 +52,9 @@
                             <a href="#">{{ __('Dịch vụ') }}</a>
                         </li>
                         <li>
+                            <a href="#">{{ __('Tin tức') }}</a>
+                        </li>
+                        <li>
                             <a href="{{ route('contact') }}">{{ __('Liên hệ') }}</a>
                         </li>
                     </ul>
