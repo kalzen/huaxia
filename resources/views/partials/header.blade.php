@@ -5,8 +5,8 @@
 
             <ul class="list-style-one">
                 <li><i class="fa fa-map-marker-alt"></i>
-                    {{ __('P.114, T.1, Thành Đạt 1, số 3 Lê Thánh Tông, P.Máy Tơ, Q.Ngô Quyền, HP') }}</li>
-                <li><i class="fa fa-clock"></i> Thứ 2 - Thứ 7: 8am - 5pm</li>
+                    {{ __('nav.address') }}</li>
+                <li><i class="fa fa-clock"></i> {{ __('nav.work_time') }}: 8am - 5pm</li>
                 <li><i class="fa fa-phone-volume"></i> <a href="tel:+84968633588">+84 968633588</a></li>
             </ul>
         </div>
@@ -43,19 +43,30 @@
                 <nav class="nav main-menu">
                     <ul class="navigation">
                         <li>
-                            <a href="{{ route('home') }}">{{ __('Trang chủ') }}</a>
+                            <a href="{{ route('home') }}">{{ __('nav.home') }}</a>
                         </li>
                         <li>
-                            <a href="{{ route('about') }}">{{ __('Giới thiệu') }}</a>
+                            <a href="{{ route('about') }}">{{ __('nav.about') }}</a>
                         </li>
                         <li>
-                            <a href="{{ route('service') }}">{{ __('Dịch vụ') }}</a>
+                            <a href="{{ route('service') }}">{{ __('nav.services') }}</a>
                         </li>
                         <li>
-                            <a href="{{ route('post.list') }}">{{ __('Tin tức') }}</a>
+                            <a href="{{ route('post.list') }}">{{ __('nav.post') }}</a>
                         </li>
                         <li>
-                            <a href="{{ route('contact') }}">{{ __('Liên hệ') }}</a>
+                            <a href="{{ route('contact') }}">{{ __('contact') }}</a>
+                        </li>
+                        <li class="dropdown">
+                            <a>{{ __('nav.language') }}</a>
+                            <ul>
+
+                                <li> <a
+                                        href="{{ route('language', ['locale' => 'vi']) }}">{{ __('nav.lang.vi') }}</a>
+                                </li>
+                                <li><a href="{{ route('language', ['locale' => 'en']) }}">{{ __('nav.lang.en') }}</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>
@@ -94,7 +105,7 @@
 
                     <div class="contact-info-box">
                         <i class="icon lnr-icon-phone-handset"></i>
-                        <span class="title">{{ __('Gọi Ngay') }}</span>
+                        <span class="title">{{ __('nav.call_callout') }}</span>
                         <a href="tel:+84968633588">0968633588</a>
                     </div>
                 </li>
@@ -102,7 +113,7 @@
 
                     <div class="contact-info-box">
                         <span class="icon lnr-icon-envelope1"></span>
-                        <span class="title">{{ __('Gửi email') }}</span>
+                        <span class="title">{{ __('nav.email_callout') }}</span>
                         <a href=""><span>info@huaxiavietnam.com</span></a>
                     </div>
                 </li>
@@ -110,8 +121,8 @@
 
                     <div class="contact-info-box">
                         <span class="icon lnr-icon-clock"></span>
-                        <span class="title">{{ __('Gửi email') }}</span>
-                        Mon - Sat 8:00 - 6:30, Sunday - CLOSED
+                        <span class="title">{{ __('nav.work_time_callout') }}</span>
+                        {{ __('nav.work_time_mobile') }}
                     </div>
                 </li>
             </ul>
