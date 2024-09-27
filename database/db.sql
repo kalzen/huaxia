@@ -465,8 +465,6 @@ INSERT INTO `tags` (`id`, `name`, `created_at`, `updated_at`) VALUES
 /*!40000 ALTER TABLE `tags` ENABLE KEYS */;
 
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`id`, `role`, `status`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-	(1, 1, 1, 'Prof. Cyrus Sawayn II', 'christian14@example.org', '2022-03-18 11:49:38', '$2y$10$zYGlrX/Jg2U3CwjDxC2gD.rWHCCl/sk21SI5f4kjbDSPtFpge7xpe', 'jvVnhaoWSO1J1Us5g0kcHuHAxqd8bK9EVqChhW4Df27YbrQcFaXuEzFwE4g3', '2022-03-18 11:49:38', '2022-03-18 11:49:38');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
