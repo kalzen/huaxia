@@ -34,14 +34,14 @@
                             data-frames="[{&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:2000,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:3000,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;mask&quot;:&quot;x:0;y:0;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
                             <figure><img src="{{ asset('huaxia/images/main-slider/plane-icon.png') }}" alt /></figure>
                         </div>
-                        <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
+                        <div class="tp-caption mb-4" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
                             data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
                             data-type="text" data-height="none" data-width="['750','750','750','650']"
                             data-whitespace="normal" data-hoffset="['0','0','0','0']"
                             data-voffset="['-195','-160','-160','-140']" data-x="['left','left','left','left']"
                             data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
                             data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                            <span class="title">{{ __('Huaxia Việt Nam') }}</span>
+                            <span class="title">{{ __('home.company_name') }}</span>
                         </div>
                         <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
                             data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
@@ -50,17 +50,18 @@
                             data-voffset="['-70','-40','-40','-30']" data-x="['left','left','left','left']"
                             data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
                             data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                            <h2>{{ __('Vận chuyển hàng hoá Quốc tế') }}</h2>
+                            <h2>{{ __('home.slider_text') }}</h2>
                         </div>
-                        <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
+                        <div class="tp-caption mt-4" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
                             data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
                             data-type="text" data-height="none" data-width="['700','750','700','450']"
                             data-whitespace="normal" data-hoffset="['0','0','0','0']"
                             data-voffset="['100','120','120','120']" data-x="['left','left','left','left']"
                             data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
                             data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                            <a href="#" class="theme-btn btn-style-one hvr-light"><span
-                                    class="btn-title">{{ __('Xem thêm') }}</span></a>
+                            <a href="#" class="theme-btn btn-style-one hvr-light">
+                                <span class="btn-title">{{ __('home.slider_button') }}</span>
+                            </a>
                         </div>
                     </li>
 
@@ -93,14 +94,14 @@
                             data-frames="[{&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:2000,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:3000,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;mask&quot;:&quot;x:0;y:0;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
                             <figure><img src="{{ asset('huaxia/images/main-slider/plane-icon.png') }}" alt /></figure>
                         </div>
-                        <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
+                        <div class="tp-caption mb-4" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
                             data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
                             data-type="text" data-height="none" data-width="['750','750','750','650']"
                             data-whitespace="normal" data-hoffset="['0','0','0','0']"
                             data-voffset="['-195','-160','-160','-140']" data-x="['left','left','left','left']"
                             data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
                             data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                            <span class="title">{{ __('Huaxia Việt Nam') }}</span>
+                            <span class="title">{{ __('home.company_name') }}</span>
                         </div>
                         <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
                             data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
@@ -109,9 +110,9 @@
                             data-voffset="['-70','-40','-40','-30']" data-x="['left','left','left','left']"
                             data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
                             data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                            <h2>{{ __('Vận chuyển hàng hoá Quốc tế') }}</h2>
+                            <h2>{{ __('home.slider_text') }}</h2>
                         </div>
-                        <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
+                        <div class="tp-caption mt-4" data-paddingbottom="[0,0,0,0]" data-paddingleft="[15,15,15,15]"
                             data-paddingright="[15,15,15,15]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
                             data-type="text" data-height="none" data-width="['700','750','700','450']"
                             data-whitespace="normal" data-hoffset="['0','0','0','0']"
@@ -119,7 +120,7 @@
                             data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
                             data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
                             <a href="page-about.html" class="theme-btn btn-style-one hvr-light"><span
-                                    class="btn-title">{{ __('Xem thêm') }}</span></a>
+                                    class="btn-title">{{ __('home.slider_button') }}</span></a>
                         </div>
                     </li>
                 </ul>
@@ -140,7 +141,7 @@
                         </div>
                         <div class="content-box">
                             <h4 class="title">
-                                <a href="page-about.html">{!! __('Tối ưu </br> chi phí') !!}</a>
+                                <a href="page-about.html">{!! __('home.feature_title_1') !!}</a>
                             </h4>
                             <div class="text">Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod.</div>
                         </div>
@@ -155,7 +156,7 @@
                         </div>
                         <div class="content-box">
                             <h4 class="title">
-                                <a href="page-about.html">{!! __('Vận chuyển </br> nhanh chóng') !!}</a>
+                                <a href="page-about.html">{!! __('home.feature_title_2') !!}</a>
                             </h4>
                             <div class="text">Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod.</div>
                         </div>
@@ -169,7 +170,7 @@
                             <span class="count">03</span>
                         </div>
                         <div class="content-box">
-                            <h4 class="title"><a href="page-about.html">{!! __('Kho hàng </br> đảm bảo') !!}</a></h4>
+                            <h4 class="title"><a href="page-about.html">{!! __('home.feature_title_3') !!}</a></h4>
                             <div class="text">Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod.</div>
                         </div>
                     </div>
@@ -191,29 +192,27 @@
                 <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
                     <div class="inner-column">
                         <div class="sec-title">
-                            <span class="sub-title">{{ __('HUAXIA VIETNAM') }}</span>
-                            <h2>{!! __('Chúng tôi cung cấp các dịch vụ vận chuyển </br> trọn gói') !!}</h2>
+                            <span class="sub-title">{{ __('home.company_name_upper') }}</span>
+                            <h2>{!! __('home.about_title') !!}</h2>
                             <div class="text">
-                                {{ __('Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam luôn nỗ lực phấn đấu trở thành công ty giao nhận hàng được khách hàng gửi gắm niềm tiên và sự tín nhiệm cao, hỗ trợ kết nối các doanh nghiệp Việt Nam vươn ra thế giới với dịch vụ chat lượng cao, nhân sự chuyên nghiệp, tận tâm, tạo ra giá trị gia tăng, đóng góp tích cực vào sự phát triển của chuỗi cung ứng') }}
+                                {{ __('home.about_description') }}
                             </div>
                         </div>
                         <div class="content-box">
                             <div class="about-block">
                                 <i class="icon flaticon-worldwide-shipping"></i>
-                                <h4 class="title">{{ __('Vận chuyển hàng hoá quốc tế') }}</h4>
-                                <p class="text">We’re always provide people a complete solution focused of any
-                                    business.</p>
+                                <h4 class="title">{{ __('home.about_box_title_1') }}</h4>
+                                <p class="text">{{ __('home.about_box_description_1') }}.</p>
                             </div>
                             <div class="about-block">
                                 <i class="icon flaticon-3d-cube"></i>
-                                <h4 class="title">{{ __('Xúc tiến thương mại') }}</h4>
-                                <p class="text">We’re always provide people a complete solution focused of any
-                                    business.</p>
+                                <h4 class="title">{{ __('home.about_box_title_2') }}</h4>
+                                <p class="text">{{ __('home.about_box_description_2') }}.</p>
                             </div>
                         </div>
                         <div class="btm-box">
                             <a href="page-about.html" class="theme-btn btn-style-one"><span
-                                    class="btn-title">{{ __('Tìm hiểu thêm') }}</span></a>
+                                    class="btn-title">{{ __('home.about_button') }}</span></a>
                         </div>
                     </div>
                 </div>
@@ -226,8 +225,8 @@
                         </figure>
                         <div class="experience">
                             <strong><i class="icon flaticon-global"></i> 40<br />
-                                {{ __('Năm') }}</strong>
-                            {{ __('Kinh nghiệm') }}
+                                {{ __('home.about_experience_year') }}</strong>
+                            {{ __('home.about_experience') }}
                         </div>
                     </div>
                 </div>
@@ -243,8 +242,8 @@
         </div>
         <div class="auto-container">
             <div class="sec-title text-center">
-                <span class="sub-title">{{ __('Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam') }}</span>
-                <h2>{{ __('Dịch vụ của chúng tôi') }}</h2>
+                <span class="sub-title">{{ __('home.service_company') }}</span>
+                <h2>{{ __('home.service_title') }}</h2>
             </div>
             <div class="row">
                 @foreach ($services as $service)
@@ -277,26 +276,28 @@
             <div class="outer-box">
                 <div class="arrow-box wow fadeInRight">
                     <img src="{{ asset('huaxia/images/icons/arrow-2.png') }}" alt class="icon" />
-                    <span class="title">{{ __('File sẽ được gửi trong vài giây') }}</span>
+                    <span class="title">{{ __('home.tracking_tool_tip') }}</span>
                 </div>
                 <div class="tracking-form">
-                    <h4 class="title">{!! __('Nhận profile </br> công ty') !!}</h4>
+                    <h4 class="title">{!! __('home.tracking_title') !!}</h4>
 
                     <form method="post" action="#">
                         <div class="row">
                             <div class="form-group col-lg-4 col-md-12 col-sm-12">
                                 <span class="icon lnr-icon-user"></span>
-                                <input type="text" name="field_name" placeholder="{{ __('Họ và tên') }}" />
+                                <input type="text" name="field_name"
+                                    placeholder="{{ __('home.tracking_placeholder_1') }}" />
                             </div>
 
                             <div class="form-group col-lg-4 col-md-12 col-sm-12">
                                 <span class="icon lnr-icon-envelope1"></span>
-                                <input type="text" name="field_name" placeholder="{{ __('Email của bạn') }}" />
+                                <input type="text" name="field_name"
+                                    placeholder="{{ __('home.tracking_placeholder_2') }}" />
                             </div>
 
                             <div class="form-group col-lg-4 col-md-12 col-sm-12 text-end">
                                 <button type="submit" class="theme-btn btn-style-one"><span
-                                        class="btn-title">{{ __('Đăng ký') }}</span></button>
+                                        class="btn-title">{{ __('home.tracking_button') }}</span></button>
                             </div>
                         </div>
                     </form>
@@ -313,10 +314,10 @@
                 <a href="https://www.youtube.com/watch?v=Fvae8nxzVz4" class="play-now lightbox-image"><i
                         class="icon fa fa-play"></i><span class="ripple"></span></a>
                 <div class="sec-title light mb-0">
-                    <div class="sub-title">{{ __('Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam') }}</div>
-                    <h1>{!! __('Bạn muốn tìm kiếm <br />công ty vận chuyển hàng hoá đa quốc gia?') !!}</h1>
+                    <div class="sub-title">{{ __('home.call_action_company') }}</div>
+                    <h1>{!! __('home.call_action_title') !!}</h1>
                     <a href="#" class="theme-btn btn-style-one hvr-light"><span
-                            class="btn-title">{{ __('Liên hệ ngay') }}</span></a>
+                            class="btn-title">{{ __('home.call_action_button') }}</span></a>
                 </div>
             </div>
         </div>
@@ -333,14 +334,14 @@
                 <div class="content-column col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-column">
                         <div class="sec-title light">
-                            <span class="sub-title">{{ __('Vì sao nên chọn chúng tôi') }}</span>
-                            <h2>{{ __('Nhanh gọn, thủ tục dễ dàng, vận chuyển nhanh chóng') }}</h2>
+                            <span class="sub-title">{{ __('home.why_choose_us') }}</span>
+                            <h2>{{ __('home.why_choose_us_description') }}</h2>
                         </div>
 
                         <div class="feature-block-two">
                             <div class="inner-box">
                                 <i class="icon flaticon-delivery-box-4"></i>
-                                <h4 class="title">{{ __('Vận chuyển nhanh chóng') }}</h4>
+                                <h4 class="title">{{ __('home.why_choose_us_title_1') }}</h4>
                                 <p class="text">Aenean placerat ut lacus nec pulvinar. Donec eu leo, ante at,
                                     commodo diam.</p>
                             </div>
@@ -349,7 +350,7 @@
                         <div class="feature-block-two">
                             <div class="inner-box">
                                 <i class="icon flaticon-international-shipping-3"></i>
-                                <h4 class="title">{{ __('Vận chuyển đa quốc gia') }}</h4>
+                                <h4 class="title">{{ __('home.why_choose_us_title_2') }}</h4>
                                 <p class="text">Interdum et malesuada fames ac ante ipsum primis in faucibus donec
                                     tempor nisi neque.</p>
                             </div>
@@ -365,48 +366,50 @@
                             <form method="post" action="#" id="contact-form">
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                        <label>Your Name:</label>
+                                        <label>{{ __('home.why_choose_us_form_1') }}</label>
                                         <input type="text" name="full_name" placeholder required />
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                        <label>Your Email:</label>
+                                        <label>{{ __('home.why_choose_us_form_2') }}:</label>
                                         <input type="text" name="Email" placeholder required />
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                        <label>Phone No::</label>
+                                        <label>{{ __('home.why_choose_us_form_3') }}:</label>
                                         <input type="text" name="Phone" placeholder required />
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                        <label>DIST (Miles):</label>
+                                        <label>{{ __('home.why_choose_us_form_4') }}</label>
                                         <div class="range-slider-one">
                                             <input type="text" class="range-amount" name="field-name" readonly />
                                             <div class="distance-range-slider"></div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                        <label>Freight type:</label>
+                                        <label>{{ __('home.why_choose_us_form_5') }}</label>
                                         <select class="custom-select">
-                                            <option value>Select</option>
-                                            <option value>Air Freight</option>
-                                            <option value>Ocean Freight</option>
-                                            <option value>Rail transport</option>
-                                            <option value>Cargo ship</option>
-                                            <option value>Bulk cargo</option>
+                                            <option value>{{ __('home.why_choose_us_form_select_1') }}</option>
+                                            <option value>{{ __('home.why_choose_us_form_select_2') }}</option>
+                                            <option value>{{ __('home.why_choose_us_form_select_3') }}</option>
+                                            <option value>{{ __('home.why_choose_us_form_select_4') }}</option>
+                                            <option value>{{ __('home.why_choose_us_form_select_5') }}</option>
+                                            <option value>{{ __('home.why_choose_us_form_select_6') }}</option>
                                         </select>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                        <label>Load:</label>
+                                        <label>{{ __('home.why_choose_us_form_6') }}</label>
                                         <select class="custom-select">
-                                            <option value>Select</option>
-                                            <option value>Door to Door</option>
-                                            <option value>International shipping</option>
-                                            <option value>Multi Modal</option>
+                                            <option value>{{ __('home.why_choose_us_form_select_7') }}</option>
+                                            <option value>{{ __('home.why_choose_us_form_select_8') }}</option>
+                                            <option value>{{ __('home.why_choose_us_form_select_9') }}</option>
+                                            <option value>{{ __('home.why_choose_us_form_select_10') }}</option>
                                         </select>
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                         <button class="theme-btn btn-style-two hvr-light" type="submit"
-                                            name="submit-form"><span class="btn-title">Submit
-                                                Request</span></button>
+                                            name="submit-form"><span class="btn-title">
+                                                {{ __('home.why_choose_us_button') }}
+                                            </span>
+                                        </button>
                                     </div>
                                 </div>
                             </form>
@@ -425,40 +428,38 @@
                 <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
                     <div class="inner-column">
                         <div class="sec-title">
-                            <span class="sub-title">{{ __('Giới thiệu về chúng tôi') }}</span>
-                            <h2>{{ __('Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam') }}</h2>
-                            <h4>Simplify your freight and logistics needs with a personal approch.</h4>
-                            <div class="text">Explain to you how all this mistaken denouncing pleasure and praising
-                                pain was born and we will give you a complete account of the system, and expound the
-                                actual teachings.</div>
+                            <span class="sub-title">{{ __('home.about_2_title') }}</span>
+                            <h2>{{ __('home.about_2_company') }}</h2>
+                            <h4>{{ __('home.about_2_title_2') }}.</h4>
+                            <div class="text">{{ __('home.about_2_description') }}</div>
                         </div>
                         <div class="row">
 
                             <div class="feature-block-three col-lg-4 col-md-4 col-sm-12">
                                 <div class="inner">
                                     <i class="icon flaticon-delivery-courier"></i>
-                                    <h4 class="title">Cost Optimisation</h4>
+                                    <h4 class="title">{{ __('home.about_2_box_1') }}</h4>
                                 </div>
                             </div>
 
                             <div class="feature-block-three col-lg-4 col-md-4 col-sm-12">
                                 <div class="inner">
                                     <i class="icon flaticon-delivery-insurance-3"></i>
-                                    <h4 class="title">Reduced <br />Transit Time</h4>
+                                    <h4 class="title">{{ __('home.about_2_box_2') }}</h4>
                                 </div>
                             </div>
 
                             <div class="feature-block-three col-lg-4 col-md-4 col-sm-12">
                                 <div class="inner">
                                     <i class="icon flaticon-delivery-box-3"></i>
-                                    <h4 class="title">Delivery <br />on Time</h4>
+                                    <h4 class="title">{{ __('home.about_2_box_3') }}</h4>
                                 </div>
                             </div>
                         </div>
                         <div class="founder-info">
                             <div class="thumb"><img src="{{ asset('huaxia/images/resource/ceo.jpg') }}" alt /></div>
-                            <h5 class="name">Ông. Mai Công Luật</h5>
-                            <span class="designation">Giám đốc điều hành</span>
+                            <h5 class="name">{{ __('home.about_2_ceo_name') }}</h5>
+                            <span class="designation">{{ __('home.about_2_ceo_title') }}</span>
                         </div>
                     </div>
                 </div>
@@ -484,10 +485,9 @@
         </div>
         <div class="auto-container">
             <div class="sec-title text-center">
-                <span class="sub-title">OUR NEWS FROM BLOG</span>
+                <span class="sub-title">{{ __('home.news_title') }}</span>
                 <h2>
-                    Latest news, advices<br />
-                    & best posts from the blog
+                    {!! __('home.news_big_title') !!}
                 </h2>
             </div>
             <div class="row">
