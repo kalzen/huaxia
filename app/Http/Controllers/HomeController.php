@@ -29,7 +29,7 @@ class HomeController extends Controller
         $services = Post::whereHas('categories', function ($query) {
             $query->where('category_post.category_id', 2);
         })->get();
-        return view('home.index', ['slides' => $slides, 'posts' => $posts, 'testimonials' => $testimonials, 'teams' => $teams, 'services' => $services]);
+        return view('home.index', ['posts' => $posts, 'testimonials' => $testimonials, 'teams' => $teams, 'services' => $services]);
     }
     public function order()
     {
