@@ -1,18 +1,16 @@
 @extends('layouts.master')
 @section('content')
-    <section class="page-title" style="background-image: url({{ asset('huaxia/images/background/2.jpg') }});">
-        <div class="auto-container">
-            <div class="title-outer">
-                <h1 class="title">Services</h1>
-                <ul class="page-breadcrumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li>Services</li>
-                </ul>
-            </div>
+<section class="page-title" style="background-image: url({{ asset('huaxia/images/background/2.jpg') }})">
+    <div class="auto-container">
+        <div class="title-outer">
+            <h1 class="title">{{ __('service.page_title') }}</h1>
+            <ul class="page-breadcrumb">
+                <li><a href="{{ route('home') }}">{{ __('service.page_title_breadcrumb_1') }}</a></li>
+                <li>{{ __('service.page_title_breadcrumb_2') }}</li>
+            </ul>
         </div>
-    </section>
-
+    </div>
+</section>
 
     <section class="services-section">
         <div class="auto-container">
@@ -26,8 +24,8 @@
                         </div>
                         <div class="content-box">
                             <i class="icon flaticon-airplane-2"></i>
-                            <span class="sub-title">Dịch vụ 1</span>
-                            <h4 class="title"><a href="page-service-details.html">Vận chuyển <br /> hàng không</a></h4>
+                            <span class="sub-title">{{ __('service.service_box_subtitle_1') }}</span>
+                            <h4 class="title"><a href="page-service-details.html">{!! __('service.service_box_title_1') !!}</a></h4>
                             <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
                         </div>
                     </div>
@@ -41,8 +39,8 @@
                         </div>
                         <div class="content-box">
                             <i class="icon flaticon-cargo-boat"></i>
-                            <span class="sub-title">Dịch vụ 2</span>
-                            <h4 class="title"><a href="page-service-details.html">Vận chuyển <br /> đường biển</a></h4>
+                            <span class="sub-title">{{ __('service.service_box_subtitle_2') }}</span>
+                            <h4 class="title"><a href="page-service-details.html">{!! __('service.service_box_title_2') !!}</a></h4>
                             <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
                         </div>
                     </div>
@@ -56,8 +54,8 @@
                         </div>
                         <div class="content-box">
                             <i class="icon flaticon-delivery-truck-3"></i>
-                            <span class="sub-title">Dịch vụ 3</span>
-                            <h4 class="title"><a href="page-service-details.html">Dịch vụ <br /> đường bộ</a></h4>
+                            <span class="sub-title">{{ __('service.service_box_subtitle_3') }}</span>
+                            <h4 class="title"><a href="page-service-details.html">{!! __('service.service_box_title_3') !!}</a></h4>
                             <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
                         </div>
                     </div>
@@ -71,8 +69,8 @@
                         </div>
                         <div class="content-box">
                             <i class="icon flaticon-delivery-box-4"></i>
-                            <span class="sub-title">Dịch vụ 4</span>
-                            <h4 class="title"><a href="page-service-details.html">Giải pháp <br /> khác</a></h4>
+                            <span class="sub-title">{{ __('service.service_box_subtitle_4') }}</span>
+                            <h4 class="title"><a href="page-service-details.html">{!! __('service.service_box_title_4') !!}</a></h4>
                             <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
                         </div>
                     </div>
