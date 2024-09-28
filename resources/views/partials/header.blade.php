@@ -55,7 +55,7 @@
                             <a href="{{ route('post.list') }}">{{ __('nav.post') }}</a>
                         </li>
                         <li>
-                            <a href="{{ route('contact') }}">{{ __('contact') }}</a>
+                            <a href="{{ route('contact') }}">{{ __('nav.contact') }}</a>
                         </li>
                         <li class="dropdown">
                             <a>{{ __('nav.language') }}</a>
