@@ -20,13 +20,13 @@
 @endsection
 @section('content')
     <div class="body-page">
-        <section class="page-title" style="background-image: url({{ asset('huaxia/images/background/2.jpg') }});">
+        <section class="page-title" style="background-image: url({{ asset('huaxia/images/background/2.jpg') }})">
             <div class="auto-container">
                 <div class="title-outer">
-                    <h1 class="title">Tin Tức</h1>
+                    <h1 class="title">{{ __('post.page_title') }}</h1>
                     <ul class="page-breadcrumb">
-                        <li><a href="{{ route('home') }}">Trang chủ</a></li>
-                        <li>Tin tức</li>
+                        <li><a href="{{ route('home') }}">{{ __('post.page_title_breadcrumb_1') }}</a></li>
+                        <li>{{ __('post.page_title_breadcrumb_2') }}</li>
                     </ul>
                 </div>
             </div>
