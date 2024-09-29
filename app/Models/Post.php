@@ -16,14 +16,19 @@ class Post extends Model
     {
         return '/tin-tuc/' . $this->slug;
     }
-    public function scopeActive($query)
+    public function scopeActive($query, $lang)
     {
-        $query->where('status', Post::STATUS_ACTIVE);
+        $query->where('status', Post::STATUS_ACTIVE)->where('lang', $lang);
     }
 
     public function scopeIsPromotion($query)
     {
         $query->where('is_promotion', Post::STATUS_ACTIVE);
+    }
+
+    public function Language()
+    {
+        return $this->hasOne(PostLanguage::class);
     }
 
     public function comments()
@@ -50,7 +55,7 @@ class Post extends Model
     {
         return $this->belongsToMany(Category::class)->withTimestamps();
     }
-    
+
     public static function boot()
     {
         parent::boot();
