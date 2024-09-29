@@ -35,68 +35,32 @@
         <section class="news-section">
             <div class="auto-container">
                 <div class="row">
-
-                    <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><a href="news-details.html"><img src="{{ asset('huaxia/images/resource/news-2.jpg') }}"
-                                            alt></a></figure>
-                                <span class="date"><b>28</b>T9</span>
-                            </div>
-                            <div class="lower-content">
-                                <ul class="post-info">
-                                    <li><i class="fa fa-user"></i>Bởi Admin</li>
-                                    <li><i class="fa fa-comments"></i> 2 Bình luận</li>
-                                </ul>
-                                <h4 class="title">
-                                    <a href="news-details.html">
-                                    Chúng tôi rất cẩn thận khi xử lý hàng hóa có giá trị
-                                    </a>
-                                </h4>
-                                <a href="news-details.html" class="read-more">Đọc thêm<i
-                                        class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><a href="news-details.html"><img src="{{ asset('huaxia/images/resource/news-2.jpg') }}"
-                                            alt></a></figure>
-                                <span class="date"><b>28</b>T9</span>
-                            </div>
-                            <div class="lower-content">
-                                <ul class="post-info">
-                                    <li><i class="fa fa-user"></i>Bởi Admin</li>
-                                    <li><i class="fa fa-comments"></i> 2 Bình luận</li>
-                                </ul>
-                                <h4 class="title"><a href="news-details.html">Dòng chảy hàng hóa thông qua chuỗi cung ứng tốt hơn ở Anh</a>
-                                </h4>
-                                <a href="news-details.html" class="read-more">Đọc thêm<i
-                                        class="fa fa-angle-right"></i></a>
+                    @foreach ($posts as $post)
+                        <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                            <div class="inner-box">
+                                <div class="image-box">
+                                    <figure class="image"><a href="{{ route('post.detail', ['alias' => $post->slug]) }}"><img
+                                                src="{{ asset($post->images->first()->url) }}" alt></a></figure>
+                                    <span class="date">
+                                        <b>{{ \Carbon\Carbon::parse($post->created_at)->format('d') }}</b>
+                                        T{{ \Carbon\Carbon::parse($post->created_at)->format('n') }}
+                                    </span>
+                                </div>
+                                <div class="lower-content">
+                                    <ul class="post-info">
+                                        <li><i class="fa fa-user"></i>Bởi Admin</li>
+                                    </ul>
+                                    <h4 class="title">
+                                        <a href="{{ route('post.detail', ['alias' => $post->slug]) }}">
+                                            {{ $post->title }}
+                                        </a>
+                                    </h4>
+                                    <a href="{{ route('post.detail', ['alias' => $post->slug]) }}" class="read-more">Đọc thêm<i
+                                            class="fa fa-angle-right"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><a href="news-details.html"><img src="{{ asset('huaxia/images/resource/news-3.jpg') }}"
-                                            alt></a></figure>
-                                <span class="date"><b>28</b>T9</span>
-                            </div>
-                            <div class="lower-content">
-                                <ul class="post-info">
-                                    <li><i class="fa fa-user"></i>Bởi Admin</li>
-                                    <li><i class="fa fa-comments"></i>2 Bình luận</li>
-                                </ul>
-                                <h4 class="title"><a href="news-details.html">Tại sao khả năng hiển thị chuỗi cung ứng lại quan trọng?</a></h4>
-                                <a href="news-details.html" class="read-more">Đọc thêm<i
-                                        class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
