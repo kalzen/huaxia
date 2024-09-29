@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
-// use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\PostController as AdminPostController;
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\Admin\CategoryController;
@@ -46,9 +46,9 @@ Route::middleware(['LocalizationMiddleware'])->group(function () {
     // Route::get('/danh-muc/{alias}', [ProductController::class, 'catalogue'])->name('product.catalogue');
     // Route::get('/tin-tuc', [PostController::class, 'index'])->name('post.list');
     Route::get('/tuc-tin', [PostController::class, 'index'])->name('post.list');
+    Route::get('/tin-tuc/{alias}', [PostController::class, 'detail'])->name('post.detail');
     Route::get('/danh-muc-tin-tuc/{alias}', [PostController::class, 'category'])->name('post.category');
     Route::get('/tim-kiem-tin-tuc', [PostController::class, 'search'])->name('post.search');
-    Route::get('/tin-tuc/{alias}', [PostController::class, 'detail'])->name('post.detail');
 });
 
 Route::get('/language/{locale}', [LocaleController::class, 'SetLocale'])->name('language');
@@ -73,7 +73,7 @@ Route::middleware(['auth'])->name('admin.')->prefix('admin')->group(function () 
     //Attribute
     Route::resource('attribute', AttributeController::class);
     //Post
-    Route::resource('post', PostController::class);
+    Route::resource('post', AdminPostController::class);
     //Message
     Route::resource('message', MessageController::class);
     //Testimonial
@@ -83,6 +83,8 @@ Route::middleware(['auth'])->name('admin.')->prefix('admin')->group(function () 
     //Attribute
     Route::resource('attribute', AttributeController::class);
     Route::prefix('post')->name('post.')->group(function () {
+        Route::get('', [AdminPostController::class, 'index'])->name('index');
+        Route::post('store-post', [AdminPostController::class, 'store'])->name('store');
         Route::post('category', [PostController::class, 'category'])->name('category');
     });
     //Product
