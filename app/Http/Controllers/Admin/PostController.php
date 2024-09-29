@@ -8,9 +8,10 @@ use App\Http\Requests\SubmitPostRequest;
 use App\Models\Post;
 use App\Models\Tag;
 use App\Models\Category;
+use Exception;
 use Illuminate\Support\Facades\Validator;
 use Log;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Sunra\PhpSimple\HtmlDomParser;
 use Illuminate\Support\Str;
 
@@ -37,7 +38,7 @@ class PostController extends Controller
         ]);
  
         if ($validator->fails()) {
-            return response()->json($validator->messages(), 422);
+            return response()->json($validator->errors(), 422);
         }
         $created = Category::create($validator->validated());
         return view('admin.shared.select-category',[
