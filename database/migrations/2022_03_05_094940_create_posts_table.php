@@ -19,10 +19,11 @@ class CreatePostsTable extends Migration
             $table->text('title')->nullable()->default(null);
             $table->text('slug')->nullable()->default(null);
             $table->text('description')->nullable()->default(null);
-            $table->longtext('content')->nullable()->default(null);
+            $table->longText('content')->nullable()->default(null);
             $table->unsignedInteger('user_id')->nullable()->default(null);
             $table->unsignedInteger('status')->nullable()->default(Post::STATUS_ACTIVE);
             $table->unsignedInteger('is_promotion')->nullable()->default(Post::STATUS_INACTIVE);
+            $table->text('keyword')->nullable()->default(null);
             $table->unsignedBigInteger('viewed')->nullable()->default(null);
             $table->string('lang')->default('vi');
             $table->softDeletes();
