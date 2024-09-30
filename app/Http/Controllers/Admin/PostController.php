@@ -8,6 +8,7 @@ use App\Http\Requests\SubmitPostRequest;
 use App\Models\Post;
 use App\Models\Tag;
 use App\Models\Category;
+use App\Models\PostLanguage;
 use Exception;
 use Illuminate\Support\Facades\Validator;
 use Log;
@@ -19,57 +20,79 @@ class PostController extends Controller
 {
     public function index(Request $request)
     {
-        $query = Post::latest();
-        $records = $query->paginate();
-        return view('admin.post.index',compact('records'));
+        $records = Post::where('lang', 'vi')
+            ->with([
+                'categories',
+                'tags',
+                'images',
+                'Language'
+            ])
+            ->paginate();
+        return view('admin.post.index', compact('records'));
     }
-    
-    public function create()
+
+    public function create($post = null, $lang = null, $title = null)
     {
-        $categories = Category::query()->whereNull('parent_id')->orderBy('name','asc')->get();
-        return view('admin.post.form',compact('categories'));
+        $categories = Category::query()->whereNull('parent_id')->orderBy('name', 'asc')->get();
+        return view('admin.post.form', compact('categories', 'post', 'lang', 'title'));
     }
-    
+
     public function category(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|max:255',
             'parent_id' => 'nullable|integer'
         ]);
- 
+
         if ($validator->fails()) {
             return response()->json($validator->errors(), 422);
         }
         $created = Category::create($validator->validated());
-        return view('admin.shared.select-category',[
-            'categories'=>Category::query()->whereNull('parent_id')->orderBy('name','asc')->get()
+        return view('admin.shared.select-category', [
+            'categories' => Category::query()->whereNull('parent_id')->orderBy('name', 'asc')->get()
         ]);
     }
-    
-    public function store(SubmitPostRequest $request)
+
+    public function store(SubmitPostRequest $request, $postId = null, $lang = null)
     {
         DB::beginTransaction();
         try {
-            $post = Post::create($request->only(['title','description','content','status','is_promotion','keyword']));
+            $post = $postId ?
+                Post::create([
+                    'title' => $request->title,
+                    'description' => $request->description,
+                    'content' => $request->content,
+                    'status' => $request->status,
+                    'is_promotion' => $request->is_promotion,
+                    'keyword' => $request->keyword,
+                    'lang' => $lang
+                ]) : Post::create($request->only(['title', 'description', 'content', 'status', 'is_promotion', 'keyword']));
+                
             $post->categories()->sync($request->category_id);
-            $post->tags()->sync(collect(explode(', ',$request->tags))->map(function($item){return Tag::updateOrCreate(['name'=>$item]);})->pluck('id'));
+            $post->tags()->sync(collect(explode(', ', $request->tags))->map(function ($item) {
+                return Tag::updateOrCreate(['name' => $item]);
+            })->pluck('id'));
             $post->images()->create(['url' => $request->image]);
+
+            if ($postId != null) {
+                $postLanguage = PostLanguage::find($postId);
+                $postLanguage->update([$lang => $post->id]);
+                $postLanguage->save();
+            }
+
             DB::commit();
             return redirect()->route('admin.post.index')->with('message', 'Thêm mới thành công');
-        } catch(Exception $ex) {
+        } catch (Exception $ex) {
             DB::rollback();
             return back()->withInput();
         }
     }
-    
-    public function show($id)
-    {
-        
-    }
-    
+
+    public function show($id) {}
+
     public function edit($id)
     {
-        $categories = Category::query()->whereNull('parent_id')->orderBy('name','asc')->get();
+        $categories = Category::query()->whereNull('parent_id')->orderBy('name', 'asc')->get();
         $record = Post::find($id);
         $document = new \DOMDocument();
         $document->loadHTML($record->content);
@@ -82,84 +105,68 @@ class PostController extends Controller
         $success = '';
         $words = Str::of(strip_tags($record->content))->wordCount();
         //dd($words);
-        if ($words < 300)
-        {
-            $issue= $issue.'<li class=""><b>Độ dài văn bản:</b> Văn bản chứa '.$words.' từ. Số lượng từ quá ít so với mức tối thiểu 300 từ. Hãy thêm nội dung.</li>';
+        if ($words < 300) {
+            $issue = $issue . '<li class=""><b>Độ dài văn bản:</b> Văn bản chứa ' . $words . ' từ. Số lượng từ quá ít so với mức tối thiểu 300 từ. Hãy thêm nội dung.</li>';
+        } else {
+            $success = $success . '<li><b>Độ dài văn bản:</b> Văn bản chứa ' . $words . ' từ. Rất tốt!</li>';
         }
-        else
-        {
-            $success=$success.'<li><b>Độ dài văn bản:</b> Văn bản chứa '.$words.' từ. Rất tốt!</li>';
-        }
-        foreach ($img as $image)
-        {
-            if (!$image->getAttribute('alt'))
-            {
+        foreach ($img as $image) {
+
+            if (!$image->getAttribute('alt')) {
                 $alt = 0;
             }
         }
-        if ($alt)
-        {
-            $success=$success.'<li><b>Thuộc tính alt của các Ảnh:</b> Rất tốt!</li>';
+        if ($alt) {
+            $success = $success . '<li><b>Thuộc tính alt của các Ảnh:</b> Rất tốt!</li>';
+        } else {
+            $issue = $issue . '<li><b>Thuộc tính alt của các Ảnh:</b> Còn ảnh chưa có thẻ alt! Cần bổ sung</li>';
         }
-        else
-        {
-             $issue= $issue.'<li><b>Thuộc tính alt của các Ảnh:</b> Còn ảnh chưa có thẻ alt! Cần bổ sung</li>';
-        }
-        foreach ($a as $link)
-        {
-            if (strpos($link->getAttribute('href'),'hocvienielts.edu.vn'))
-            {
+        foreach ($a as $link) {
+            if (strpos($link->getAttribute('href'), 'hocvienielts.edu.vn')) {
                 $inlinks = 1;
-            }
-            else 
-            {
+            } else {
                 $outlinks = 1;
             }
         }
-        if ($inlinks)
-        {
-            $success=$success.'<li><b>Các đường dẫn nội bộ:</b> Bạn đã có đủ các đường dẫn nội bộ. Rất tốt!</li>';
+        if ($inlinks) {
+            $success = $success . '<li><b>Các đường dẫn nội bộ:</b> Bạn đã có đủ các đường dẫn nội bộ. Rất tốt!</li>';
+        } else {
+            $issue = $issue . '<li class="issue_internallinks"><b>Các đường dẫn nội bộ:</b> Cần thêm link nội bộ tới chính trang của bạn!</li>';
         }
-        else
-        {
-            $issue= $issue.'<li class="issue_internallinks"><b>Các đường dẫn nội bộ:</b> Cần thêm link nội bộ tới chính trang của bạn!</li>';
+        if ($outlinks) {
+            $success = $success . '<li class="issue_outlinks"><b>Các đường dẫn ra ngoài trang:</b> Rất tốt!</li>';
+        } else {
+            $issue = $issue . '<li class="issue_outlinks"><b>Các đường dẫn ra ngoài trang:</b> Cần thêm link dẫn tới trang ngoài!</li>';
         }
-        if ($outlinks)
-        {
-            $success=$success. '<li class="issue_outlinks"><b>Các đường dẫn ra ngoài trang:</b> Rất tốt!</li>';
-        }
-        else
-        {
-            $issue=$issue.'<li class="issue_outlinks"><b>Các đường dẫn ra ngoài trang:</b> Cần thêm link dẫn tới trang ngoài!</li>';
-        }
-       // $dom = HtmlDomParser::str_get_html($record->content);
+        // $dom = HtmlDomParser::str_get_html($record->content);
         //check inlinks
-       // $content = $record->content;
-        
-        return view('admin.post.form',compact('categories','record', 'success', 'issue'));
+        // $content = $record->content;
+
+        return view('admin.post.form', compact('categories', 'record', 'success', 'issue'));
     }
-    
+
     public function update(SubmitPostRequest $request, $id)
     {
         DB::beginTransaction();
         try {
             $post = Post::find($id);
-            $post->update($request->only(['title','description','content','status','is_promotion','keyword']));
+            $post->update($request->only(['title', 'description', 'content', 'status', 'is_promotion', 'keyword']));
             $post->categories()->sync($request->category_id);
-            $post->tags()->sync(collect(explode(', ',$request->tags))->map(function($item){return Tag::updateOrCreate(['name'=>$item]);})->pluck('id'));
+            $post->tags()->sync(collect(explode(', ', $request->tags))->map(function ($item) {
+                return Tag::updateOrCreate(['name' => $item]);
+            })->pluck('id'));
             $post->images()->first()->update(['url' => $request->image]);
             DB::commit();
             return redirect()->route('admin.post.index')->with('message', 'Cập nhật thành công');
-        }catch(Exception $ex) {
+        } catch (Exception $ex) {
             DB::rollback();
             return back()->withInput();
         }
     }
-    
+
     public function destroy($id)
     {
         Post::find($id)->delete();
-        return response()->json(['success'=>true,'message'=>'Xóa thành công']);
+        return response()->json(['success' => true, 'message' => 'Xóa thành công']);
     }
-    
 }
