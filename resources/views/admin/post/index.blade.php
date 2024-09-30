@@ -5,6 +5,9 @@
             @include('admin.partials.message')
             <a class="btn mb-2 btn-success" href="{{ route('admin.post.create') }}"><i class="icon-plus-circle2"></i> Viết bài
                 mới</a>
+            <div class="mt-2">
+                {{ $records }}
+            </div>
             @if (count($records))
                 <div class="card card-table table-responsive shadow-0 mb-0">
                     <table class="table table-bordered">
@@ -18,15 +21,16 @@
                                 <th>Thời gian</th>
                                 <th>Lượt xem</th>
                                 <th>Trạng thái</th>
-                                <th></th>
+                                <th style="max-width: 10px">Ngôn ngữ</th>
+                                <th>Hành động</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($records as $record)
                                 <tr>
                                     <td>
-                                        <input type="checkbox" name="ids[]" value="{{ $record->id }}"
-                                            class="form-input-styled">
+                                        <input type="checkbox" name="ids[]"
+                                            value="{{ $record->id }}"class="form-input-styled">
                                     </td>
                                     <td>
                                         @if ($record->images->count())
@@ -58,6 +62,13 @@
                                             <span class="badge bg-secondary">Ẩn</span>
                                         @endif
                                     </td>
+                                    <td class="text-center">
+                                        <a
+                                            href="{{ $record->language->vi ? route('admin.post.edit', $record->language->vi) : route('admin.post.lang', [$record->language->id, 'en', $record->title]) }}">Việt</a>
+                                        -
+                                        <a
+                                            href="{{ $record->language->en ? route('admin.post.edit', $record->language->en) : route('admin.post.lang', [$record->language->id, 'en', $record->title]) }}">Anh</a>
+                                    </td>
                                     <td>
                                         <a href="javascript:;" class="js-delete text-danger" data-key="{{ $record->id }}"
                                             title="Xóa"><i class="icon-trash"></i></a>
@@ -66,9 +77,6 @@
                             @endforeach
                         </tbody>
                     </table>
-                </div>
-                <div class="mt-2">
-                    {{ $records->links() }}
                 </div>
             @else
                 <div class="text-center p-5">
