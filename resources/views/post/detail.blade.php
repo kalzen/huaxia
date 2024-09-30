@@ -70,7 +70,7 @@
                     <div class="sidebar">
                         <div class="sidebar__single sidebar__search">
                             <form action="#" class="sidebar__search-form">
-                                <input type="search" placeholder="{{ __('postDetail.search_placeholderw') }}">
+                                <input type="search" placeholder="{{ __('postDetail.search_placeholder') }}">
                                 <button type="submit"><i class="lnr-icon-search"></i></button>
                             </form>
                         </div>
