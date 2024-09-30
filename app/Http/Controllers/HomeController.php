@@ -21,15 +21,15 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $slides = Slide::orderBy('ordering', 'asc')->paginate();
-        $testimonials = Testimonial::All();
-        $teams = Team::All();
-        $posts = Post::latest()->withCount(['images'])->having('images_count', '>', 0)->active()->take(5)->get();
+        // $slides = Slide::orderBy('ordering', 'asc')->paginate();
+        // $testimonials = Testimonial::All();
+        // $teams = Team::All();
+        // $posts = Post::latest()->withCount(['images'])->having('images_count', '>', 0)->active()->take(5)->get();
 
         $services = Post::whereHas('categories', function ($query) {
             $query->where('category_post.category_id', 2);
         })->get();
-        return view('home.index', ['posts' => $posts, 'testimonials' => $testimonials, 'teams' => $teams, 'services' => $services]);
+        return view('home.index', ['services' => $services]);
     }
     public function order()
     {
