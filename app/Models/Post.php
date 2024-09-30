@@ -28,7 +28,7 @@ class Post extends Model
 
     public function Language()
     {
-        return $this->hasOne(PostLanguage::class);
+        return $this->hasOne(PostLanguage::class, 'vi');
     }
 
     public function comments()
