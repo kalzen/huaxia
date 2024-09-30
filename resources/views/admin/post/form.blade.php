@@ -3,8 +3,10 @@
     @if (isset($record))
         <form method="POST" action="{{ route('admin.post.update', $record->id) }}">
             @method('PUT')
-        @else
+        @elseif ($lang == null)
             <form method="POST" action="{{ route('admin.post.store') }}">
+            @else
+                <form method="POST" action="{{ route('admin.post.store-lang', [$post, $lang]) }}">
     @endif
     @csrf
     <div class="content">
@@ -41,8 +43,8 @@
                                 <img class="mt-2" id="image_preview" height="100"
                                     src="{{ $record->images->first()->url ?? '' }}" />
                             @else
-                                <input type="hidden" name="image" value="{{ asset('hocvienielts/images/no-image.jpg') }}"
-                                    id="image">
+                                <input type="hidden" name="image"
+                                    value="{{ asset('hocvienielts/images/no-image.jpg') }}" id="image">
                                 <img class="mt-2" id="image_preview" style="display:none;" height="100" />
                             @endif
                             @error('image')
@@ -87,10 +89,10 @@
                                         khoá</li>
                                     {!! $issue ?? '' !!}
                                     <!--  <li class="issue_internallinks"><b>Các đường dẫn nội bộ:</b> Cần thêm link nội bộ tới chính trang của bạn!</li>
-                                <li class="issue_outlinks"><b>Các đường dẫn ra ngoài trang:</b> Cần thêm link dẫn tới trang ngoài!</li>
-                                <li class="issue_images"><b>Thuộc tính alt của các ảnh:</b> Ảnh chưa có thuộc tính alt!</li>
-                                <li class="issue_words"><b>Độ dài của văn bản:</b> </li>
-                                <li class="issue_heading"><b>Độ rộng của tiêu đề SEO:</b> </li> -->
+                                                                                                                    <li class="issue_outlinks"><b>Các đường dẫn ra ngoài trang:</b> Cần thêm link dẫn tới trang ngoài!</li>
+                                                                                                                    <li class="issue_images"><b>Thuộc tính alt của các ảnh:</b> Ảnh chưa có thuộc tính alt!</li>
+                                                                                                                    <li class="issue_words"><b>Độ dài của văn bản:</b> </li>
+                                                                                                                    <li class="issue_heading"><b>Độ rộng của tiêu đề SEO:</b> </li> -->
                                 </ul>
                             </div>
                             <div id="success_seo">
@@ -100,10 +102,10 @@
                                 <li class=""><b>Độ dài mô tả meta:</b> Rất tốt!</li>
                                 {!! $success ?? '' !!}
                                 <!--  <li class="success_internallinks"><b>Các đường dẫn nội bộ:</b> Bạn đã có đủ các đường dẫn nội bộ. Rất tốt!</li>
-                                <li class="success_outlinks"><b>Các đường dẫn ra ngoài trang:</b> Rất tốt!</li>
-                                <li class="success_images"><b>Thuộc tính alt của các ảnh:</b> Rất tốt!</li>
-                                <li class="success_words"><b>Độ dài của văn bản:</b> </li>
-                                <li class="success_heading"><b>Độ rộng của tiêu đề SEO:</b> Rất tốt</li> -->
+                                                                                                                    <li class="success_outlinks"><b>Các đường dẫn ra ngoài trang:</b> Rất tốt!</li>
+                                                                                                                    <li class="success_images"><b>Thuộc tính alt của các ảnh:</b> Rất tốt!</li>
+                                                                                                                    <li class="success_words"><b>Độ dài của văn bản:</b> </li>
+                                                                                                                    <li class="success_heading"><b>Độ rộng của tiêu đề SEO:</b> Rất tốt</li> -->
                             </div>
                         </div>
                         <div class="text-right">
@@ -173,6 +175,15 @@
                             </button>
                         </div>
                     </div>
+
+                    @if (isset($lang))
+                        <div class="card">
+                            <div class="card-body" id="select_language">
+                                Bạn đang viết <b>{{ convertLanguageCode($lang) }}</b> cho bài viết
+                                <b>{{ $title }}</b>
+                            </div>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
