@@ -85,7 +85,9 @@ Route::middleware(['auth'])->name('admin.')->prefix('admin')->group(function () 
     Route::prefix('post')->name('post.')->group(function () {
         Route::get('', [AdminPostController::class, 'index'])->name('index');
         Route::post('store-post', [AdminPostController::class, 'store'])->name('store');
-        Route::post('category', [PostController::class, 'category'])->name('category');
+        Route::post('store-post-lang/{post}/{lang}', [AdminPostController::class, 'store'])->name('store-lang');
+        Route::post('category', [AdminPostController::class, 'category'])->name('category');
+        Route::get('create-post-lang/{post}/{lang}/{title}', [AdminPostController::class, 'create'])->name('lang');
     });
     //Product
     Route::resource('product', ProductController::class);
