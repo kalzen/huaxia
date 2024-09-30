@@ -132,6 +132,29 @@ class DatabaseSeeder extends Seeder
         $secondPost->tags()->sync([1]);
         $secondPost->images()->create(['url' => '/userfiles/files/thaylam.jpg']);
 
+        $thirdPost = Post::create([
+            'title' => 'Bài viết thứ ba',
+            'slug' => 'bai-viet-thu-ba',
+            'description' => 'Mô tả bài viết thứ ba',
+            'content' => '<p>Nội dung bài viết thứ 3</p>',
+            'user_id' => 1,
+            'status' => 1,
+            'is_promotion' => 1,
+            'keyword' => 'Bài viết thứ ba',
+            'lang' => 'vi',
+            'viewed' => 150,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        $thirdPost->categories()->sync(1);
+        $thirdPost->tags()->sync([1]);
+        $thirdPost->images()->create(['url' => '/userfiles/files/thaylam.jpg']);
+
+        $thirdPost->categories()->sync(1);
+        $thirdPost->tags()->sync([1]);
+        $thirdPost->images()->create(['url' => '/userfiles/files/thaylam.jpg']);
+
         PostLanguage::create([
             'vi' => 1,
             'en' => 2,
@@ -140,6 +163,11 @@ class DatabaseSeeder extends Seeder
         PostLanguage::create([
             'vi' => 3,
             'en' => 4,
+        ]);
+
+        PostLanguage::create([
+            'vi' => 5,
+            'en' => null,
         ]);
     }
 }
