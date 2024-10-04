@@ -10,6 +10,14 @@
     @endif
     @csrf
     <div class="content">
+        @if (isset($lang))
+        <div class="card">
+            <div class="card-body" id="select_language">
+                Bạn đang viết <b>{{ convertLanguageCode($lang) }}</b> cho bài viết
+                <b>{{ $title }}</b>
+            </div>
+        </div>
+    @endif
         <div class="d-flex align-items-start flex-column flex-md-row">
             <div class="w-100 overflow-auto order-2 order-md-1">
                 <div class="card">
@@ -175,15 +183,6 @@
                             </button>
                         </div>
                     </div>
-
-                    @if (isset($lang))
-                        <div class="card">
-                            <div class="card-body" id="select_language">
-                                Bạn đang viết <b>{{ convertLanguageCode($lang) }}</b> cho bài viết
-                                <b>{{ $title }}</b>
-                            </div>
-                        </div>
-                    @endif
                 </div>
             </div>
         </div>
