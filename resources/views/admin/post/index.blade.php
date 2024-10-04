@@ -21,7 +21,8 @@
                                 <th>Thời gian</th>
                                 <th>Lượt xem</th>
                                 <th>Trạng thái</th>
-                                <th style="max-width: 10px">Ngôn ngữ</th>
+                                <th>Tiếng Việt</th>
+                                <th>Tiếng Anh</th>
                                 <th>Hành động</th>
                             </tr>
                         </thead>
@@ -62,12 +63,30 @@
                                             <span class="badge bg-secondary">Ẩn</span>
                                         @endif
                                     </td>
-                                    <td class="text-center">
+                                    {{-- <td class="text-center">
                                         <a
                                             href="{{ $record->language->vi ? route('admin.post.edit', $record->language->vi) : route('admin.post.lang', [$record->language->id, 'en', $record->title]) }}">Việt</a>
                                         -
                                         <a
                                             href="{{ $record->language->en ? route('admin.post.edit', $record->language->en) : route('admin.post.lang', [$record->language->id, 'en', $record->title]) }}">Anh</a>
+                                    </td> --}}
+                                    <td class="text-center">
+                                        @if ($record->language->vi)
+                                            <a class="btn btn-success"
+                                                href="{{ route('admin.post.edit', $record->language->vi) }}">Sửa</a>
+                                        @else
+                                            <a class="btn btn-success"
+                                                href="{{ route('admin.post.lang', [$record->language->id, 'vi', $record->title]) }}">Thêm</a>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if ($record->language->en)
+                                            <a class="btn btn-success"
+                                                href="{{ route('admin.post.edit', $record->language->en) }}">Sửa</a>
+                                        @else
+                                            <a class="btn btn-success"
+                                                href="{{ route('admin.post.lang', [$record->language->id, 'en', $record->title]) }}">Thêm</a>
+                                        @endif
                                     </td>
                                     <td>
                                         <a href="javascript:;" class="js-delete text-danger" data-key="{{ $record->id }}"
