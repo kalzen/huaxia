@@ -63,29 +63,22 @@
                                             <span class="badge bg-secondary">Ẩn</span>
                                         @endif
                                     </td>
-                                    {{-- <td class="text-center">
-                                        <a
-                                            href="{{ $record->language->vi ? route('admin.post.edit', $record->language->vi) : route('admin.post.lang', [$record->language->id, 'en', $record->title]) }}">Việt</a>
-                                        -
-                                        <a
-                                            href="{{ $record->language->en ? route('admin.post.edit', $record->language->en) : route('admin.post.lang', [$record->language->id, 'en', $record->title]) }}">Anh</a>
-                                    </td> --}}
                                     <td class="text-center">
                                         @if ($record->language->vi)
-                                            <a class="btn btn-success"
-                                                href="{{ route('admin.post.edit', $record->language->vi) }}">Sửa</a>
+                                            <a class="badge bg-success"
+                                                href="{{ route('admin.post.edit', $record->language->vi) }}">Chỉnh sửa</a>
                                         @else
-                                            <a class="btn btn-success"
-                                                href="{{ route('admin.post.lang', [$record->language->id, 'vi', $record->title]) }}">Thêm</a>
+                                            <a class="badge bg-primary"
+                                                href="{{ route('admin.post.lang', [$record->language->id, 'vi', $record->title]) }}">Thêm mới</a>
                                         @endif
                                     </td>
-                                    <td>
+                                    <td class="text-center">
                                         @if ($record->language->en)
-                                            <a class="btn btn-success"
-                                                href="{{ route('admin.post.edit', $record->language->en) }}">Sửa</a>
+                                            <a class="badge bg-success"
+                                                href="{{ route('admin.post.edit', $record->language->en) }}">Chỉnh sửa</a>
                                         @else
-                                            <a class="btn btn-success"
-                                                href="{{ route('admin.post.lang', [$record->language->id, 'en', $record->title]) }}">Thêm</a>
+                                            <a class="badge bg-primary"
+                                                href="{{ route('admin.post.lang', [$record->language->id, 'en', $record->title]) }}">Thêm mới</a>
                                         @endif
                                     </td>
                                     <td>
