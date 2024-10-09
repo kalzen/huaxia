@@ -24,12 +24,20 @@ class PostController extends Controller
     public function detail($alias)
     {
         $lang =  App::getLocale();
-        $post = Post::active()->where('slug', $alias)->firstOrFail();
-        if ($post->lang != $lang && $post->Language == null) {
-            
+        $post = Post::active()->where('slug', $alias)->first();
+        $post_id = 0;
+        $otherLang = $lang == 'vi' ? 'en' : 'vi';
+
+        $languageRelation = 'Language_' . $otherLang;
+
+        if ($post->lang != $lang) {
+            $post_id = $post->$languageRelation->$lang;
         }
 
-        // dd($post->Language);
+        if ($post_id) {
+            $post = Post::active()->where('id', $post_id)->first();
+        }
+
         DB::table('posts')->where('id', $post->id)->increment('viewed');
         $categories = Category::orderBy('name', 'asc')->whereNull('parent_id')->limit(8)->get();
         $most_view = Post::active($lang)->orderBy('id', 'desc')->limit(5)->get();
