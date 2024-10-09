@@ -9,8 +9,8 @@ return [
     "feature_title_2" => "Vận chuyển </br> nhanh chóng",
     "feature_title_3" => "Kho hàng </br> đảm bảo",
 
-    "about_title" => "Chúng tôi cung cấp các dịch vụ vận chuyển </br> trọn gói",
-    "about_description" => "Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam luôn nỗ lực phấn đấu trở thành công ty giao nhận hàng được khách hàng gửi gắm niềm tiên và sự tín nhiệm cao, hỗ trợ kết nối các doanh nghiệp Việt Nam vươn ra thế giới với dịch vụ chat lượng cao, nhân sự chuyên nghiệp, tận tâm, tạo ra giá trị gia tăng, đóng góp tích cực vào sự phát triển của chuỗi cung ứng",
+    "about_title" => "Chúng tôi cung cấp các dịch vụ vận chuyển trọn gói",
+    "about_description" => "Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam tự hào tiên phong trong lĩnh vực logistics và quản lý chuỗi cung ứng tại Việt Nam. Chúng tôi cam kết mang đến giải pháp vận chuyển chất lượng, nhanh chóng và an toàn, kết nối doanh nghiệp Việt Nam với thị trường quốc tế. Hiểu được vai trò quan trọng của tối ưu hóa chuỗi cung ứng trong bối cảnh toàn cầu hóa, Huaxia không ngừng cải tiến quy trình, nâng cao chất lượng dịch vụ và đầu tư vào đội ngũ nhân sự chuyên nghiệp. Chúng tôi cung cấp các dịch vụ đa dạng từ vận chuyển hàng hóa siêu trường, siêu trọng đến nông sản và hàng tiêu dùng, đảm bảo tư vấn giải pháp tối ưu chi phí và thời gian giao nhận, góp phần vào sự phát triển bền vững của khách hàng và nền kinh tế Việt Nam.",
     "about_box_title_1" => "Vận chuyển hàng hoá quốc tế",
     "about_box_description_1" => "Chúng tôi luôn cung cấp cho mọi người một giải pháp hoàn chỉnh tập trung vào bất kỳ doanh nghiệp nào",
     "about_box_title_2" => "Xúc tiến thương mại",
@@ -21,6 +21,16 @@ return [
 
     "service_company" => "Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam",
     "service_title" => "Dịch vụ của chúng tôi",
+    "service" => "Dịch vụ",
+    "service_sub_title_1" => "Dịch vụ Logistics",
+    "service_description_1" => "Vận chuyển hàng hóa quốc tế đa phương thức, giao nhận, kiểm đếm hàng hóa. Thông quan hàng hóa xuất nhập khẩu",
+    "service_sub_title_2" => "Xúc tiến thương mại",
+    "service_description_2" => "Xúc tiến thương mại nhà máy Trung Quốc - Việt Nam. Hỗ trợ doanh nghiệp nước ngoài đầu tư vào Việt Nam",
+    "service_sub_title_3" => "Cung ứng vật tư",
+    "service_description_3" => "Cung ứng vật tư, thiết bị hàng hải Gia công, chế tạo và lắp đặt kết cấu, nhà xưởng",
+    "service_sub_title_4" => "Quản lý nguồn nhân lực",
+    "service_description_4" => "Tư vấn xây dựng hệ thống quản lý và cung ứng nguồn nhân lực chất lượng cao",
+
 
     "tracking_tool_tip" => "File sẽ được gửi trong vài giây",
     "tracking_title" => "Nhận profile </br> công ty",
