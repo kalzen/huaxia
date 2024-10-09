@@ -423,30 +423,34 @@
 
                 <div class="form-column col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-column">
-
                         <div class="contact-form wow fadeInLeft">
-
-                            <form method="post" action="#" id="contact-form">
+                            @if (@session('message'))
+                                <div class="alert alert-success">
+                                    {{ session('message') }}
+                                </div>
+                            @endif
+                            <form method="post" action="{{ route('message') }}" id="contact-form">
+                                @csrf
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                         <label>{{ __('home.why_choose_us_form_1') }}</label>
-                                        <input type="text" name="full_name"
+                                        <input type="text" name="name"
                                             placeholder="{{ __('home.why_choose_us_form_placeholder_1') }}" required />
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                         <label>{{ __('home.why_choose_us_form_2') }}:</label>
-                                        <input type="text" name="Email"
+                                        <input type="text" name="email"
                                             placeholder="{{ __('home.why_choose_us_form_placeholder_2') }}" required />
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                         <label>{{ __('home.why_choose_us_form_3') }}:</label>
-                                        <input type="text" name="Phone"
+                                        <input type="text" name="mobile"
                                             placeholder="{{ __('home.why_choose_us_form_placeholder_3') }}" required />
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                     <label>{{ __('home.why_choose_us_form_4') }}</label>
-                                    <select class="custom-select">
+                                    <select class="custom-select" name="service">
                                         <option value selected disabled required>
                                             {{ __('home.why_choose_us_form_select') }}
                                         </option>
@@ -458,14 +462,14 @@
                                     </select>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                    <button class="theme-btn btn-style-two hvr-light" type="submit"
-                                        name="submit-form"><span class="btn-title">
+                                    <button class="theme-btn btn-style-two hvr-light" type="submit">
+                                        <span class="btn-title">
                                             {{ __('home.why_choose_us_button') }}
                                         </span>
                                     </button>
                                 </div>
+                            </form>
                         </div>
-                        </form>
                     </div>
 
                 </div>
