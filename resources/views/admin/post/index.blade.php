@@ -64,21 +64,21 @@
                                         @endif
                                     </td>
                                     <td class="text-center">
-                                        @if ($record->language->vi)
+                                        @if ($record->language_vi->vi)
                                             <a class="badge bg-success"
-                                                href="{{ route('admin.post.edit', $record->language->vi) }}">Chỉnh sửa</a>
+                                                href="{{ route('admin.post.edit', $record->language_vi->vi) }}">Chỉnh sửa</a>
                                         @else
                                             <a class="badge bg-primary"
-                                                href="{{ route('admin.post.lang', [$record->language->id, 'vi', $record->title]) }}">Thêm mới</a>
+                                                href="{{ route('admin.post.lang', [$record->language_vi->id, 'vi', $record->title]) }}">Thêm mới</a>
                                         @endif
                                     </td>
                                     <td class="text-center">
-                                        @if ($record->language->en)
+                                        @if ($record->language_vi->en)
                                             <a class="badge bg-success"
-                                                href="{{ route('admin.post.edit', $record->language->en) }}">Chỉnh sửa</a>
+                                                href="{{ route('admin.post.edit', $record->language_vi->en) }}">Chỉnh sửa</a>
                                         @else
                                             <a class="badge bg-primary"
-                                                href="{{ route('admin.post.lang', [$record->language->id, 'en', $record->title]) }}">Thêm mới</a>
+                                                href="{{ route('admin.post.lang', [$record->language_vi->id, 'en', $record->title]) }}">Thêm mới</a>
                                         @endif
                                     </td>
                                     <td>
