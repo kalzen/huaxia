@@ -27,9 +27,9 @@
                         <div class="inner-column">
                             <div class="sec-title">
                                 <span class="sub-title">{{ __('home.company_name_upper') }}</span>
-                                <h2>{!! __('home.about_title') !!}</h2>
+                                <h2>{!! __('about.title') !!}</h2>
                                 <div class="text">
-                                    {{ __('home.about_description') }}
+                                    {!! __('about.description') !!}
                                 </div>
                             </div>
                             <div class="content-box">
