@@ -58,10 +58,9 @@ class HomeController extends Controller
         if (request()->isMethod('post')) {
             Message::create([
                 'name' => request('name'),
-                'mobile' => request('mobile'),
                 'email' => request('email'),
-                'target' => request('target'),
-                'content' => request('content')
+                'mobile' => request('mobile'),
+                'content' => request('service')
             ]);
             return redirect()->back()->with('message', 'Cảm ơn bạn đã liên hệ. Chúng tôi sẽ liên lạc với bạn ngay!');
         }
