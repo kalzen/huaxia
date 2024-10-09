@@ -36,6 +36,7 @@ Auth::routes();
 
 Route::middleware(['LocalizationMiddleware'])->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('index');
+    Route::post('/message', [HomeController::class, 'contact'])->name('message');
     Route::get('/logout', [HomeController::class, 'logout'])->name('logout');
     // Route::get('/tu-van', [HomeController::class, 'advise'])->name('advise');
     Route::any('/gioi-thieu', [HomeController::class, 'about'])->name('about');
