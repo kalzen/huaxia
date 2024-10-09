@@ -30,9 +30,14 @@ class Post extends Model
         $query->where('is_promotion', Post::STATUS_ACTIVE);
     }
 
-    public function Language()
+    public function Language_vi()
     {
         return $this->hasOne(PostLanguage::class, 'vi');
+    }
+
+    public function Language_en()
+    {
+        return $this->hasOne(PostLanguage::class, 'en');
     }
 
     public function comments()
