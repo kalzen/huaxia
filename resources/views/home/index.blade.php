@@ -548,69 +548,33 @@
                 </h2>
             </div>
             <div class="row">
-
-                <div class="news-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <a href="news-details.html"><img src="{{ asset('huaxia/images/resource/news-1.jpg') }}"
-                                        alt /></a>
-                            </figure>
-                            <span class="date"><b>28</b> SEP</span>
-                        </div>
-                        <div class="lower-content">
-                            <ul class="post-info">
-                                <li><i class="fa fa-user"></i> by Admin</li>
-                                <li><i class="fa fa-comments"></i> 2 Comments</li>
-                            </ul>
-                            <h4 class="title"><a href="news-details.html">We very careful handling the valuable
-                                    goods</a></h4>
-                            <a href="news-details.html" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="news-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <a href="news-details.html"><img src="{{ asset('huaxia/images/resource/news-2.jpg') }}"
-                                        alt /></a>
-                            </figure>
-                            <span class="date"><b>28</b> SEP</span>
-                        </div>
-                        <div class="lower-content">
-                            <ul class="post-info">
-                                <li><i class="fa fa-user"></i> by Admin</li>
-                                <li><i class="fa fa-comments"></i> 2 Comments</li>
-                            </ul>
-                            <h4 class="title"><a href="news-details.html">Why is supply chain visibility so
-                                    important?</a></h4>
-                            <a href="news-details.html" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
+                @foreach ($posts as $post)
+                    <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <figure class="image"><a
+                                        href="{{ route('post.detail', ['alias' => $post->slug]) }}"><img
+                                            src="{{ asset($post->images->first()->url) }}" alt></a></figure>
+                                <span class="date">
+                                    <b>{{ \Carbon\Carbon::parse($post->created_at)->format('d') }}</b>
+                                    T{{ \Carbon\Carbon::parse($post->created_at)->format('n') }}
+                                </span>
+                            </div>
+                            <div class="lower-content">
+                                <ul class="post-info">
+                                    <li><i class="fa fa-user"></i>Bởi Admin</li>
+                                </ul>
+                                <h4 class="title">
+                                    <a href="{{ route('post.detail', ['alias' => $post->slug]) }}">
+                                        {{ $post->title }}
+                                    </a>
+                                </h4>
+                                <a href="{{ route('post.detail', ['alias' => $post->slug]) }}" class="read-more">Đọc
+                                    thêm<i class="fa fa-angle-right"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="news-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <a href="news-details.html"><img src="{{ asset('huaxia/images/resource/news-3.jpg') }}"
-                                        alt /></a>
-                            </figure>
-                            <span class="date"><b>28</b> SEP</span>
-                        </div>
-                        <div class="lower-content">
-                            <ul class="post-info">
-                                <li><i class="fa fa-user"></i> by Admin</li>
-                                <li><i class="fa fa-comments"></i> 2 Comments</li>
-                            </ul>
-                            <h4 class="title"><a href="news-details.html">Cargo flow through better supply in UK</a>
-                            </h4>
-                            <a href="news-details.html" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
