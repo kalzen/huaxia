@@ -77,7 +77,7 @@ class DatabaseSeeder extends Seeder
 
         $post = Post::create([
             'title' => 'First post',
-            'slug' => 'bai-viet-thu-nhat',
+            'slug' => 'first-post',
             'description' => 'Description of first post',
             'content' => '<p>Content of first post</p>',
             'user_id' => 1,
@@ -115,7 +115,7 @@ class DatabaseSeeder extends Seeder
 
         $secondPost =  Post::create([
             'title' => 'second post',
-            'slug' => 'bai-viet-thu-hai',
+            'slug' => 'second-post',
             'description' => 'description of second post',
             'content' => '<p>content of second post</p>',
             'user_id' => 1,
