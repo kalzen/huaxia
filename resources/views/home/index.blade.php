@@ -195,7 +195,7 @@
                             <span class="sub-title">{{ __('home.company_name_upper') }}</span>
                             <h2>{!! __('home.about_title') !!}</h2>
                             <div class="text">
-                                {{ __('home.about_description') }}
+                                {!! __('home.about_description') !!}
                             </div>
                         </div>
                         <div class="content-box">
@@ -244,28 +244,91 @@
             <div class="sec-title text-center">
                 <span class="sub-title">{{ __('home.service_company') }}</span>
                 <h2>{{ __('home.service_title') }}</h2>
+                <h3>Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam chuyên cung cấp cho khách hàng các dịch vụ vận
+                    chuyển trọn gói như sau:
+                </h3>
             </div>
             <div class="row">
-                @foreach ($services as $service)
-                    <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image">
-                                    <a href="{{ route('post.detail', ['alias' => $service->slug]) }}"><img
-                                            src="{{ $service->images()->first()->url }}" alt /></a>
-                                </figure>
-                            </div>
-                            <div class="content-box">
-                                <i class="icon flaticon-airplane-2"></i>
-                                <span class="sub-title">{{ __('Dịch vụ') }}</span>
-                                <h4 class="title"><a
-                                        href="{{ route('post.detail', ['alias' => $service->slug]) }}">{{ $service->title }}</a>
-                                </h4>
-                                <div class="text">{{ $service->description }}</div>
+                <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image">
+                                <a href=""><img src="{{ asset('huaxia/images/resource/service-1.jpg') }}"
+                                        alt /></a>
+                            </figure>
+                        </div>
+                        <div class="content-box">
+                            <i class="icon flaticon-worldwide-shipping"></i>
+                            <span class="sub-title">{{ __('home.service') }}</span>
+                            <h4 class="title">
+                                <a href="">{{ __('home.service_sub_title_1') }}</a>
+                            </h4>
+                            <div class="text">
+                                {{ __('home.service_description_1') }}
                             </div>
                         </div>
                     </div>
-                @endforeach
+                </div>
+                <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image">
+                                <a href=""><img src="{{ asset('huaxia/images/resource/service-2.jpg') }}"
+                                        alt /></a>
+                            </figure>
+                        </div>
+                        <div class="content-box">
+                            <i class="icon flaticon-airplane-2"></i>
+                            <span class="sub-title">{{ __('home.service') }}</span>
+                            <h4 class="title">
+                                <a href="">{{ __('home.service_sub_title_2') }}</a>
+                            </h4>
+                            <div class="text">
+                                {{ __('home.service_description_2') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image">
+                                <a href=""><img src="{{ asset('huaxia/images/resource/service-3.jpg') }}"
+                                        alt /></a>
+                            </figure>
+                        </div>
+                        <div class="content-box">
+                            <i class="icon flaticon-delivery-box-4"></i>
+                            <span class="sub-title">{{ __('home.service') }}</span>
+                            <h4 class="title">
+                                <a href="">{{ __('home.service_sub_title_3') }}</a>
+                            </h4>
+                            <div class="text">
+                                {{ __('home.service_description_3') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image">
+                                <a href=""><img src="{{ asset('huaxia/images/resource/service-4.jpg') }}"
+                                        alt /></a>
+                            </figure>
+                        </div>
+                        <div class="content-box">
+                            <i class="icon flaticon-3d-cube"></i>
+                            <span class="sub-title">{{ __('home.service') }}</span>
+                            <h4 class="title">
+                                <a href="">{{ __('home.service_sub_title_4') }}</a>
+                            </h4>
+                            <div class="text">
+                                {{ __('home.service_description_4') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -558,6 +621,73 @@
         </div>
     </section>
 
+    <section class>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <ul class="accordion-box wow fadeInRight">
+
+                        <li class="accordion block">
+                            <div class="acc-btn">Tầm Nhìn Của Chúng Tôi
+                                <div class="icon fa fa-plus"></div>
+                            </div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text">
+                                        <b>
+                                            Huaxia phấn đấu trở thành công ty logistics đáng tin cậy, kết nối doanh nghiệp
+                                            Việt Nam với thị trường quốc tế, tập trung vào tạo ra giá trị gia tăng và thúc
+                                            đẩy sự phát triển của chuỗi cung ứng.
+                                        </b> <br>
+                                        Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam luôn không ngừng nỗ lực để phấn
+                                        đấu trở thành công ty giao nhận hàng hóa được khách hàng gửi gắm niềm tin và sự tín
+                                        nhiệm cao nhất trên thị trường. Chúng tôi cam kết cung cấp các dịch vụ chất lượng
+                                        cao, với sự tận tâm và chuyên nghiệp từ đội ngũ nhân sự, luôn chú trọng đến từng chi
+                                        tiết nhỏ nhất trong quá trình phục vụ khách hàng. Huaxia không chỉ đơn thuần là cầu
+                                        nối giữa các doanh nghiệp Việt Nam và thị trường quốc tế mà còn hướng tới mục tiêu
+                                        tạo ra giá trị gia tăng, nâng cao lợi ích cho khách hàng và đối tác. Qua đó, chúng
+                                        tôi mong muốn góp phần quan trọng vào việc thúc đẩy sự phát triển bền vững và toàn
+                                        diện của chuỗi cung ứng, đồng thời nâng tầm vị thế của các doanh nghiệp Việt Nam
+                                        trong quá trình hội nhập kinh tế toàn cầu. Sự phát triển của Huaxia không chỉ dừng
+                                        lại ở việc xây dựng niềm tin với khách hàng mà còn mong muốn đóng góp vào sự phát
+                                        triển của nền kinh tế đất nước, với khát vọng trở thành một trong những doanh nghiệp
+                                        đầu ngành trong lĩnh vực logistics.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="accordion block">
+                            <div class="acc-btn">Sứ Mệnh Của Chúng Tôi
+                                <div class="icon fa fa-plus"></div>
+                            </div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="fs-5 text">
+                                        <b>Huaxia đặt sự an toàn và hài lòng của khách hàng lên hàng đầu, cung cấp dịch vụ
+                                            vận chuyển đa dạng, tối ưu thời gian và chi phí cho khách hàng trong nhiều lĩnh
+                                            vực khác nhau.
+                                        </b> <br>
+                                        Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam hiểu rõ rằng việc duy trì và
+                                        phát triển các dịch vụ vận tải chất lượng cao, đảm bảo an toàn, chính xác và nhanh
+                                        chóng là nhiệm vụ xuyên suốt và quan trọng nhất trong mọi hoạt động. Chúng tôi luôn
+                                        đặt lợi ích của khách hàng lên hàng đầu, đảm bảo rằng mỗi chuyến hàng được giao nhận
+                                        không chỉ đúng thời gian mà còn tuân thủ các tiêu chuẩn khắt khe về chất lượng và an
+                                        toàn. Huaxia cam kết mang đến cho khách hàng những giải pháp vận chuyển tối ưu, phù
+                                        hợp với từng nhu cầu riêng biệt của từng đối tượng khách hàng, từ đó giúp họ tối ưu
+                                        hóa chi phí và thời gian. Hiện nay, công ty chúng tôi cung cấp dịch vụ logistics đa
+                                        dạng, phục vụ cho nhiều lĩnh vực khác nhau, bao gồm các mặt hàng từ máy móc, hàng
+                                        siêu trường, siêu trọng, đến nông sản, hàng tiêu dùng, vật tư, hóa chất và nhiều
+                                        loại hàng hóa khác, đáp ứng đầy đủ mọi nhu cầu vận chuyển của thị trường hiện nay
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="clients-section">
         <div class="anim-icon">
@@ -565,7 +695,6 @@
             <span class="icon dotted-line-2"></span>
         </div>
         <div class="auto-container">
-
             <div class="sponsors-outer">
 
                 <ul class="clients-carousel owl-carousel owl-theme">
