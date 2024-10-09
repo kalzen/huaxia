@@ -447,12 +447,14 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                     <label>{{ __('home.why_choose_us_form_4') }}</label>
                                     <select class="custom-select">
-                                        <option value selected disabled required>{{ __('home.why_choose_us_form_select') }}</option>
-                                        <option value>{{ __('home.why_choose_us_form_select_1') }}</option>
-                                        <option value>{{ __('home.why_choose_us_form_select_2') }}</option>
-                                        <option value>{{ __('home.why_choose_us_form_select_3') }}</option>
-                                        <option value>{{ __('home.why_choose_us_form_select_4') }}</option>
-                                        <option value>{{ __('home.why_choose_us_form_select_5') }}</option>
+                                        <option value selected disabled required>
+                                            {{ __('home.why_choose_us_form_select') }}
+                                        </option>
+                                        <option value="1">{{ __('home.why_choose_us_form_select_1') }}</option>
+                                        <option value="2">{{ __('home.why_choose_us_form_select_2') }}</option>
+                                        <option value="3">{{ __('home.why_choose_us_form_select_3') }}</option>
+                                        <option value="4">{{ __('home.why_choose_us_form_select_4') }}</option>
+                                        <option value="5">{{ __('home.why_choose_us_form_select_5') }}</option>
                                     </select>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group">
