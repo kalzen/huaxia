@@ -16,9 +16,13 @@ class Post extends Model
     {
         return '/tin-tuc/' . $this->slug;
     }
-    public function scopeActive($query, $lang)
+    public function scopeActive($query, $lang = null)
     {
-        $query->where('status', Post::STATUS_ACTIVE)->where('lang', $lang);
+        if ($lang) {
+            $query->where('status', Post::STATUS_ACTIVE)->where('lang', $lang);
+        } else {
+            $query->where('status', Post::STATUS_ACTIVE);
+        }
     }
 
     public function scopeIsPromotion($query)
