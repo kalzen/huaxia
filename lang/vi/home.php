@@ -21,6 +21,7 @@ return [
 
     "service_company" => "Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam",
     "service_title" => "Dịch vụ của chúng tôi",
+    'service_sub_title' => "Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam chuyên cung cấp cho khách hàng các dịch vụ vận chuyển trọn gói như sau",
     "service" => "Dịch vụ",
     "service_sub_title_1" => "Dịch vụ Logistics",
     "service_description_1" => "Vận chuyển hàng hóa quốc tế đa phương thức, giao nhận, kiểm đếm hàng hóa. Thông quan hàng hóa xuất nhập khẩu",

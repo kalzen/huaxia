@@ -244,9 +244,7 @@
             <div class="sec-title text-center">
                 <span class="sub-title">{{ __('home.service_company') }}</span>
                 <h2>{{ __('home.service_title') }}</h2>
-                <h3>Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam chuyên cung cấp cho khách hàng các dịch vụ vận
-                    chuyển trọn gói như sau:
-                </h3>
+                <h3>{{ __('home.service_sub_title') }}</h3>
             </div>
             <div class="row">
                 <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">

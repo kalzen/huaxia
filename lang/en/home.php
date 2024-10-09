@@ -21,6 +21,7 @@ return [
 
     "service_company" => "Huaxia Vietnam Supply Chain Management Co., Ltd.",
     "service_title" => "Our services",
+    'service_sub_title' => "Huaxia Vietnam Supply Chain Management Co., Ltd. specializes in providing customers with the following comprehensive transportation services",
     "service" => "Service",
     "service_sub_title_1" => "Logistics services",
     "service_description_1" => "International multi-modal transportation, delivery, cargo inspection. Customs clearance of import and export goods",
