@@ -15,6 +15,7 @@ use App\Models\Testimonial;
 use App\Models\Team;
 use App\Models\Category;
 use Exception;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -24,12 +25,12 @@ class HomeController extends Controller
         // $slides = Slide::orderBy('ordering', 'asc')->paginate();
         // $testimonials = Testimonial::All();
         // $teams = Team::All();
-        // $posts = Post::latest()->withCount(['images'])->having('images_count', '>', 0)->active()->take(5)->get();
-
+        $lang =  App::getLocale();
+        $posts = Post::active($lang)->get();
         $services = Post::whereHas('categories', function ($query) {
             $query->where('category_post.category_id', 2);
         })->get();
-        return view('home.index', ['services' => $services]);
+        return view('home.index', ['services' => $services, 'posts' => $posts]);
     }
     public function order()
     {
