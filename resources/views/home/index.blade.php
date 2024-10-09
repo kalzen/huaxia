@@ -430,57 +430,45 @@
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                         <label>{{ __('home.why_choose_us_form_1') }}</label>
-                                        <input type="text" name="full_name" placeholder required />
+                                        <input type="text" name="full_name"
+                                            placeholder="{{ __('home.why_choose_us_form_placeholder_1') }}" required />
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                         <label>{{ __('home.why_choose_us_form_2') }}:</label>
-                                        <input type="text" name="Email" placeholder required />
+                                        <input type="text" name="Email"
+                                            placeholder="{{ __('home.why_choose_us_form_placeholder_2') }}" required />
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                         <label>{{ __('home.why_choose_us_form_3') }}:</label>
-                                        <input type="text" name="Phone" placeholder required />
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                        <label>{{ __('home.why_choose_us_form_4') }}</label>
-                                        <div class="range-slider-one">
-                                            <input type="text" class="range-amount" name="field-name" readonly />
-                                            <div class="distance-range-slider"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                        <label>{{ __('home.why_choose_us_form_5') }}</label>
-                                        <select class="custom-select">
-                                            <option value>{{ __('home.why_choose_us_form_select_1') }}</option>
-                                            <option value>{{ __('home.why_choose_us_form_select_2') }}</option>
-                                            <option value>{{ __('home.why_choose_us_form_select_3') }}</option>
-                                            <option value>{{ __('home.why_choose_us_form_select_4') }}</option>
-                                            <option value>{{ __('home.why_choose_us_form_select_5') }}</option>
-                                            <option value>{{ __('home.why_choose_us_form_select_6') }}</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                        <label>{{ __('home.why_choose_us_form_6') }}</label>
-                                        <select class="custom-select">
-                                            <option value>{{ __('home.why_choose_us_form_select_7') }}</option>
-                                            <option value>{{ __('home.why_choose_us_form_select_8') }}</option>
-                                            <option value>{{ __('home.why_choose_us_form_select_9') }}</option>
-                                            <option value>{{ __('home.why_choose_us_form_select_10') }}</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                        <button class="theme-btn btn-style-two hvr-light" type="submit"
-                                            name="submit-form"><span class="btn-title">
-                                                {{ __('home.why_choose_us_button') }}
-                                            </span>
-                                        </button>
+                                        <input type="text" name="Phone"
+                                            placeholder="{{ __('home.why_choose_us_form_placeholder_3') }}" required />
                                     </div>
                                 </div>
-                            </form>
+                                <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                    <label>{{ __('home.why_choose_us_form_4') }}</label>
+                                    <select class="custom-select">
+                                        <option value selected disabled required>{{ __('home.why_choose_us_form_select') }}</option>
+                                        <option value>{{ __('home.why_choose_us_form_select_1') }}</option>
+                                        <option value>{{ __('home.why_choose_us_form_select_2') }}</option>
+                                        <option value>{{ __('home.why_choose_us_form_select_3') }}</option>
+                                        <option value>{{ __('home.why_choose_us_form_select_4') }}</option>
+                                        <option value>{{ __('home.why_choose_us_form_select_5') }}</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                    <button class="theme-btn btn-style-two hvr-light" type="submit"
+                                        name="submit-form"><span class="btn-title">
+                                            {{ __('home.why_choose_us_button') }}
+                                        </span>
+                                    </button>
+                                </div>
                         </div>
-
+                        </form>
                     </div>
+
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -635,8 +623,8 @@
                                 <div class="content">
                                     <div class="text">
                                         {!! __('home.vision_description') !!}
+                                    </div>
                                 </div>
-                            </div>
                         </li>
 
                         <li class="accordion block">
