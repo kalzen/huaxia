@@ -25,7 +25,7 @@ class PostController extends Controller
                 'categories',
                 'tags',
                 'images',
-                'Language'
+                'Language_vi'
             ])
             ->paginate();
         return view('admin.post.index', compact('records'));
