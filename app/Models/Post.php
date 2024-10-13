@@ -40,6 +40,11 @@ class Post extends Model
         return $this->hasOne(PostLanguage::class, 'en');
     }
 
+    public function Language_cn()
+    {
+        return $this->hasOne(PostLanguage::class, 'cn');
+    }
+
     public function comments()
     {
         return $this->morphMany(Comment::class, 'commentable');
