@@ -25,4 +25,9 @@ class PostLanguage extends Model
     {
         return $this->belongsTo(Post::class, 'en', 'id')->where('lang', 'en');
     }
+
+    public function post_cn()
+    {
+        return $this->belongsTo(Post::class, 'cn', 'id')->where('lang', 'cn');
+    }
 }
