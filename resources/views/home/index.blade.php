@@ -128,7 +128,6 @@
         </div>
     </section>
 
-
     <section class="features-section">
         <div class="auto-container">
             <div class="row">
@@ -178,7 +177,6 @@
             </div>
         </div>
     </section>
-
 
     <section class="about-section pt-0">
         <div class="anim-icons">
@@ -234,9 +232,8 @@
         </div>
     </section>
 
-
-    <section class="services-section">
-        <div class="bg-image" style="background-image: url(images/background/1.jpg)"></div>
+    <section class="services-section mt-5">
+        <div class="bg-image" style="background-image: url({{ asset('huaxia/images/background/1.jpg') }})"></div>
         <div class="anim-icons">
             <span class="icon icon-wave-line"></span>
         </div>
@@ -331,7 +328,6 @@
         </div>
     </section>
 
-
     <section class="tracking-section pull-down">
         <div class="auto-container">
             <div class="outer-box">
@@ -367,7 +363,6 @@
             </div>
         </div>
     </section>
-
 
     <section class="call-to-action" style="background-image: url({{ asset('huaxia/images/background/2.jpg') }})">
         <div class="auto-container">
@@ -476,7 +471,6 @@
         </div>
     </section>
 
-
     <section class="about-section-two">
         <div class="auto-container">
             <div class="row">
@@ -573,42 +567,6 @@
                         </div>
                     </div>
                 @endforeach
-            </div>
-        </div>
-    </section>
-
-    <section class>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <ul class="accordion-box wow fadeInRight">
-
-                        <li class="accordion block">
-                            <div class="acc-btn"> {{ __('home.vision_title') }}
-                                <div class="icon fa fa-plus"></div>
-                            </div>
-                            <div class="acc-content">
-                                <div class="content">
-                                    <div class="text">
-                                        {!! __('home.vision_description') !!}
-                                    </div>
-                                </div>
-                        </li>
-
-                        <li class="accordion block">
-                            <div class="acc-btn"> {{ __('home.mission_title') }}
-                                <div class="icon fa fa-plus"></div>
-                            </div>
-                            <div class="acc-content">
-                                <div class="content">
-                                    <div class="fs-5 text">
-                                        {!! __('home.mission_description') !!}
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
     </section>
