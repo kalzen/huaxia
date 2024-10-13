@@ -18,6 +18,7 @@ class CreatePostLanguagesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('vi')->nullable();
             $table->unsignedBigInteger('en')->nullable();
+            $table->unsignedBigInteger('cn')->nullable();
             $table->tinyInteger('status')->default(PostLanguage::STATUS_ACTIVE);
             $table->timestamps();
         });
