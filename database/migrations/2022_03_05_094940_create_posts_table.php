@@ -26,6 +26,7 @@ class CreatePostsTable extends Migration
             $table->text('keyword')->nullable()->default(null);
             $table->unsignedBigInteger('viewed')->nullable()->default(null);
             $table->string('lang')->default('vi');
+            $table->string('icon')->nullable()->default(null);
             $table->softDeletes();
             $table->timestamps();
         });
