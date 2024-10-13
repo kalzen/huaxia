@@ -1,23 +1,18 @@
 <?php
 return [
     "address" => "Address",
-    "address_content" => "30 St Kilda Road, Jackson Store, Australia",
+    "address_content" => "P.114, T.1, Thanh Dat 1, No. 3 Le Thanh Tong, May To Ward, Ngo Quyen District, HP",
 
     "contact" => "Contact",
 
     "time" => "Working time",
-    "time_content" => "Monday - Friday: 8:00 - 22:00",
+    "time_content" => "Monday - Saturday: 8am - 5pm",
 
     "about" => "About us",
 
-    "sub_title_1" => "We work with passion to face challenges and create new things in the advertising field",
+    "sub_title_1" => "We work with passion to face challenges and create new things in the field of Logistics",
 
     "service" => "Service",
-    "service_content_1" => "Reliable & On time",
-    "service_content_2" => "Reliable franchise",
-    "service_content_3" => "Storage warehouse",
-    "service_content_4" => "Real-time tracking",
-    "service_content_5" => "Transparent price",
 
     "news" => "News",
     "news_content" => "The latest news, advice & best articles from the blog",
