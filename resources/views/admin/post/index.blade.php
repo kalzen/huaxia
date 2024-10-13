@@ -23,6 +23,7 @@
                                 <th>Trạng thái</th>
                                 <th>Tiếng Việt</th>
                                 <th>Tiếng Anh</th>
+                                <th>Tiếng Trung</th>
                                 <th>Hành động</th>
                             </tr>
                         </thead>
@@ -66,19 +67,34 @@
                                     <td class="text-center">
                                         @if ($record->language_vi->vi)
                                             <a class="badge bg-success"
-                                                href="{{ route('admin.post.edit', $record->language_vi->vi) }}">Chỉnh sửa</a>
+                                                href="{{ route('admin.post.edit', $record->language_vi->vi) }}">Chỉnh
+                                                sửa</a>
                                         @else
                                             <a class="badge bg-primary"
-                                                href="{{ route('admin.post.lang', [$record->language_vi->id, 'vi', $record->title]) }}">Thêm mới</a>
+                                                href="{{ route('admin.post.lang', [$record->language_vi->id, 'vi', $record->title]) }}">Thêm
+                                                mới</a>
                                         @endif
                                     </td>
                                     <td class="text-center">
                                         @if ($record->language_vi->en)
                                             <a class="badge bg-success"
-                                                href="{{ route('admin.post.edit', $record->language_vi->en) }}">Chỉnh sửa</a>
+                                                href="{{ route('admin.post.edit', $record->language_vi->en) }}">Chỉnh
+                                                sửa</a>
                                         @else
                                             <a class="badge bg-primary"
-                                                href="{{ route('admin.post.lang', [$record->language_vi->id, 'en', $record->title]) }}">Thêm mới</a>
+                                                href="{{ route('admin.post.lang', [$record->language_vi->id, 'en', $record->title]) }}">Thêm
+                                                mới</a>
+                                        @endif
+                                    </td>
+                                    <td class="text-center">
+                                        @if ($record->language_vi->cn)
+                                            <a class="badge bg-success"
+                                                href="{{ route('admin.post.edit', $record->language_vi->cn) }}">Chỉnh
+                                                sửa</a>
+                                        @else
+                                            <a class="badge bg-primary"
+                                                href="{{ route('admin.post.lang', [$record->language_vi->id, 'cn', $record->title]) }}">Thêm
+                                                mới</a>
                                         @endif
                                     </td>
                                     <td>
