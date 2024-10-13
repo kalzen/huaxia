@@ -19,6 +19,20 @@ return [
     "about_experience_year" => "Năm",
     "about_experience" => "KINH NGHIỆM",
 
+    "vision_title" => "Tầm nhìn",
+    "vision_sub_title" => "Huaxia phấn đấu trở thành công ty logistics đáng tin cậy, kết nối doanh nghiệp Việt Nam với thị trường quốc tế, tập trung vào tạo ra giá trị gia tăng và thúc đẩy sự phát triển của chuỗi cung ứng.",
+    "vision_box_title_1" => "Dịch vụ giao nhận hàng hóa chất lượng cao",
+    "vision_box_description_1" => "Cam kết cung cấp dịch vụ chất lượng, tận tâm và chuyên nghiệp, đảm bảo sự hài lòng cho khách hàng",
+    "vision_box_title_2" => "Tạo giá trị gia tăng cho khách hàng",
+    "vision_box_description_2" => "Kết nối doanh nghiệp Việt Nam với thị trường quốc tế, thúc đẩy chuỗi cung ứng và nâng cao vị thế doanh nghiệp",
+
+    "mission_title" => "Sứ mệnh",
+    "mission_sub_title" => "Huaxia đặt sự an toàn và hài lòng của khách hàng lên hàng đầu, cung cấp dịch vụ vận chuyển đa dạng, tối ưu thời gian và chi phí cho khách hàng trong nhiều lĩnh vực khác nhau.",
+    "mission_box_title_1" => "Dịch vụ vận tải an toàn và chính xác",
+    "mission_box_description_1" => "Đảm bảo giao nhận đúng thời gian, an toàn và tuân thủ các tiêu chuẩn chất lượng cao",
+    "mission_box_title_2" => "Giải pháp vận chuyển đa dạng",
+    "mission_box_description_2" => "Cung cấp dịch vụ logistics cho nhiều loại hàng hóa khác nhau, tối ưu chi phí và thời gian cho khách hàng",
+
     "service_company" => "Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam",
     "service_title" => "Dịch vụ của chúng tôi",
     'service_sub_title' => "Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam chuyên cung cấp cho khách hàng các dịch vụ vận chuyển trọn gói như sau",
@@ -74,10 +88,4 @@ return [
 
     "news_title" => "TIN TỨC TỪ BLOG CỦA CHÚNG TÔI",
     "news_big_title" => "Tin tức mới nhất, lời khuyên <br /> & bài viết hay nhất từ blog",
-
-    "vision_title" => "Tầm Nhìn Của Chúng Tôi",
-    "vision_description" => "<b>Huaxia phấn đấu trở thành công ty logistics đáng tin cậy, kết nối doanh nghiệp Việt Nam với thị trường quốc tế, tập trung vào tạo ra giá trị gia tăng và thúc đẩy sự phát triển của chuỗi cung ứng.</b> <br>Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam luôn không ngừng nỗ lực để phấn đấu trở thành công ty giao nhận hàng hóa được khách hàng gửi gắm niềm tin và sự tín nhiệm cao nhất trên thị trường. Chúng tôi cam kết cung cấp các dịch vụ chất lượng cao, với sự tận tâm và chuyên nghiệp từ đội ngũ nhân sự, luôn chú trọng đến từng chi tiết nhỏ nhất trong quá trình phục vụ khách hàng. Huaxia không chỉ đơn thuần là cầu nối giữa các doanh nghiệp Việt Nam và thị trường quốc tế mà còn hướng tới mục tiêu tạo ra giá trị gia tăng, nâng cao lợi ích cho khách hàng và đối tác. Qua đó, chúng tôi mong muốn góp phần quan trọng vào việc thúc đẩy sự phát triển bền vững và toàn diện của chuỗi cung ứng, đồng thời nâng tầm vị thế của các doanh nghiệp Việt Nam trong quá trình hội nhập kinh tế toàn cầu. Sự phát triển của Huaxia không chỉ dừng lại ở việc xây dựng niềm tin với khách hàng mà còn mong muốn đóng góp vào sự phát triển của nền kinh tế đất nước, với khát vọng trở thành một trong những doanh nghiệp đầu ngành trong lĩnh vực logistics.",
-
-    "mission_title" => "Sứ Mệnh Của Chúng Tôi",
-    "mission_description" => "<b>Huaxia đặt sự an toàn và hài lòng của khách hàng lên hàng đầu, cung cấp dịch vụ vận chuyển đa dạng, tối ưu thời gian và chi phí cho khách hàng trong nhiều lĩnh vực khác nhau. </b> <br>Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam hiểu rõ rằng việc duy trì và phát triển các dịch vụ vận tải chất lượng cao, đảm bảo an toàn, chính xác và nhanh chóng là nhiệm vụ xuyên suốt và quan trọng nhất trong mọi hoạt động. Chúng tôi luôn đặt lợi ích của khách hàng lên hàng đầu, đảm bảo rằng mỗi chuyến hàng được giao nhận không chỉ đúng thời gian mà còn tuân thủ các tiêu chuẩn khắt khe về chất lượng và an toàn. Huaxia cam kết mang đến cho khách hàng những giải pháp vận chuyển tối ưu, phù hợp với từng nhu cầu riêng biệt của từng đối tượng khách hàng, từ đó giúp họ tối ưu hóa chi phí và thời gian. Hiện nay, công ty chúng tôi cung cấp dịch vụ logistics đa dạng, phục vụ cho nhiều lĩnh vực khác nhau, bao gồm các mặt hàng từ máy móc, hàng siêu trường, siêu trọng, đến nông sản, hàng tiêu dùng, vật tư, hóa chất và nhiều loại hàng hóa khác, đáp ứng đầy đủ mọi nhu cầu vận chuyển của thị trường hiện nay"
 ];
