@@ -19,20 +19,6 @@ return [
     "about_experience_year" => "Năm",
     "about_experience" => "KINH NGHIỆM",
 
-    "vision_title" => "Tầm nhìn",
-    "vision_sub_title" => "Huaxia phấn đấu trở thành công ty logistics đáng tin cậy, kết nối doanh nghiệp Việt Nam với thị trường quốc tế, tập trung vào tạo ra giá trị gia tăng và thúc đẩy sự phát triển của chuỗi cung ứng.",
-    "vision_box_title_1" => "Dịch vụ giao nhận hàng hóa chất lượng cao",
-    "vision_box_description_1" => "Cam kết cung cấp dịch vụ chất lượng, tận tâm và chuyên nghiệp, đảm bảo sự hài lòng cho khách hàng",
-    "vision_box_title_2" => "Tạo giá trị gia tăng cho khách hàng",
-    "vision_box_description_2" => "Kết nối doanh nghiệp Việt Nam với thị trường quốc tế, thúc đẩy chuỗi cung ứng và nâng cao vị thế doanh nghiệp",
-
-    "mission_title" => "Sứ mệnh",
-    "mission_sub_title" => "Huaxia đặt sự an toàn và hài lòng của khách hàng lên hàng đầu, cung cấp dịch vụ vận chuyển đa dạng, tối ưu thời gian và chi phí cho khách hàng trong nhiều lĩnh vực khác nhau.",
-    "mission_box_title_1" => "Dịch vụ vận tải an toàn và chính xác",
-    "mission_box_description_1" => "Đảm bảo giao nhận đúng thời gian, an toàn và tuân thủ các tiêu chuẩn chất lượng cao",
-    "mission_box_title_2" => "Giải pháp vận chuyển đa dạng",
-    "mission_box_description_2" => "Cung cấp dịch vụ logistics cho nhiều loại hàng hóa khác nhau, tối ưu chi phí và thời gian cho khách hàng",
-
     "service_company" => "Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam",
     "service_title" => "Dịch vụ của chúng tôi",
     'service_sub_title' => "Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam chuyên cung cấp cho khách hàng các dịch vụ vận chuyển trọn gói như sau",
@@ -62,7 +48,7 @@ return [
     "why_choose_us_title_1" => "Vận chuyển nhanh chóng",
     "why_choose_us_title_2" => "Vận chuyển đa quốc gia",
     "why_choose_us_form_1" => "Họ và tên",
-    "why_choose_us_form_placeholder_1" => "Họ và tên của bạn", 
+    "why_choose_us_form_placeholder_1" => "Họ và tên của bạn",
     "why_choose_us_form_2" => "Địa chỉ Email",
     "why_choose_us_form_placeholder_2" => "Email của bạn",
     "why_choose_us_form_3" => "Số điện thoại",
@@ -83,9 +69,16 @@ return [
     "about_2_box_1" => "Tối ưu chi phí",
     "about_2_box_2" => "Giảm thời gian <br /> vận chuyển",
     "about_2_box_3" => "Giao hàng <br />đúng giờ",
-    "about_2_ceo_name" => "Ông. Mai Công Luật",
-    "about_2_ceo_title" => "Giám đốc điều hành",
+
+    "vision_&_mission" => "Tầm nhìn & Sứ mệnh",
+
+    "vision_title" => "Tầm nhìn",
+    'vision_sub_title' => "Tầm nhìn của chúng tôi",
+    "vision_description" => "Huaxia phấn đấu trở thành công ty logistics đáng tin cậy, kết nối doanh nghiệp Việt Nam với thị trường quốc tế, tập trung vào tạo ra giá trị gia tăng và thúc đẩy sự phát triển của chuỗi cung ứng",
+
+    "mission_title" => "Sứ mệnh",
+    "mission_description" => "Huaxia đặt sự an toàn và hài lòng của khách hàng lên hàng đầu, cung cấp dịch vụ vận chuyển đa dạng, tối ưu thời gian và chi phí cho khách hàng trong nhiều lĩnh vực khác nhau",
 
     "news_title" => "TIN TỨC TỪ BLOG CỦA CHÚNG TÔI",
-    "news_big_title" => "Tin tức mới nhất, lời khuyên <br /> & bài viết hay nhất từ blog",
+    "news_big_title" => "Tin tức mới nhất",
 ];

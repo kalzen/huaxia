@@ -69,16 +69,16 @@ return [
     "about_2_box_2" => "Fast delivery",
     "about_2_box_3" => "Guaranteed warehouse",
     "about_2_button" => "Read more",
-    "about_2_ceo_name" => "Mr. Mai Cong Luat",
-    "about_2_ceo_title" => "CEO",
+
+    "vision_&_mission" => "Vision & Mission",
+
+    "vision_title" => "Vision",
+    'vision_sub_title' => "Our vision",
+    "vision_description" => "Huaxia strives to become a reliable logistics company, connecting Vietnamese businesses to the international market, focusing on creating added value and promoting the development of the supply chain",
+
+    "mission_title" => "Mission",
+    "mission_description" => "Huaxia puts the safety and satisfaction of customers first, providing diverse transportation services, optimizing time and costs for customers in many different fields",
 
     "news_title" => "NEWS FROM OUR BLOG",
     "news_big_title" => "Latest news, advice <br /> & best articles from the blog",
-
-    "vision_title" => "Our Vision",
-    "vision_description" => "<b>
-    Huaxia strives to become a reliable logistics company, connecting Vietnamese businesses with the international market, focusing on creating added value and promoting the development of the supply chain.</b> <br>Huaxia Vietnam Supply Chain Management Co., Ltd. continuously strives to become a trusted freight forwarding company that earns the highest trust and confidence from customers in the market. We are committed to providing high-quality services with dedication and professionalism from our team, always paying attention to the smallest details in the customer service process. Huaxia is not just a bridge between Vietnamese businesses and the international market but also aims to create added value, enhancing benefits for customers and partners. Through this, we wish to play an important role in promoting the sustainable and comprehensive development of the supply chain while elevating the position of Vietnamese enterprises in the process of global economic integration. Huaxia's development is not only about building trust with customers but also about contributing to the country's economic growth, with the aspiration to become a leading enterprise in the logistics sector.",
-
-    "mission_title" => "Our Mission",
-    "mission_description" => "<b>Huaxia prioritizes customer safety and satisfaction, providing diverse transportation services, optimizing time and costs for customers across various industries.</b> <br>Huaxia Vietnam Supply Chain Management Co., Ltd. fully understands that maintaining and developing high-quality transportation services, ensuring safety, accuracy, and speed, is the most crucial and ongoing mission in all our operations. We always prioritize our customers' interests, ensuring that each shipment is not only delivered on time but also meets strict quality and safety standards. Huaxia is committed to providing customers with optimal transportation solutions tailored to the specific needs of each customer, helping them optimize costs and time. Currently, our company offers a wide range of logistics services, catering to various industries, including machinery, oversized and overweight goods, agricultural products, consumer goods, materials, chemicals, and many other types of cargo, fully meeting the current market's transportation needs."
 ];
