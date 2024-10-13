@@ -26,10 +26,12 @@ class HomeController extends Controller
         // $testimonials = Testimonial::All();
         // $teams = Team::All();
         $lang =  App::getLocale();
-        $posts = Post::active($lang)->get();
-        $services = Post::whereHas('categories', function ($query) {
-            $query->where('category_post.category_id', 2);
+        $posts = Post::active($lang)->limit(3)->get();
+        $categoryId = Category::where('lang', $lang)->get()->pluck('id');
+        $services = Post::where('lang', $lang)->whereHas('categories', function ($query) use ($categoryId) {
+            $query->where('category_post.category_id', $categoryId);
         })->get();
+        $services->load('images');
         return view('home.index', ['services' => $services, 'posts' => $posts]);
     }
     public function order()
@@ -65,16 +67,35 @@ class HomeController extends Controller
             ]);
             return redirect()->back()->with('message', 'Cảm ơn bạn đã liên hệ. Chúng tôi sẽ liên lạc với bạn ngay!');
         }
-        return view('contact.index');
+        $lang =  App::getLocale();
+        $categoryId = Category::where('lang', $lang)->get()->pluck('id');
+        $services = Post::where('lang', $lang)->whereHas('categories', function ($query) use ($categoryId) {
+            $query->where('category_post.category_id', $categoryId);
+        })->get();
+        $services->load('images');
+
+        return view('contact.index', compact('services'));
     }
     public function about()
     {
-        return view('home.about');
+        $lang =  App::getLocale();
+        $categoryId = Category::where('lang', $lang)->get()->pluck('id');
+        $services = Post::where('lang', $lang)->whereHas('categories', function ($query) use ($categoryId) {
+            $query->where('category_post.category_id', $categoryId);
+        })->get();
+        $services->load('images');
+        return view('home.about', compact('services'));
     }
 
     public function service()
     {
-        return view('home.service');
+        $lang =  App::getLocale();
+        $categoryId = Category::where('lang', $lang)->get()->pluck('id');
+        $services = Post::where('lang', $lang)->whereHas('categories', function ($query) use ($categoryId) {
+            $query->where('category_post.category_id', $categoryId);
+        })->get();
+        $services->load('images');
+        return view('home.service', compact('services'));
     }
 
     public function logout()
@@ -95,5 +116,15 @@ class HomeController extends Controller
             return redirect()->back()->with('message', 'Cảm ơn bạn đã liên hệ. Chúng tôi sẽ liên lạc với bạn ngay!');
         }
         return view('contact.advise');
+    }
+
+    public function vision()
+    {
+        $lang =  App::getLocale();
+        $categoryId = Category::where('lang', $lang)->get()->pluck('id');
+        $services = Post::where('lang', $lang)->whereHas('categories', function ($query) use ($categoryId) {
+            $query->where('category_post.category_id', $categoryId);
+        })->get();
+        return view('home.vision&mission', compact('services'));
     }
 }
