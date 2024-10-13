@@ -12,6 +12,7 @@ if (!function_exists('convertLanguageCode')) {
         $languages = [
             'en' => 'Tiếng Anh',
             'vi' => 'Tiếng Việt',
+            'cn' => 'Tiếng Trung',
         ];
 
         return $languages[$code] ?? $code;
