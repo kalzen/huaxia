@@ -35,11 +35,19 @@
         <section class="news-section">
             <div class="auto-container">
                 <div class="row">
+                    @if ($posts->isEmpty())
+                        <div class="col-lg-12">
+                            <div class="alert alert-warning">
+                                {{ __('post.no_post') }}
+                            </div>
+                        </div>
+                    @endif
                     @foreach ($posts as $post)
                         <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><a href="{{ route('post.detail', ['alias' => $post->slug]) }}"><img
+                                    <figure class="image"><a
+                                            href="{{ route('post.detail', ['alias' => $post->slug]) }}"><img
                                                 src="{{ asset($post->images->first()->url) }}" alt></a></figure>
                                     <span class="date">
                                         <b>{{ \Carbon\Carbon::parse($post->created_at)->format('d') }}</b>
@@ -55,8 +63,8 @@
                                             {{ $post->title }}
                                         </a>
                                     </h4>
-                                    <a href="{{ route('post.detail', ['alias' => $post->slug]) }}" class="read-more">Đọc thêm<i
-                                            class="fa fa-angle-right"></i></a>
+                                    <a href="{{ route('post.detail', ['alias' => $post->slug]) }}" class="read-more">Đọc
+                                        thêm<i class="fa fa-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>
