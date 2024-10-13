@@ -50,6 +50,7 @@ Route::middleware(['LocalizationMiddleware'])->group(function () {
     Route::get('/tin-tuc/{alias}', [PostController::class, 'detail'])->name('post.detail');
     Route::get('/danh-muc-tin-tuc/{alias}', [PostController::class, 'category'])->name('post.category');
     Route::get('/tim-kiem-tin-tuc', [PostController::class, 'search'])->name('post.search');
+    Route::get('/vision&mission', [HomeController::class, 'vision'])->name('vision&mission');
 });
 
 Route::get('/language/{locale}', [LocaleController::class, 'SetLocale'])->name('language');
