@@ -7,6 +7,8 @@ return [
         "en" => "English",
         "vi" => "Vietnamese"
     ],
+    "button" => "Book service",
+    "search" => "Search...",
     "home" => "Home",
     "about" => "About",
     "services" => "Services",

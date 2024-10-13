@@ -7,6 +7,8 @@ return [
         "en" => "Tiếng Anh",
         "vi" => "Tiếng Việt"
     ],
+    "button" => "Đặt dịch vụ",
+    "search" => "Tìm kiếm...",
     "home" => "Trang chủ",
     "about" => "Giới thiệu",
     "services" => "Dịch vụ",

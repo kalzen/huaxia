@@ -1,6 +1,6 @@
 <header class="main-header header-style-one">
 
-    <div class="header-top">
+    <div class="header-top" >
         <div class="top-left">
 
             <ul class="list-style-one">
@@ -29,10 +29,10 @@
     </div>
 
 
-    <div class="header-lower">
+    <div class="header-lower" >
 
         <div class="main-box">
-            <div class="logo-box">
+            <div class="logo-box" style="background-color: white !important">
                 <div class="logo">
                     <a href="{{ route('home') }}"><img src="{{ asset('huaxia/images/logo.jpg') }}" alt
                             title="Huaxia" /></a>
@@ -77,7 +77,7 @@
                     </button>
                     <!-- <a href="#" class="ui-btn"><i class="lnr-icon-shopping-cart"></i></a> -->
                     <a href="#" class="theme-btn btn-style-one alternate"><span
-                            class="btn-title">{{ __('Đặt dịch vụ') }}</span></a>
+                            class="btn-title">{{ __('nav.button') }}</span></a>
 
                     <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
                 </div>
@@ -150,7 +150,7 @@
         <div class="search-inner">
             <form method="post" action="{{ route('home') }}">
                 <div class="form-group">
-                    <input type="search" name="search-field" value placeholder="{{ __('Tìm kiếm...') }}" required />
+                    <input type="search" name="search-field" value placeholder="{{ __('nav.search') }}" required />
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </div>
             </form>
