@@ -78,6 +78,10 @@ class PostController extends Controller
                 $postLanguage = PostLanguage::find($postId);
                 $postLanguage->update([$lang => $post->id]);
                 $postLanguage->save();
+            } else {
+                $postLanguage = new PostLanguage();
+                $postLanguage->vi = $post->id;
+                $postLanguage->save();
             }
 
             DB::commit();
