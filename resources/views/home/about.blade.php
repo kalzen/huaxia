@@ -68,99 +68,41 @@
             </div>
         </section>
 
-        <section class="services-section">
-            <div class="bg-image" style="background-image: url({{ asset('huaxia/images/background/1.jpg') }})"></div>
-            <div class="anim-icons">
-                <span class="icon icon-wave-line"></span>
-            </div>
+        <section class="about-section-two">
             <div class="auto-container">
-                <div class="sec-title text-center">
-                    <span class="sub-title">{{ __('about.service_subtitle') }}</span>
-                    <h2>{{ __('about.service_title') }}</h2>
-                </div>
                 <div class="row">
-                    <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image">
-                                    <a href="page-service-details.html"></a>
-                                </figure>
+                    <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+                        <div class="inner-column">
+                            <div class="sec-title">
+                                <span class="sub-title">{{ __('about.company_name_upper') }}</span>
+                                <h2>{{ __('about.vision_&_mission') }}</h2>
+                                <h4 class="py-0">{{ __('about.vision_sub_title') }}</h4>
+                                <div class="text">{{ __('about.vision_description') }}.</div>
+    
+                                <h4>{{ __('about.mission_title') }}</h4>
+                                <div class="text">{{ __('about.mission_description') }}.</div>
                             </div>
-                            <div class="content-box">
-                                <i class="icon flaticon-airplane-2 mt-5"></i>
-                                <span class="sub-title">{{ __('about.service_box_subtitle_1') }} </span>
-                                <h4 class="title">
-                                    <a href="page-service-details.html">{!! __('about.service_box_title_1') !!}</a>
-                                </h4>
-                                <div class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing
-                                </div>
+                            <div class="btm-box">
+                                <a href="page-about.html" class="theme-btn btn-style-one">
+                                    <span class="btn-title">{{ __('about.about_button') }}</span></a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image">
-                                    <a href="page-service-details.html"></a>
-                                </figure>
-                            </div>
-                            <div class="content-box">
-                                <i class="icon flaticon-cargo-boat mt-5"></i>
-                                <span class="sub-title">{{ __('about.service_box_subtitle_2') }}</span>
-                                <h4 class="title">
-                                    <a href="page-service-details.html">{!! __('about.service_box_title_2') !!}</a>
-                                </h4>
-                                <div class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image">
-                                    <a href="page-service-details.html"></a>
-                                </figure>
-                            </div>
-                            <div class="content-box">
-                                <i class="icon flaticon-delivery-truck-3 mt-5"></i>
-                                <span class="sub-title">{{ __('about.service_box_subtitle_3') }}</span>
-                                <h4 class="title">
-                                    <a href="page-service-details.html">{!! __('about.service_box_title_3') !!}</a>
-                                </h4>
-                                <div class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="900ms">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image">
-                                    <a href="page-service-details.html"></a>
-                                </figure>
-                            </div>
-                            <div class="content-box">
-                                <i class="icon flaticon-delivery-box-4 mt-5"></i>
-                                <span class="sub-title">{{ __('about.service_box_subtitle_4') }}</span>
-                                <h4 class="title">
-                                    <a href="page-service-details.html">{!! __('about.service_box_title_3') !!}</a>
-                                </h4>
-                                <div class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing
-                                </div>
-                            </div>
+    
+                    <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column">
+                            <figure class="image-1 wow fadeInUp">
+                                <img src="{{ asset('huaxia/images/resource/offer-img-2.jpg') }}" alt />
+                            </figure>
+                            <figure class="image-2 wow fadeInRight">
+                                <img src="{{ asset('huaxia/images/resource/service-7.jpg') }}" alt />
+                            </figure>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <div class="scroll-to-top scroll-to-target" data-target="html">
             <span class="fa fa-angle-up"></span>
         </div>
