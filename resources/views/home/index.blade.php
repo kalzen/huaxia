@@ -232,6 +232,41 @@
         </div>
     </section>
 
+    <section class="about-section-two">
+        <div class="auto-container">
+            <div class="row">
+                <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+                    <div class="inner-column">
+                        <div class="sec-title">
+                            <span class="sub-title">{{ __('home.company_name_upper') }}</span>
+                            <h2>{{ __('home.vision_&_mission') }}</h2>
+                            <h4 class="py-0">{{ __('home.vision_sub_title') }}</h4>
+                            <div class="text">{{ __('home.vision_description') }}.</div>
+
+                            <h4>{{ __('home.mission_title') }}</h4>
+                            <div class="text">{{ __('home.mission_description') }}.</div>
+                        </div>
+                        <div class="btm-box">
+                            <a href="{{ route('vision&mission') }}" class="theme-btn btn-style-one">
+                                <span class="btn-title">{{ __('home.about_button') }}</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner-column">
+                        <figure class="image-1 wow fadeInUp">
+                            <img src="{{ asset('huaxia/images/resource/offer-img-2.jpg') }}" alt />
+                        </figure>
+                        <figure class="image-2 wow fadeInRight">
+                            <img src="{{ asset('huaxia/images/resource/service-7.jpg') }}" alt />
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="services-section mt-5">
         <div class="bg-image" style="background-image: url({{ asset('huaxia/images/background/1.jpg') }})"></div>
         <div class="anim-icons">
@@ -244,86 +279,28 @@
                 <h3>{{ __('home.service_sub_title') }}</h3>
             </div>
             <div class="row">
-                <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <a href=""><img src="{{ asset('huaxia/images/resource/service-1.jpg') }}"
-                                        alt /></a>
-                            </figure>
-                        </div>
-                        <div class="content-box">
-                            <i class="icon flaticon-worldwide-shipping"></i>
-                            <span class="sub-title">{{ __('home.service') }}</span>
-                            <h4 class="title">
-                                <a href="">{{ __('home.service_sub_title_1') }}</a>
-                            </h4>
-                            <div class="text">
-                                {{ __('home.service_description_1') }}
+                @foreach ($services as $service)
+                    <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <figure class="image">
+                                    <a href="{{ route('post.detail', ['alias' => $service->slug]) }}"><img
+                                            src="{{ asset($service->images->first()->url) }}" alt /></a>
+                                </figure>
+                            </div>
+                            <div class="content-box">
+                                <span class="sub-title"></span>
+                                <h4 class="title">
+                                    <a
+                                        href="{{ route('post.detail', ['alias' => $service->slug]) }}">{{ $service->title }}</a>
+                                </h4>
+                                <div class="text">
+                                    {{ $service->description }}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <a href=""><img src="{{ asset('huaxia/images/resource/service-2.jpg') }}"
-                                        alt /></a>
-                            </figure>
-                        </div>
-                        <div class="content-box">
-                            <i class="icon flaticon-airplane-2"></i>
-                            <span class="sub-title">{{ __('home.service') }}</span>
-                            <h4 class="title">
-                                <a href="">{{ __('home.service_sub_title_2') }}</a>
-                            </h4>
-                            <div class="text">
-                                {{ __('home.service_description_2') }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <a href=""><img src="{{ asset('huaxia/images/resource/service-3.jpg') }}"
-                                        alt /></a>
-                            </figure>
-                        </div>
-                        <div class="content-box">
-                            <i class="icon flaticon-delivery-box-4"></i>
-                            <span class="sub-title">{{ __('home.service') }}</span>
-                            <h4 class="title">
-                                <a href="">{{ __('home.service_sub_title_3') }}</a>
-                            </h4>
-                            <div class="text">
-                                {{ __('home.service_description_3') }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="service-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <a href=""><img src="{{ asset('huaxia/images/resource/service-4.jpg') }}"
-                                        alt /></a>
-                            </figure>
-                        </div>
-                        <div class="content-box">
-                            <i class="icon flaticon-3d-cube"></i>
-                            <span class="sub-title">{{ __('home.service') }}</span>
-                            <h4 class="title">
-                                <a href="">{{ __('home.service_sub_title_4') }}</a>
-                            </h4>
-                            <div class="text">
-                                {{ __('home.service_description_4') }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -487,28 +464,23 @@
                             <div class="feature-block-three col-lg-4 col-md-4 col-sm-12">
                                 <div class="inner">
                                     <i class="icon flaticon-delivery-courier"></i>
-                                    <h4 class="title">{{ __('home.about_2_box_1') }}</h4>
+                                    <h4 class="title">{!! __('home.about_2_box_1') !!}</h4>
                                 </div>
                             </div>
 
                             <div class="feature-block-three col-lg-4 col-md-4 col-sm-12">
                                 <div class="inner">
                                     <i class="icon flaticon-delivery-insurance-3"></i>
-                                    <h4 class="title">{{ __('home.about_2_box_2') }}</h4>
+                                    <h4 class="title">{!! __('home.about_2_box_2') !!}</h4>
                                 </div>
                             </div>
 
                             <div class="feature-block-three col-lg-4 col-md-4 col-sm-12">
                                 <div class="inner">
                                     <i class="icon flaticon-delivery-box-3"></i>
-                                    <h4 class="title">{{ __('home.about_2_box_3') }}</h4>
+                                    <h4 class="title">{!! __('home.about_2_box_3') !!}</h4>
                                 </div>
                             </div>
-                        </div>
-                        <div class="founder-info">
-                            <div class="thumb"><img src="{{ asset('huaxia/images/resource/ceo.jpg') }}" alt /></div>
-                            <h5 class="name">{{ __('home.about_2_ceo_name') }}</h5>
-                            <span class="designation">{{ __('home.about_2_ceo_title') }}</span>
                         </div>
                     </div>
                 </div>
