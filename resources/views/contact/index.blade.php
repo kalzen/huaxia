@@ -34,9 +34,6 @@
                             <div class="sec-title">
                                 <span class="sub-title">{{ __('contact.subtitle_1') }}</span>
                                 <h2>{{ __('contact.subtitle_2') }}</h2>
-                                <div class="text">Lorem ipsum is simply free text available dolor sit amet, consectetur
-                                    notted adipisicing elit sed do eiusmod tempor incididunt simply free ut labore et
-                                    dolore magna aliqua.</div>
                             </div>
                             <ul class="list-unstyled contact-details__info">
                                 <li>
@@ -45,8 +42,9 @@
                                     </div>
                                     <div class="text">
                                         <h6>{{ __('contact.box_title_1') }}</h6>
-                                        <a href="tel:980089850"><span>{{ __('contact.box_subtitle_1') }}</span> +92
-                                            (020)-9850</a>
+                                        <a href="tel:0968633588"><span>{{ __('contact.box_subtitle_1') }}</span>
+                                            +84 968633588
+                                        </a>
                                     </div>
                                 </li>
                                 <li>
@@ -78,31 +76,28 @@
                             <span class="sub-title">{{ __('contact.subtitle_3') }}</span>
                             <h2>{{ __('contact.subtitle_4') }}</h2>
                         </div>
-
-                        <form id="contact_form" name="contact_form" class
-                            action="https://html.kodesolution.com/2022/tronis-html/includes/sendmail.php" method="post">
+                        @if (@session('message'))
+                            <div class="alert alert-success">
+                                {{ session('message') }}
+                            </div>
+                        @endif
+                        <form id="contact_form" name="contact_form" action="{{ route('message') }}" method="post">
+                            @csrf
                             <div class="row">
-                                <div class="col-sm-6">
+                                <div class="col-sm-12">
                                     <div class="mb-3">
                                         <label>{{ __('contact.form_label_1') }}<small>*</small></label>
                                         <input name="form_name" class="form-control" type="text"
                                             placeholder="{{ __('contact.form_placeholder_1') }}" />
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-sm-6">
                                     <div class="mb-3">
                                         <label>{{ __('contact.form_label_2') }}<small>*</small></label>
                                         <input name="form_email" class="form-control required email" type="email"
                                             placeholder="{{ __('contact.form_placeholder_2') }}" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="mb-3">
-                                        <label>{{ __('contact.form_label_3') }}<small>*</small></label>
-                                        <input name="form_subject" class="form-control required" type="text"
-                                            placeholder="{{ __('contact.form_placeholder_3') }}" />
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -114,14 +109,26 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label>{{ __('contact.form_label_5') }}</label>
-                                <textarea name="form_message" class="form-control required" rows="5" placeholder="{{ __('contact.form_placeholder_5') }}"></textarea>
+                                <label>{{ __('home.why_choose_us_form_4') }}</label>
+                                <select class="form-control" name="service">
+                                    <option value selected disabled required>
+                                        {{ __('home.why_choose_us_form_select') }}
+                                    </option>
+                                    <option value="1">{{ __('home.why_choose_us_form_select_1') }}</option>
+                                    <option value="2">{{ __('home.why_choose_us_form_select_2') }}</option>
+                                    <option value="3">{{ __('home.why_choose_us_form_select_3') }}</option>
+                                    <option value="4">{{ __('home.why_choose_us_form_select_4') }}</option>
+                                    <option value="5">{{ __('home.why_choose_us_form_select_5') }}</option>
+                                </select>
                             </div>
+
                             <div class="mb-3">
                                 <input name="form_botcheck" class="form-control" type="hidden" value />
                                 <button type="submit" class="theme-btn btn-style-one"
-                                    data-loading-text="Please wait..."><span class="btn-title">{{ __('contact.form_button') }}</span></button>
-                                <button type="reset" class="theme-btn btn-style-one"><span class="btn-title">{{ __('contact.form_reset') }}</span></button>
+                                    data-loading-text="Please wait..."><span
+                                        class="btn-title">{{ __('contact.form_button') }}</span></button>
+                                <button type="reset" class="theme-btn btn-style-one"><span
+                                        class="btn-title">{{ __('contact.form_reset') }}</span></button>
                             </div>
                         </form>
                     </div>
@@ -132,10 +139,10 @@
         <section>
             <div class="container-fluid p-0">
                 <div class="row">
-
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.843149788316!2d144.9537131159042!3d-37.81714274201087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sbn!2sbd!4v1583760510840!5m2!1sbn!2sbd"
-                        data-tm-width="100%" height="500" frameborder="0" allowfullscreen></iframe>
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d739.7506130319392!2d106.6969995001695!3d20.867639274713923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7ae7cd8ac77b%3A0xefcd637da20f063b!2zMyBQIEzDqiBUaMOhbmggVMO0bmcsIE3DoXkgVMahLCBOZ8O0IFF1eeG7gW4sIEjhuqNpIFBow7JuZywgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1728842233321!5m2!1sen!2s"
+                        data-tm-width="100%" height="500" frameborder="0" allowfullscreen loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
