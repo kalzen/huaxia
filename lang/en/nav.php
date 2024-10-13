@@ -12,7 +12,7 @@ return [
     "home" => "Home",
     "about" => "About",
     "services" => "Services",
-    "post" => "Post",
+    "post" => "News",
     "contact" => "Contact",
     "book_service" => "Book service",
     "call_callout" => "CALL NOW",
