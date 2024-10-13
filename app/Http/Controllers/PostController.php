@@ -18,7 +18,12 @@ class PostController extends Controller
         // $featured_posts = Post::active()->orderBy('viewed', 'desc')->paginate();
         $lang =  App::getLocale();
         $posts = Post::active($lang)->paginate();
-        return view('post.index', compact('posts'));
+
+        $services = Post::whereHas('categories', function ($query) {
+            $query->where('category_post.category_id', 1);
+        })->get();
+        
+        return view('post.index', compact('posts', 'services'));
     }
 
     public function detail($alias)
@@ -38,11 +43,20 @@ class PostController extends Controller
             $post = Post::active()->where('id', $post_id)->first();
         }
 
+        $categoryId = Category::where('lang', $lang)->get()->pluck('id');
+        $services = Post::where('lang', $lang)->whereHas('categories', function ($query) use ($categoryId) {
+            $query->where('category_post.category_id', $categoryId);
+        })->get();
+        $services->load('images');
         DB::table('posts')->where('id', $post->id)->increment('viewed');
         $categories = Category::orderBy('name', 'asc')->whereNull('parent_id')->limit(8)->get();
         $most_view = Post::active($lang)->orderBy('id', 'desc')->limit(5)->get();
         $tags = Tag::limit(5)->get();
-        return view('post.detail', compact('post', 'categories', 'most_view', 'tags'));
+
+        if ($post_id) {
+            return redirect()->route('post.detail', ['alias' => $post->slug]);
+        }
+        return view('post.detail', compact('post', 'categories', 'most_view', 'tags', 'services'));
     }
 
     public function category($alias)
