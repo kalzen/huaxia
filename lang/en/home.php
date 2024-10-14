@@ -6,8 +6,11 @@ return [
     "slider_button" => "Read more",
 
     "feature_title_1" => "Optimize cost",
+    "feature_description_1" => "</br> Optimize costs to provide cost-effective solutions for customers",
     "feature_title_2" => "Fast delivery",
+    "feature_description_2" => "</br> Fast, safe and always on-time delivery to customers",
     "feature_title_3" => "Guaranteed warehouse",
+    "feature_description_3" => "Quality, safe and convenient warehouse for all storage needs",
 
     "about_title" => "We provide comprehensive </br> shipping services",
     "about_description" => "Huaxia Vietnam Supply Chain Management Co., Ltd. always strives to become a delivery company that customers entrust with high trust and trust, supporting the connection of Vietnamese businesses to the world with high-quality services, professional, dedicated personnel, creating added value, contributing positively to the development of the supply chain",

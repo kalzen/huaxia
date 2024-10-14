@@ -142,7 +142,7 @@
                             <h4 class="title">
                                 <a href="page-about.html">{!! __('home.feature_title_1') !!}</a>
                             </h4>
-                            <div class="text">Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod.</div>
+                            <div class="text">{!! __('home.feature_description_1') !!}</div>
                         </div>
                     </div>
                 </div>
@@ -157,7 +157,7 @@
                             <h4 class="title">
                                 <a href="page-about.html">{!! __('home.feature_title_2') !!}</a>
                             </h4>
-                            <div class="text">Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod.</div>
+                            <div class="text">{!! __('home.feature_description_2') !!}</div>
                         </div>
                     </div>
                 </div>
@@ -170,7 +170,7 @@
                         </div>
                         <div class="content-box">
                             <h4 class="title"><a href="page-about.html">{!! __('home.feature_title_3') !!}</a></h4>
-                            <div class="text">Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod.</div>
+                            <div class="text">{!! __('home.feature_description_3') !!}</div>
                         </div>
                     </div>
                 </div>
@@ -372,20 +372,18 @@
                         </div>
 
                         <div class="feature-block-two">
-                            <div class="inner-box">
+                            <div class="inner-box d-flex align-middle">
                                 <i class="icon flaticon-delivery-box-4"></i>
-                                <h4 class="title">{{ __('home.why_choose_us_title_1') }}</h4>
-                                <p class="text">Aenean placerat ut lacus nec pulvinar. Donec eu leo, ante at,
-                                    commodo diam.</p>
+                                <h4 class="title pt-1">{{ __('home.why_choose_us_title_1') }}</h4>
+                                <p class="text"></p>
                             </div>
                         </div>
 
-                        <div class="feature-block-two">
-                            <div class="inner-box">
+                        <div class="feature-block-two pt-2 ">
+                            <div class="inner-box d-flex align-middle">
                                 <i class="icon flaticon-international-shipping-3"></i>
-                                <h4 class="title">{{ __('home.why_choose_us_title_2') }}</h4>
-                                <p class="text">Interdum et malesuada fames ac ante ipsum primis in faucibus donec
-                                    tempor nisi neque.</p>
+                                <h4 class="title pt-1">{{ __('home.why_choose_us_title_2') }}</h4>
+                                <p class="text"></p>
                             </div>
                         </div>
                     </div>

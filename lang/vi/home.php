@@ -5,9 +5,12 @@ return [
     "slider_text" => "Vận chuyển hàng hoá Quốc tế",
     "slider_button" => "Xem thêm",
 
-    "feature_title_1" => "Tối ưu </br> chi phí",
+    "feature_title_1" => "Tối ưu chi phí",
+    "feature_description_1" => "</br> Tối ưu chi phí mang đến giải pháp tiết kiệm cho khách hàng",
     "feature_title_2" => "Vận chuyển </br> nhanh chóng",
+    "feature_description_2" => "vận chuyển nhanh chóng, an toàn, và luôn đúng hẹn đến tay khách hàng",
     "feature_title_3" => "Kho hàng </br> đảm bảo",
+    "feature_description_3" => "Kho hàng đảm bảo chất lượng, an toàn và tiện lợi cho mọi nhu cầu lưu trữ",
 
     "about_title" => "Chúng tôi cung cấp các dịch vụ vận chuyển trọn gói",
     "about_description" => "Công ty TNHH Quản lý chuỗi cung ứng Huaxia Việt Nam tự hào tiên phong trong lĩnh vực logistics và quản lý chuỗi cung ứng tại Việt Nam. Chúng tôi cam kết mang đến giải pháp vận chuyển chất lượng, nhanh chóng và an toàn, kết nối doanh nghiệp Việt Nam với thị trường quốc tế. Hiểu được vai trò quan trọng của tối ưu hóa chuỗi cung ứng trong bối cảnh toàn cầu hóa, Huaxia không ngừng cải tiến quy trình, nâng cao chất lượng dịch vụ và đầu tư vào đội ngũ nhân sự chuyên nghiệp. Chúng tôi cung cấp các dịch vụ đa dạng từ vận chuyển hàng hóa siêu trường, siêu trọng đến nông sản và hàng tiêu dùng, đảm bảo tư vấn giải pháp tối ưu chi phí và thời gian giao nhận, góp phần vào sự phát triển bền vững của khách hàng và nền kinh tế Việt Nam.",
