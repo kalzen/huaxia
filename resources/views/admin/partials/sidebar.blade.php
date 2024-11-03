@@ -63,7 +63,7 @@
                         </span>
                     </a>
                 </li>
-                <li class="nav-item nav-item-submenu">
+                {{-- <li class="nav-item nav-item-submenu">
                     <a href="javascript:;" class="nav-link"><i class="icon-color-sampler"></i> <span>Giao diện</span></a>
 
                     <ul class="nav nav-group-sub" data-submenu-title="Giao diện">
@@ -71,7 +71,7 @@
                         <li class="nav-item"><a href="{{route('admin.slide.index')}}" class="nav-link">Slide</a></li>
                         <li class="nav-item"><a href="{{route('admin.menu.index')}}" class="nav-link">Menu</a></li>
                     </ul>
-                </li>
+                </li> --}}
                 <li class="nav-item nav-item-submenu">
                     <a href="javascript:;" class="nav-link"><i class="icon-pushpin"></i> <span>Bài viết</span></a>
 
