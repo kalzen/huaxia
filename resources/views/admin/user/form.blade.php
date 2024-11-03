@@ -58,8 +58,8 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="form-group">
-                                <label class="font-weight-semibold">Mật khẩu</label>
-                                <input type="password" class="form-control" name="password">
+                                <label class="font-weight-semibold">Mật khẩu <span class="required"></label>
+                                <input type="password" class="form-control" name="password" required>
                             </div>
                         </div>
                     </div>
