@@ -95,7 +95,7 @@
         <div class="auto-container">
             <div class="inner-container">
                 <div class="copyright-text">
-                    <p>&copy; {{ __('footer.copy_right') }} <a href="{{ route('home') }}">kodesolution.com</a></p>
+                    <p>&copy; {{ __('footer.copy_right') }} <a href="{{ route('home') }}">12Bytes</a></p>
                 </div>
                 <ul class="social-icon-two">
                     <li>
