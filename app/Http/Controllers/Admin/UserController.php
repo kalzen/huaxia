@@ -7,6 +7,7 @@ use App\Http\Requests\CreateUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Exception;
 
 class UserController extends Controller
 {
