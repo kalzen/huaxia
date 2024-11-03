@@ -11,8 +11,13 @@ class LocalizationMiddleware
 {
     public function handle(Request $request, Closure $next): Response
     {
-        $locale = Session::get('locale') ?? 'vi';
-        Session::put('locale', $locale);
+        if ($request->has('locale') && in_array($request->get('locale'), ['vi', 'en', 'cn'])) {
+            $locale = $request->get('locale');
+            Session::put('locale', $locale);
+        } else {
+            $locale = Session::get('locale', 'vi');
+        }
+
         App::setLocale($locale);
         
         return $next($request);
