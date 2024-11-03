@@ -90,6 +90,7 @@ Route::middleware(['auth'])->name('admin.')->prefix('admin')->group(function () 
         Route::post('store-post-lang/{post}/{lang}', [AdminPostController::class, 'store'])->name('store-lang');
         Route::post('category', [AdminPostController::class, 'category'])->name('category');
         Route::get('create-post-lang/{post}/{lang}/{title}', [AdminPostController::class, 'create'])->name('lang');
+        Route::get('delete-post-lang/{post}', [AdminPostController::class, 'destroy'])->name('delete-lang');
     });
     //Product
     Route::resource('product', ProductController::class);
