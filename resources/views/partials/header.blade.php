@@ -7,34 +7,32 @@
                 <li><i class="fa fa-map-marker-alt"></i>
                     {{ __('nav.address') }}</li>
                 <li><i class="fa fa-clock"></i> {{ __('nav.work_time') }}: 8am - 5pm</li>
-                <li><i class="fa fa-phone-volume"></i> <a href="tel:+84968633588">+84 968633588</a></li>
+                <li><i class="fa fa-phone-volume"></i> <a
+                        href="tel:{{ str_replace(' ', '', $config['hotline']->value) }}">{{ $config['hotline']->value }}</a>
+                </li>
             </ul>
         </div>
         <div class="top-right">
             <ul class="social-icon-one">
                 <li>
-                    <a href="#"><span class="fab fa-facebook-square"></span></a>
+                    <a href="{{ $config['facebook']->value }}"><span class="fab fa-facebook-square"></span></a>
                 </li>
                 <li>
-                    <a href="#"><span class="fab fa-twitter"></span></a>
+                    <a href="{{ $config['youtube']->value }}"><span class="fab fa-youtube"></span></a>
                 </li>
                 <li>
-                    <a href="#"><span class="fab fa-pinterest-p"></span></a>
-                </li>
-                <li>
-                    <a href="#"><span class="fab fa-instagram"></span></a>
+                    <a href="{{ $config['instagram']->value }}"><span class="fab fa-instagram"></span></a>
                 </li>
             </ul>
         </div>
     </div>
-
 
     <div class="header-lower">
 
         <div class="main-box">
             <div class="logo-box" style="background-color: white !important">
                 <div class="logo">
-                    <a href="{{ route('home') }}"><img src="{{ asset('huaxia/images/logo.jpg') }}" alt
+                    <a href="{{ route('home') }}"><img src="{{ asset($config['logo']->value) }}" alt
                             title="Huaxia" /></a>
                 </div>
             </div>
@@ -110,7 +108,8 @@
                     <div class="contact-info-box">
                         <i class="icon lnr-icon-phone-handset"></i>
                         <span class="title">{{ __('nav.call_callout') }}</span>
-                        <a href="tel:+84968633588">0968633588</a>
+                        <a
+                            href="tel:{{ str_replace(' ', '', $config['hotline']->value) }}">{{ $config['hotline']->value }}</a>
                     </div>
                 </li>
                 <li>
@@ -118,7 +117,7 @@
                     <div class="contact-info-box">
                         <span class="icon lnr-icon-envelope1"></span>
                         <span class="title">{{ __('nav.email_callout') }}</span>
-                        <a href=""><span>info@huaxiavietnam.com</span></a>
+                        <a href="{{ $config['email']->value }}"><span>{{ $config['email']->value }}</span></a>
                     </div>
                 </li>
                 <li>
@@ -132,16 +131,13 @@
             </ul>
             <ul class="social-links">
                 <li>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="{{ $config['facebook']->value }}"><span class="fab fa-facebook-square"></span></a>
                 </li>
                 <li>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="{{ $config['youtube']->value }}"><span class="fab fa-youtube"></span></a>
                 </li>
                 <li>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="{{ $config['instagram']->value }}"><span class="fab fa-instagram"></span></a>
                 </li>
             </ul>
         </nav>
