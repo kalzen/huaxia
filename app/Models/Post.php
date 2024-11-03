@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
+use Overtrue\Pinyin\Pinyin;
 
 class Post extends Model
 {
@@ -74,11 +75,27 @@ class Post extends Model
     {
         parent::boot();
         static::creating(function ($post) {
-            $post->slug = $post->slug ?: (Str::slug($post->title));
+            if ($post->slug) {
+                return;
+            }
+            if (preg_match('/[\x{4e00}-\x{9fa5}]/u', $post->title)) {
+                $pinyin = new Pinyin();
+                $post->slug = Str::slug($pinyin->permalink($post->title));
+                
+            } else {
+                $post->slug = Str::slug($post->title);
+            }
+            
             $post->user_id = $post->user_id ?: (auth()->user()->id ?? null);
         });
+        
         static::updating(function ($post) {
-            $post->slug = Str::slug($post->title);
+            if (preg_match('/[\x{4e00}-\x{9fa5}]/u', $post->title)) {
+                $pinyin = new Pinyin();
+                $post->slug = Str::slug($pinyin->permalink($post->title));
+            } else {
+                $post->slug = Str::slug($post->title);
+            }
         });
     }
 }
