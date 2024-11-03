@@ -14,6 +14,7 @@ use App\Models\OrderDetail;
 use App\Models\Testimonial;
 use App\Models\Team;
 use App\Models\Category;
+use App\Models\Config;
 use Exception;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
@@ -34,7 +35,9 @@ class HomeController extends Controller
         })->get();
         $services->load('images');
 
-        return view('home.index', ['services' => $services, 'posts' => $posts]);
+        $config = Config::all()->keyBy('name');
+
+        return view('home.index', ['services' => $services, 'posts' => $posts, 'config' => $config]);
     }
     public function order()
     {
@@ -92,8 +95,9 @@ class HomeController extends Controller
             $query->where('category_post.category_id', $categoryId);
         })->get();
         $services->load('images');
+        $config = Config::all()->keyBy('name');
 
-        return view('contact.index', compact('services'));
+        return view('contact.index', compact('services', 'config'));
     }
     public function about()
     {
@@ -103,7 +107,8 @@ class HomeController extends Controller
             $query->where('category_post.category_id', $categoryId);
         })->get();
         $services->load('images');
-        return view('home.about', compact('services'));
+        $config = Config::all()->keyBy('name');
+        return view('home.about', compact('services', 'config'));
     }
 
     public function service()
@@ -114,7 +119,8 @@ class HomeController extends Controller
             $query->where('category_post.category_id', $categoryId);
         })->get();
         $services->load('images');
-        return view('home.service', compact('services'));
+        $config = Config::all()->keyBy('name');
+        return view('home.service', compact('services', 'config'));
     }
 
     public function logout()

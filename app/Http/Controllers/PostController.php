@@ -9,6 +9,7 @@ use App\Models\PostLanguage;
 use App\Models\Tag;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
+use App\Models\Config;
 
 class PostController extends Controller
 {
@@ -23,7 +24,9 @@ class PostController extends Controller
             $query->where('category_post.category_id', 1);
         })->get();
         
-        return view('post.index', compact('posts', 'services'));
+        $config = Config::all()->keyBy('name');
+
+        return view('post.index', compact('posts', 'services', 'config'));
     }
 
     public function detail($alias)
