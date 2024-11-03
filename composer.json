@@ -16,6 +16,7 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4",
+        "overtrue/pinyin": "^5.3",
         "sunra/php-simple-html-dom-parser": "v1.5.2"
     },
     "require-dev": {
