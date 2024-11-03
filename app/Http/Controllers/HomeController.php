@@ -17,6 +17,7 @@ use App\Models\Category;
 use Exception;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
 class HomeController extends Controller
 {
@@ -32,6 +33,7 @@ class HomeController extends Controller
             $query->where('category_post.category_id', $categoryId);
         })->get();
         $services->load('images');
+
         return view('home.index', ['services' => $services, 'posts' => $posts]);
     }
     public function order()
@@ -59,6 +61,23 @@ class HomeController extends Controller
     public function contact()
     {
         if (request()->isMethod('post')) {
+            $validator = Validator::make(request()->all(), [
+                'name' => 'required',
+                'email' => 'required|email',
+                'mobile' => 'regex:/^0[0-9]{9,10}$/',
+                'service' => 'required'
+            ], [
+                'name.required' => 'Vui lòng nhập tên của bạn.',
+                'email.required' => 'Vui lòng nhập email của bạn.',
+                'email.email' => 'Email không hợp lệ.',
+                'mobile.regex' => 'Số điện thoại không hợp lệ.',
+                'service.required' => 'Vui lòng chọn dịch vụ.'
+            ]);
+
+            if ($validator->fails()) {
+                return redirect()->back()->withErrors($validator)->withInput();
+            }
+
             Message::create([
                 'name' => request('name'),
                 'email' => request('email'),
