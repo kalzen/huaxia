@@ -67,7 +67,7 @@ class PostController extends Controller
                     'keyword' => $request->keyword,
                     'lang' => $lang
                 ]) : Post::create($request->only(['title', 'description', 'content', 'status', 'is_promotion', 'keyword']));
-                
+
             $post->categories()->sync($request->category_id);
             $post->tags()->sync(collect(explode(', ', $request->tags))->map(function ($item) {
                 return Tag::updateOrCreate(['name' => $item]);
@@ -170,7 +170,18 @@ class PostController extends Controller
 
     public function destroy($id)
     {
-        Post::find($id)->delete();
+        $languages = ['vi', 'en', 'cn'];
+        $post = PostLanguage::where('vi', $id)->first();
+    
+        if (!$post) {
+            return response()->json(['success' => false, 'message' => 'Không tìm thấy bài viết']);
+        }
+    
+        foreach ($languages as $lang) {
+            if ($post->$lang) {
+                Post::find($post->$lang)->delete();
+            }
+        }
         return response()->json(['success' => true, 'message' => 'Xóa thành công']);
     }
 }
