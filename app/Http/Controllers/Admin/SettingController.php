@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Config;
-use DB;
+use Illuminate\Support\Facades\DB;
+use Exception;
 
 class SettingController extends Controller
 {
@@ -54,6 +55,9 @@ class SettingController extends Controller
             }
             if ($request->email) {
                 Config::where('name','youtube')->update(['value'=>$request->youtube]);
+            }
+            if ($request->map) {
+                Config::where('name','map')->update(['value'=>$request->map]);
             }
             DB::commit();
             return redirect()->route('admin.setting.index')->with('message', 'Cập nhật thành công');
