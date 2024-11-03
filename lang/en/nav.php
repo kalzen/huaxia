@@ -5,7 +5,8 @@ return [
     "language" => "Language",
     "lang" => [
         "en" => "English",
-        "vi" => "Vietnamese"
+        "vi" => "Vietnamese",
+        "cn" => "Chinese"
     ],
     "button" => "Book service",
     "search" => "Search...",

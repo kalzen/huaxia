@@ -5,7 +5,8 @@ return [
     "language" => "Ngôn ngữ",
     "lang" => [
         "en" => "Tiếng Anh",
-        "vi" => "Tiếng Việt"
+        "vi" => "Tiếng Việt",
+        "cn" => "Tiếng Trung"
     ],
     "button" => "Đặt dịch vụ",
     "search" => "Tìm kiếm...",
