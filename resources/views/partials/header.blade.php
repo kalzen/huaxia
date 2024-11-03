@@ -1,6 +1,6 @@
 <header class="main-header header-style-one">
 
-    <div class="header-top" >
+    <div class="header-top">
         <div class="top-left">
 
             <ul class="list-style-one">
@@ -29,7 +29,7 @@
     </div>
 
 
-    <div class="header-lower" >
+    <div class="header-lower">
 
         <div class="main-box">
             <div class="logo-box" style="background-color: white !important">
@@ -61,10 +61,14 @@
                             <a>{{ __('nav.language') }}</a>
                             <ul>
 
-                                <li> <a
-                                        href="{{ route('language', ['locale' => 'vi']) }}">{{ __('nav.lang.vi') }}</a>
+                                <li>
+                                    <a href="{{ route('language', ['locale' => 'vi']) }}">{{ __('nav.lang.vi') }}</a>
                                 </li>
-                                <li><a href="{{ route('language', ['locale' => 'en']) }}">{{ __('nav.lang.en') }}</a>
+                                <li>
+                                    <a href="{{ route('language', ['locale' => 'en']) }}">{{ __('nav.lang.en') }}</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('language', ['locale' => 'cn']) }}">{{ __('nav.lang.cn') }}</a>
                                 </li>
                             </ul>
                         </li>
