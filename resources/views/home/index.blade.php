@@ -119,7 +119,7 @@
                             data-voffset="['100','120','120','120']" data-x="['left','left','left','left']"
                             data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']"
                             data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                            <a href="page-about.html" class="theme-btn btn-style-one hvr-light"><span
+                            <a href="{{ route('about') }}" class="theme-btn btn-style-one hvr-light"><span
                                     class="btn-title">{{ __('home.slider_button') }}</span></a>
                         </div>
                     </li>
@@ -140,7 +140,7 @@
                         </div>
                         <div class="content-box">
                             <h4 class="title">
-                                <a href="page-about.html">{!! __('home.feature_title_1') !!}</a>
+                                <a href="{{ route('service') }}">{!! __('home.feature_title_1') !!}</a>
                             </h4>
                             <div class="text">{!! __('home.feature_description_1') !!}</div>
                         </div>
@@ -155,7 +155,7 @@
                         </div>
                         <div class="content-box">
                             <h4 class="title">
-                                <a href="page-about.html">{!! __('home.feature_title_2') !!}</a>
+                                <a href="{{ route('service') }}">{!! __('home.feature_title_2') !!}</a>
                             </h4>
                             <div class="text">{!! __('home.feature_description_2') !!}</div>
                         </div>
@@ -169,7 +169,7 @@
                             <span class="count">03</span>
                         </div>
                         <div class="content-box">
-                            <h4 class="title"><a href="page-about.html">{!! __('home.feature_title_3') !!}</a></h4>
+                            <h4 class="title"><a href="{{ route('about') }}">{!! __('home.feature_title_3') !!}</a></h4>
                             <div class="text">{!! __('home.feature_description_3') !!}</div>
                         </div>
                     </div>
@@ -209,7 +209,7 @@
                             </div>
                         </div>
                         <div class="btm-box">
-                            <a href="page-about.html" class="theme-btn btn-style-one"><span
+                            <a href="{{ route('about') }}" class="theme-btn btn-style-one"><span
                                     class="btn-title">{{ __('home.about_button') }}</span></a>
                         </div>
                     </div>
@@ -315,19 +315,22 @@
                 <div class="tracking-form">
                     <h4 class="title">{!! __('home.tracking_title') !!}</h4>
 
-                    <form method="post" action="#">
+                    <form method="post" action="{{ route('message') }}">
+                        @csrf
                         <div class="row">
                             <div class="form-group col-lg-4 col-md-12 col-sm-12">
                                 <span class="icon lnr-icon-user"></span>
-                                <input type="text" name="field_name"
+                                <input type="text" name="name"
                                     placeholder="{{ __('home.tracking_placeholder_1') }}" />
                             </div>
 
                             <div class="form-group col-lg-4 col-md-12 col-sm-12">
                                 <span class="icon lnr-icon-envelope1"></span>
-                                <input type="text" name="field_name"
+                                <input type="mail" name="email"
                                     placeholder="{{ __('home.tracking_placeholder_2') }}" />
                             </div>
+
+                            <input type="hidden" name="service" value="Nhận profile">
 
                             <div class="form-group col-lg-4 col-md-12 col-sm-12 text-end">
                                 <button type="submit" class="theme-btn btn-style-one"><span
@@ -349,7 +352,7 @@
                 <div class="sec-title light mb-0">
                     <div class="sub-title">{{ __('home.call_action_company') }}</div>
                     <h1>{!! __('home.call_action_title') !!}</h1>
-                    <a href="#" class="theme-btn btn-style-one hvr-light"><span
+                    <a href="{{ route('contact') }}" class="theme-btn btn-style-one hvr-light"><span
                             class="btn-title">{{ __('home.call_action_button') }}</span></a>
                 </div>
             </div>
@@ -397,6 +400,15 @@
                                     {{ session('message') }}
                                 </div>
                             @endif
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                             <form method="post" action="{{ route('message') }}" id="contact-form">
                                 @csrf
                                 <div class="row">
@@ -407,12 +419,12 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                         <label>{{ __('home.why_choose_us_form_2') }}:</label>
-                                        <input type="text" name="email"
+                                        <input type="email" name="email"
                                             placeholder="{{ __('home.why_choose_us_form_placeholder_2') }}" required />
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                         <label>{{ __('home.why_choose_us_form_3') }}:</label>
-                                        <input type="text" name="mobile"
+                                        <input type="number" name="mobile"
                                             placeholder="{{ __('home.why_choose_us_form_placeholder_3') }}" required />
                                     </div>
                                 </div>
@@ -422,11 +434,21 @@
                                         <option value selected disabled required>
                                             {{ __('home.why_choose_us_form_select') }}
                                         </option>
-                                        <option value="1">{{ __('home.why_choose_us_form_select_1') }}</option>
-                                        <option value="2">{{ __('home.why_choose_us_form_select_2') }}</option>
-                                        <option value="3">{{ __('home.why_choose_us_form_select_3') }}</option>
-                                        <option value="4">{{ __('home.why_choose_us_form_select_4') }}</option>
-                                        <option value="5">{{ __('home.why_choose_us_form_select_5') }}</option>
+                                        <option value="{{ __('home.why_choose_us_form_select_1') }}">
+                                            {{ __('home.why_choose_us_form_select_1') }}
+                                        </option>
+                                        <option value="{{ __('home.why_choose_us_form_select_2') }}">
+                                            {{ __('home.why_choose_us_form_select_2') }}
+                                        </option>
+                                        <option value="{{ __('home.why_choose_us_form_select_3') }}">
+                                            {{ __('home.why_choose_us_form_select_3') }}
+                                        </option>
+                                        <option value="{{ __('home.why_choose_us_form_select_4') }}">
+                                            {{ __('home.why_choose_us_form_select_4') }}
+                                        </option>
+                                        <option value="{{ __('home.why_choose_us_form_select_5') }}">
+                                            {{ __('home.why_choose_us_form_select_5') }}
+                                        </option>
                                     </select>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group">
