@@ -18,11 +18,10 @@
                         <div class="icon-box"><i class="icon flaticon-stock-1"></i></div>
                         <h4 class="title">{{ __('footer.contact') }}</h4>
                         <div class="text">
-                            <a
-                                href="https://html.kodesolution.com/cdn-cgi/l/email-protection#57393232333f323b271734383a2736392e7934383a"><span
-                                    class="__cf_email__"
+                            <a href="{{ $config['email']->value }}"><span class="__cf_email__"
                                     data-cfemail="1b757e7e7f737e776b5b7874766b7a756235787476">[email&#160;protected]</span></a>
-                            <a href="tel:+84 968633588">+84 968633588</a>
+                            <a
+                                href="tel:{{ str_replace(' ', '', $config['hotline']->value) }}">{{ $config['hotline']->value }}</a>
                         </div>
                     </div>
                 </div>
@@ -46,7 +45,8 @@
                 <div class="footer-column col-xl-3 col-lg-12 col-md-6 col-sm-12">
                     <div class="footer-widget about-widget">
                         <div class="logo">
-                            <a href="{{ route('home') }}"><img src="{{ asset('huaxia/images/logo-navi.png') }}" alt /></a>
+                            <a href="{{ route('home') }}"><img src="{{ asset('huaxia/images/logo-navi.png') }}"
+                                    alt /></a>
                         </div>
                         <div class="text">{{ __('footer.sub_title_1') }}</div>
                         <a href="{{ route('about') }}" class="theme-btn btn-style-one hvr-light small"><span
@@ -59,7 +59,9 @@
                         <h3 class="widget-title">{{ __('footer.service') }}</h3>
                         <ul class="user-links">
                             @foreach ($services as $service)
-                                <li><a href="{{ route('post.detail', ['alias' => $service->slug]) }}">{{ $service->title }}</a></li>
+                                <li><a
+                                        href="{{ route('post.detail', ['alias' => $service->slug]) }}">{{ $service->title }}</a>
+                                </li>
                             @endforeach
                         </ul>
                     </div>
@@ -99,16 +101,13 @@
                 </div>
                 <ul class="social-icon-two">
                     <li>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="{{ $config['facebook']->value }}"><span class="fab fa-facebook-square"></span></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="{{ $config['youtube']->value }}"><span class="fab fa-youtube"></span></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="{{ $config['instagram']->value }}"><span class="fab fa-instagram"></span></a>
                     </li>
                 </ul>
             </div>
