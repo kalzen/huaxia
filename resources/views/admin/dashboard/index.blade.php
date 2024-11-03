@@ -75,7 +75,7 @@
                     <!-- Tabs -->
                     <ul class="nav nav-tabs nav-tabs-solid nav-justified bg-indigo-400 border-x-0 border-bottom-0 border-top-indigo-300 mb-0">
                         <li class="nav-item">
-                            <a href="#messages-tue" class="nav-link font-size-sm text-uppercase active" data-toggle="tab">
+                            <a href="{{route('admin.message.index')}}" class="nav-link font-size-sm text-uppercase active" data-toggle="tab">
                                 Liên hệ
                             </a>
                         </li>
