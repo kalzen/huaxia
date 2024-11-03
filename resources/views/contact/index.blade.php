@@ -42,8 +42,8 @@
                                     </div>
                                     <div class="text">
                                         <h6>{{ __('contact.box_title_1') }}</h6>
-                                        <a href="tel:0968633588"><span>{{ __('contact.box_subtitle_1') }}</span>
-                                            +84 968633588
+                                        <a href="{{ str_replace(' ', '', $config['hotline']->value) }}"><span>{{ __('contact.box_subtitle_1') }}</span>
+                                            {{ $config['hotline']->value }}
                                         </a>
                                     </div>
                                 </li>
@@ -54,7 +54,7 @@
                                     <div class="text">
                                         <h6>{{ __('contact.box_title_2') }}</h6>
                                         <a
-                                            href="https://html.kodesolution.com/cdn-cgi/l/email-protection#07696262636f626b774764686a7766697e2964686a"><span
+                                            href="{{ $config['email']->value }}"><span
                                                 class="__cf_email__"
                                                 data-cfemail="59373c3c3d313c3529193a363429383720773a3634">[email&#160;protected]</span></a>
                                     </div>
@@ -81,13 +81,22 @@
                                 {{ session('message') }}
                             </div>
                         @endif
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <form id="contact_form" name="contact_form" action="{{ route('message') }}" method="post">
                             @csrf
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="mb-3">
                                         <label>{{ __('contact.form_label_1') }}<small>*</small></label>
-                                        <input name="form_name" class="form-control" type="text"
+                                        <input name="name" class="form-control" type="text"
                                             placeholder="{{ __('contact.form_placeholder_1') }}" />
                                     </div>
                                 </div>
@@ -96,14 +105,14 @@
                                 <div class="col-sm-6">
                                     <div class="mb-3">
                                         <label>{{ __('contact.form_label_2') }}<small>*</small></label>
-                                        <input name="form_email" class="form-control required email" type="email"
+                                        <input name="email" class="form-control required" type="email"
                                             placeholder="{{ __('contact.form_placeholder_2') }}" />
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="mb-3">
                                         <label>{{ __('contact.form_label_4') }}</label>
-                                        <input name="form_phone" class="form-control" type="text"
+                                        <input name="mobile" class="form-control" type="text"
                                             placeholder="{{ __('contact.form_placeholder_4') }}" />
                                     </div>
                                 </div>
@@ -114,11 +123,21 @@
                                     <option value selected disabled required>
                                         {{ __('home.why_choose_us_form_select') }}
                                     </option>
-                                    <option value="1">{{ __('home.why_choose_us_form_select_1') }}</option>
-                                    <option value="2">{{ __('home.why_choose_us_form_select_2') }}</option>
-                                    <option value="3">{{ __('home.why_choose_us_form_select_3') }}</option>
-                                    <option value="4">{{ __('home.why_choose_us_form_select_4') }}</option>
-                                    <option value="5">{{ __('home.why_choose_us_form_select_5') }}</option>
+                                    <option value="{{ __('home.why_choose_us_form_select_1') }}">
+                                        {{ __('home.why_choose_us_form_select_1') }}
+                                    </option>
+                                    <option value="{{ __('home.why_choose_us_form_select_2') }}">
+                                        {{ __('home.why_choose_us_form_select_2') }}
+                                    </option>
+                                    <option value="{{ __('home.why_choose_us_form_select_3') }}">
+                                        {{ __('home.why_choose_us_form_select_3') }}
+                                    </option>
+                                    <option value="{{ __('home.why_choose_us_form_select_4') }}">
+                                        {{ __('home.why_choose_us_form_select_4') }}
+                                    </option>
+                                    <option value="{{ __('home.why_choose_us_form_select_5') }}">
+                                        {{ __('home.why_choose_us_form_select_5') }}
+                                    </option>
                                 </select>
                             </div>
 
@@ -139,10 +158,8 @@
         <section>
             <div class="container-fluid p-0">
                 <div class="row">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d739.7506130319392!2d106.6969995001695!3d20.867639274713923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7ae7cd8ac77b%3A0xefcd637da20f063b!2zMyBQIEzDqiBUaMOhbmggVMO0bmcsIE3DoXkgVMahLCBOZ8O0IFF1eeG7gW4sIEjhuqNpIFBow7JuZywgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1728842233321!5m2!1sen!2s"
-                        data-tm-width="100%" height="500" frameborder="0" allowfullscreen loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="{{ $config['map']->value }}" data-tm-width="100%" height="500" frameborder="0"
+                        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
