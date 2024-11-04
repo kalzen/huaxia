@@ -546,15 +546,14 @@
                             </div>
                             <div class="lower-content">
                                 <ul class="post-info">
-                                    <li><i class="fa fa-user"></i>Bởi Admin</li>
+                                    <li><i class="fa fa-user"></i>{!! __('post.by') !!} Admin</li>
                                 </ul>
                                 <h4 class="title">
                                     <a href="{{ route('post.detail', ['alias' => $post->slug]) }}">
                                         {{ $post->title }}
                                     </a>
                                 </h4>
-                                <a href="{{ route('post.detail', ['alias' => $post->slug]) }}" class="read-more">Đọc
-                                    thêm<i class="fa fa-angle-right"></i></a>
+                                <a href="{{ route('post.detail', ['alias' => $post->slug]) }}" class="read-more">{!! __('post.read_more') !!}<i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>

@@ -5,4 +5,7 @@ return [
     "page_title_breadcrumb_2" => "News",
 
     "no_post" => "No post to display",
+
+    "by" => "by",
+    "read_more" => "Read more",
 ];

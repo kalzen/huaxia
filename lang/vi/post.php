@@ -5,4 +5,7 @@ return [
     "page_title_breadcrumb_2" => "Tin tức",
 
     "no_post" => "Không có bài viết nào",
+
+    "by" => "bởi",
+    "read_more" => "Đọc thêm",
 ];
