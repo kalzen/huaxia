@@ -45,8 +45,7 @@ Route::middleware(['LocalizationMiddleware'])->group(function () {
     Route::any('/lien-he', [HomeController::class, 'contact'])->name('contact');
     // Route::get('/san-pham/{alias}', [ProductController::class, 'detail'])->name('product.detail');
     // Route::get('/danh-muc/{alias}', [ProductController::class, 'catalogue'])->name('product.catalogue');
-    // Route::get('/tin-tuc', [PostController::class, 'index'])->name('post.list');
-    Route::get('/tuc-tin', [PostController::class, 'index'])->name('post.list');
+    Route::get('/tin-tuc', [PostController::class, 'index'])->name('post.list');
     Route::get('/tin-tuc/{alias}', [PostController::class, 'detail'])->name('post.detail');
     Route::get('/danh-muc-tin-tuc/{alias}', [PostController::class, 'category'])->name('post.category');
     Route::get('/tim-kiem-tin-tuc', [PostController::class, 'search'])->name('post.search');
