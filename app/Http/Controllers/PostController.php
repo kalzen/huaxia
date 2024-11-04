@@ -10,6 +10,7 @@ use App\Models\Tag;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
 use App\Models\Config;
+use Illuminate\Support\Facades\Session;
 
 class PostController extends Controller
 {
@@ -23,7 +24,7 @@ class PostController extends Controller
         $services = Post::whereHas('categories', function ($query) {
             $query->where('category_post.category_id', 1);
         })->get();
-        
+
         $config = Config::all()->keyBy('name');
 
         return view('post.index', compact('posts', 'services', 'config'));
@@ -31,10 +32,10 @@ class PostController extends Controller
 
     public function detail($alias)
     {
-        $lang =  App::getLocale();
+        $lang = App::getLocale();
         $post = Post::active()->where('slug', $alias)->first();
         $post_id = 0;
-        $otherLang = $lang == 'vi' ? 'en' : 'vi';
+        $otherLang = Session::get('previous_locale');
 
         $languageRelation = 'Language_' . $otherLang;
 
@@ -56,10 +57,12 @@ class PostController extends Controller
         $most_view = Post::active($lang)->orderBy('id', 'desc')->limit(5)->get();
         $tags = Tag::limit(5)->get();
 
+        $config = Config::all()->keyBy('name');
+
         if ($post_id) {
             return redirect()->route('post.detail', ['alias' => $post->slug]);
         }
-        return view('post.detail', compact('post', 'categories', 'most_view', 'tags', 'services'));
+        return view('post.detail', compact('post', 'categories', 'most_view', 'tags', 'services', 'config'));
     }
 
     public function category($alias)
