@@ -85,7 +85,7 @@
                                         <div class="sidebar__post-content">
                                             <h3> <span class="sidebar__post-content-meta">
                                                     <i class="fas fa-user-circle"></i>{{ __('postDetail.creator') }}</span>
-                                                <a href="news-details.html">{{ $post->title }}</a>
+                                                <a href="{{ route('post.detail', ['alias' => $post->slug]) }}">{{ $post->title }}</a>
                                             </h3>
                                         </div>
                                     </li>
@@ -97,7 +97,7 @@
                             <ul class="sidebar__category-list list-unstyled">
                                 @foreach ($categories as $category)
                                     <li class="{{ $post->categories[0]->id == $category->id ? 'active' : '' }}">
-                                        <a href="news-details.html">{{ $category->name }}
+                                        <a href="">{{ $category->name }}
                                             <span class="icon-right-arrow"></span>
                                         </a>
                                     </li>
