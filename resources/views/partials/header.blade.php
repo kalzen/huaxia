@@ -8,20 +8,20 @@
                     {{ __('nav.address') }}</li>
                 <li><i class="fa fa-clock"></i> {{ __('nav.work_time') }}: 8am - 5pm</li>
                 <li><i class="fa fa-phone-volume"></i> <a
-                        href="tel:{{ str_replace(' ', '', $config['hotline']->value) }}">{{ $config['hotline']->value }}</a>
+                        href="tel:{{ str_replace(' ', '', $shared_config['hotline']->value) }}">{{ $shared_config['hotline']->value }}</a>
                 </li>
             </ul>
         </div>
         <div class="top-right">
             <ul class="social-icon-one">
                 <li>
-                    <a href="{{ $config['facebook']->value }}"><span class="fab fa-facebook-square"></span></a>
+                    <a href="{{ $shared_config['facebook']->value }}"><span class="fab fa-facebook-square"></span></a>
                 </li>
                 <li>
-                    <a href="{{ $config['youtube']->value }}"><span class="fab fa-youtube"></span></a>
+                    <a href="{{ $shared_config['youtube']->value }}"><span class="fab fa-youtube"></span></a>
                 </li>
                 <li>
-                    <a href="{{ $config['instagram']->value }}"><span class="fab fa-instagram"></span></a>
+                    <a href="{{ $shared_config['instagram']->value }}"><span class="fab fa-instagram"></span></a>
                 </li>
             </ul>
         </div>
@@ -32,7 +32,7 @@
         <div class="main-box">
             <div class="logo-box" style="background-color: white !important">
                 <div class="logo">
-                    <a href="{{ route('home') }}"><img src="{{ asset($config['logo']->value) }}" alt
+                    <a href="{{ route('home') }}"><img src="{{ asset($shared_config['logo']->value) }}" alt
                             title="Huaxia" /></a>
                 </div>
             </div>
@@ -109,7 +109,7 @@
                         <i class="icon lnr-icon-phone-handset"></i>
                         <span class="title">{{ __('nav.call_callout') }}</span>
                         <a
-                            href="tel:{{ str_replace(' ', '', $config['hotline']->value) }}">{{ $config['hotline']->value }}</a>
+                            href="tel:{{ str_replace(' ', '', $shared_config['hotline']->value) }}">{{ $shared_config['hotline']->value }}</a>
                     </div>
                 </li>
                 <li>
@@ -117,7 +117,7 @@
                     <div class="contact-info-box">
                         <span class="icon lnr-icon-envelope1"></span>
                         <span class="title">{{ __('nav.email_callout') }}</span>
-                        <a href="{{ $config['email']->value }}"><span>{{ $config['email']->value }}</span></a>
+                        <a href="{{ $shared_config['email']->value }}"><span>{{ $shared_config['email']->value }}</span></a>
                     </div>
                 </li>
                 <li>
@@ -131,13 +131,13 @@
             </ul>
             <ul class="social-links">
                 <li>
-                    <a href="{{ $config['facebook']->value }}"><span class="fab fa-facebook-square"></span></a>
+                    <a href="{{ $shared_config['facebook']->value }}"><span class="fab fa-facebook-square"></span></a>
                 </li>
                 <li>
-                    <a href="{{ $config['youtube']->value }}"><span class="fab fa-youtube"></span></a>
+                    <a href="{{ $shared_config['youtube']->value }}"><span class="fab fa-youtube"></span></a>
                 </li>
                 <li>
-                    <a href="{{ $config['instagram']->value }}"><span class="fab fa-instagram"></span></a>
+                    <a href="{{ $shared_config['instagram']->value }}"><span class="fab fa-instagram"></span></a>
                 </li>
             </ul>
         </nav>
